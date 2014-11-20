@@ -6,10 +6,13 @@ class RateLimitAdmin(admin.ModelAdmin):
 
 class GitHubRequestCacheAdmin(admin.ModelAdmin):
     list_display = ('query','ETag')
+
+class RepoAdmin(admin.ModelAdmin):
+    list_display = ('id', 'full_name','description','html_url' )
     
 # Register your models here.
-admin.site.register(RepoQueue)
+#admin.site.register(RepoQueue)
 admin.site.register(RateLimit, RateLimitAdmin)
-#admin.site.register(Repo)
+admin.site.register(Repo, RepoAdmin)
 admin.site.register(GitHubRequestCache,GitHubRequestCacheAdmin)
 

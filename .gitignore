@@ -5,3 +5,4 @@
 *.pyc
 build
 wikimedia
+projects/populargithub/populargithub/passwords.py

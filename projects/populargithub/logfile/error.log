@@ -267,3 +267,115 @@ p0
 [20/Nov/2014 00:29:01] DEBUG [github.views:102] Saving ETag: "4ccc7721820da3f95809ebc5efe52b37"
 [20/Nov/2014 00:29:01] DEBUG [github.views:123] found new data
 [20/Nov/2014 00:29:01] INFO [github.views:51] importing pull requests
+[20/Nov/2014 00:58:46] INFO [github.views:101] Making GitHubRequest: repositories
+[20/Nov/2014 00:58:46] DEBUG [github.views:104] Checking cache
+[20/Nov/2014 00:58:46] DEBUG [github.views:106] Using ETag: "7521b4905b06195c90edf501cdcef530"
+[20/Nov/2014 00:58:47] DEBUG [github.views:118] Saving ETag: "7521b4905b06195c90edf501cdcef530"
+[20/Nov/2014 00:58:47] DEBUG [github.views:137] No new data found
+[20/Nov/2014 00:59:04] INFO [github.views:101] Making GitHubRequest: repositories
+[20/Nov/2014 00:59:04] DEBUG [github.views:104] Checking cache
+[20/Nov/2014 00:59:04] DEBUG [github.views:108] Unknown API Request
+[20/Nov/2014 00:59:05] DEBUG [github.views:118] Saving ETag: "7521b4905b06195c90edf501cdcef530"
+[20/Nov/2014 00:59:05] DEBUG [github.views:130] found new data
+[20/Nov/2014 00:59:05] INFO [github.views:49] pulls url: repos/mojombo/grit/pulls?state=all
+[20/Nov/2014 00:59:05] INFO [github.views:101] Making GitHubRequest: repos/mojombo/grit/pulls?state=all
+[20/Nov/2014 00:59:05] DEBUG [github.views:104] Checking cache
+[20/Nov/2014 00:59:05] DEBUG [github.views:106] Using ETag: "4ccc7721820da3f95809ebc5efe52b37"
+[20/Nov/2014 00:59:06] DEBUG [github.views:118] Saving ETag: "4ccc7721820da3f95809ebc5efe52b37"
+[20/Nov/2014 00:59:06] DEBUG [github.views:137] No new data found
+[20/Nov/2014 00:59:06] INFO [github.views:52] importing pull requests
+[20/Nov/2014 01:18:41] INFO [github.views:120] Making GitHubRequest: rate_limit
+[20/Nov/2014 01:18:41] DEBUG [github.views:123] Checking cache
+[20/Nov/2014 01:18:41] DEBUG [github.views:127] Unknown API Request
+[20/Nov/2014 01:20:52] INFO [github.views:120] Making GitHubRequest: rate_limit
+[20/Nov/2014 01:20:52] DEBUG [github.views:123] Checking cache
+[20/Nov/2014 01:20:52] DEBUG [github.views:127] Unknown API Request
+[20/Nov/2014 01:21:22] INFO [github.views:120] Making GitHubRequest: rate_limit
+[20/Nov/2014 01:21:22] DEBUG [github.views:123] Checking cache
+[20/Nov/2014 01:21:22] DEBUG [github.views:127] Unknown API Request
+[20/Nov/2014 01:21:25] DEBUG [github.views:149] found new data
+[20/Nov/2014 01:21:42] INFO [github.views:120] Making GitHubRequest: rate_limit
+[20/Nov/2014 01:21:42] DEBUG [github.views:123] Checking cache
+[20/Nov/2014 01:21:42] DEBUG [github.views:127] Unknown API Request
+[20/Nov/2014 01:21:45] DEBUG [github.views:149] found new data
+[20/Nov/2014 01:22:18] INFO [github.views:120] Making GitHubRequest: rate_limit
+[20/Nov/2014 01:22:18] DEBUG [github.views:123] Checking cache
+[20/Nov/2014 01:22:18] DEBUG [github.views:127] Unknown API Request
+[20/Nov/2014 01:22:21] DEBUG [github.views:149] found new data
+[20/Nov/2014 01:23:14] INFO [github.views:121] Making GitHubRequest: rate_limit
+[20/Nov/2014 01:23:14] DEBUG [github.views:124] Checking cache
+[20/Nov/2014 01:23:14] DEBUG [github.views:128] Unknown API Request
+[20/Nov/2014 01:23:17] DEBUG [github.views:150] found new data
+[20/Nov/2014 01:23:58] INFO [github.views:121] Making GitHubRequest: rate_limit
+[20/Nov/2014 01:23:58] DEBUG [github.views:124] Checking cache
+[20/Nov/2014 01:23:58] DEBUG [github.views:128] Unknown API Request
+[20/Nov/2014 01:23:59] DEBUG [github.views:150] found new data
+[20/Nov/2014 01:24:36] INFO [github.views:121] Making GitHubRequest: rate_limit
+[20/Nov/2014 01:24:36] DEBUG [github.views:124] Checking cache
+[20/Nov/2014 01:24:36] DEBUG [github.views:128] Unknown API Request
+[20/Nov/2014 01:24:37] DEBUG [github.views:150] found new data
+[20/Nov/2014 01:24:50] INFO [github.views:121] Making GitHubRequest: rate_limit
+[20/Nov/2014 01:24:50] DEBUG [github.views:124] Checking cache
+[20/Nov/2014 01:24:50] DEBUG [github.views:128] Unknown API Request
+[20/Nov/2014 01:24:52] DEBUG [github.views:150] found new data
+[20/Nov/2014 01:25:11] INFO [github.views:121] Making GitHubRequest: rate_limit
+[20/Nov/2014 01:25:11] DEBUG [github.views:124] Checking cache
+[20/Nov/2014 01:25:11] DEBUG [github.views:128] Unknown API Request
+[20/Nov/2014 01:25:13] DEBUG [github.views:150] found new data
+[20/Nov/2014 01:25:13] INFO [github.views:121] Making GitHubRequest: repositories?since=0
+[20/Nov/2014 01:25:13] DEBUG [github.views:124] Checking cache
+[20/Nov/2014 01:25:13] DEBUG [github.views:128] Unknown API Request
+[20/Nov/2014 01:25:14] DEBUG [github.views:137] Saving ETag: "7521b4905b06195c90edf501cdcef530"
+[20/Nov/2014 01:25:14] DEBUG [github.views:150] found new data
+[20/Nov/2014 01:25:14] INFO [github.views:57] pulls url: repos/mojombo/grit/pulls?state=all
+[20/Nov/2014 01:25:14] INFO [github.views:121] Making GitHubRequest: repos/mojombo/grit/pulls?state=all
+[20/Nov/2014 01:25:14] DEBUG [github.views:124] Checking cache
+[20/Nov/2014 01:25:14] DEBUG [github.views:126] Using ETag: "4ccc7721820da3f95809ebc5efe52b37"
+[20/Nov/2014 01:25:15] DEBUG [github.views:137] Saving ETag: "4ccc7721820da3f95809ebc5efe52b37"
+[20/Nov/2014 01:25:15] DEBUG [github.views:157] No new data found
+[20/Nov/2014 01:25:15] INFO [github.views:60] importing pull requests
+[20/Nov/2014 01:26:09] INFO [github.views:123] Making GitHubRequest: rate_limit
+[20/Nov/2014 01:26:09] DEBUG [github.views:126] Checking cache
+[20/Nov/2014 01:26:09] DEBUG [github.views:130] Unknown API Request
+[20/Nov/2014 01:26:10] DEBUG [github.views:152] found new data
+[20/Nov/2014 01:26:10] INFO [github.views:123] Making GitHubRequest: repositories?since=0
+[20/Nov/2014 01:26:10] DEBUG [github.views:126] Checking cache
+[20/Nov/2014 01:26:10] DEBUG [github.views:128] Using ETag: "7521b4905b06195c90edf501cdcef530"
+[20/Nov/2014 01:26:11] DEBUG [github.views:139] Saving ETag: "7521b4905b06195c90edf501cdcef530"
+[20/Nov/2014 01:26:11] DEBUG [github.views:159] No new data found
+[20/Nov/2014 01:26:25] INFO [github.views:122] Making GitHubRequest: rate_limit
+[20/Nov/2014 01:26:25] DEBUG [github.views:125] Checking cache
+[20/Nov/2014 01:26:25] DEBUG [github.views:129] Unknown API Request
+[20/Nov/2014 01:26:26] DEBUG [github.views:151] found new data
+[20/Nov/2014 01:26:26] INFO [github.views:122] Making GitHubRequest: repositories?since=0
+[20/Nov/2014 01:26:27] DEBUG [github.views:125] Checking cache
+[20/Nov/2014 01:26:27] DEBUG [github.views:127] Using ETag: "7521b4905b06195c90edf501cdcef530"
+[20/Nov/2014 01:26:27] DEBUG [github.views:138] Saving ETag: "7521b4905b06195c90edf501cdcef530"
+[20/Nov/2014 01:26:27] DEBUG [github.views:158] No new data found
+[20/Nov/2014 02:04:20] INFO [github.views:124] Making GitHubRequest: rate_limit
+[20/Nov/2014 02:04:20] DEBUG [github.views:127] Checking cache
+[20/Nov/2014 02:04:20] DEBUG [github.views:131] Unknown API Request
+[20/Nov/2014 02:04:22] DEBUG [github.views:153] found new data
+[20/Nov/2014 02:04:22] INFO [github.views:124] Making GitHubRequest: repositories?since=0
+[20/Nov/2014 02:04:22] DEBUG [github.views:127] Checking cache
+[20/Nov/2014 02:04:22] DEBUG [github.views:129] Using ETag: "7521b4905b06195c90edf501cdcef530"
+[20/Nov/2014 02:04:22] DEBUG [github.views:140] Saving ETag: "7521b4905b06195c90edf501cdcef530"
+[20/Nov/2014 02:04:22] DEBUG [github.views:160] No new data found
+[20/Nov/2014 02:06:29] INFO [github.views:124] Making GitHubRequest: rate_limit
+[20/Nov/2014 02:06:29] DEBUG [github.views:127] Checking cache
+[20/Nov/2014 02:06:29] DEBUG [github.views:131] Unknown API Request
+[20/Nov/2014 02:06:30] DEBUG [github.views:153] found new data
+[20/Nov/2014 02:06:30] INFO [github.views:124] Making GitHubRequest: repositories?since=0
+[20/Nov/2014 02:06:30] DEBUG [github.views:127] Checking cache
+[20/Nov/2014 02:06:30] DEBUG [github.views:129] Using ETag: "7521b4905b06195c90edf501cdcef530"
+[20/Nov/2014 02:06:31] DEBUG [github.views:140] Saving ETag: "7521b4905b06195c90edf501cdcef530"
+[20/Nov/2014 02:06:31] DEBUG [github.views:160] No new data found
+[20/Nov/2014 02:08:36] INFO [github.views:124] Making GitHubRequest: rate_limit
+[20/Nov/2014 02:08:36] DEBUG [github.views:127] Checking cache
+[20/Nov/2014 02:08:36] DEBUG [github.views:131] Unknown API Request
+[20/Nov/2014 02:08:36] DEBUG [github.views:153] found new data
+[20/Nov/2014 02:08:36] INFO [github.views:124] Making GitHubRequest: repositories?since=0
+[20/Nov/2014 02:08:36] DEBUG [github.views:127] Checking cache
+[20/Nov/2014 02:08:36] DEBUG [github.views:129] Using ETag: "7521b4905b06195c90edf501cdcef530"
+[20/Nov/2014 02:08:37] DEBUG [github.views:140] Saving ETag: "7521b4905b06195c90edf501cdcef530"
+[20/Nov/2014 02:08:37] DEBUG [github.views:160] No new data found
