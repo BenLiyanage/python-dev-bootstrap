@@ -6,3 +6,5 @@
 build
 wikimedia
 projects/populargithub/populargithub/passwords.py
+*.log
+*.log

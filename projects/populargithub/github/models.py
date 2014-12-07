@@ -11,6 +11,7 @@ class RepoQueue(models.Model):
 class GitHubRequestCache(models.Model):
     query = models.CharField(max_length=255, primary_key=True)
     ETag = models.CharField(max_length=255)
+    processed = models.BooleanField(default=False)
     
 class RateLimit(models.Model):
     type = models.CharField(max_length=255, primary_key=True)

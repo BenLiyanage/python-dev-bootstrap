@@ -209,10 +209,7 @@ class flask {
       command => "/usr/bin/sudo pip install flup",
       require => Package["python-pip"],
   }
-
 }
-
-
 
 include core
 include python

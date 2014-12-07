@@ -1,381 +1,702 @@
-[19/Nov/2014 23:52:25] DEBUG [github.views:110] ccopy_reg
-_reconstructor
-p0
-(crequests.structures
-CaseInsensitiveDict
-p1
-c__builtin__
-object
-p2
-Ntp3
-Rp4
-(dp5
-S'_store'
-p6
-(dp7
-S'vary'
-p8
-(S'vary'
-p9
-S'Accept, Accept-Encoding'
-p10
-tp11
-sS'x-served-by'
-p12
-(S'x-served-by'
-p13
-S'd594a23ec74671eba905bf91ef329026'
-p14
-tp15
-sS'x-xss-protection'
-p16
-(S'x-xss-protection'
-p17
-S'1; mode=block'
-p18
-tp19
-sS'x-content-type-options'
-p20
-(S'x-content-type-options'
-p21
-S'nosniff'
-p22
-tp23
-sS'etag'
-p24
-(S'etag'
-p25
-S'"7521b4905b06195c90edf501cdcef530"'
-p26
-tp27
-sS'access-control-allow-credentials'
-p28
-(S'access-control-allow-credentials'
-p29
-S'true'
-p30
-tp31
-sS'status'
-p32
-(S'status'
-p33
-S'200 OK'
-p34
-tp35
-sS'x-ratelimit-remaining'
-p36
-(S'x-ratelimit-remaining'
-p37
-S'59'
-p38
-tp39
-sS'x-github-media-type'
-p40
-(S'x-github-media-type'
-p41
-S'github.v3'
-p42
-tp43
-sS'access-control-expose-headers'
-p44
-(S'access-control-expose-headers'
-p45
-S'ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval'
-p46
-tp47
-sS'transfer-encoding'
-p48
-(S'transfer-encoding'
-p49
-S'chunked'
-p50
-tp51
-sS'x-github-request-id'
-p52
-(S'x-github-request-id'
-p53
-S'49BD5EA0:706A:7CB5572:546D2D38'
-p54
-tp55
-sS'cache-control'
-p56
-(S'cache-control'
-p57
-S'public, max-age=60, s-maxage=60'
-p58
-tp59
-sS'link'
-p60
-(S'link'
-p61
-S'<https://api.github.com/repositories?since=364>; rel="next", <https://api.github.com/repositories{?since}>; rel="first"'
-p62
-tp63
-sS'date'
-p64
-(S'date'
-p65
-S'Wed, 19 Nov 2014 23:52:25 GMT'
-p66
-tp67
-sS'access-control-allow-origin'
-p68
-(S'access-control-allow-origin'
-p69
-S'*'
-p70
-tp71
-sS'content-security-policy'
-p72
-(S'content-security-policy'
-p73
-S"default-src 'none'"
-p74
-tp75
-sS'content-encoding'
-p76
-(S'content-encoding'
-p77
-S'gzip'
-p78
-tp79
-sS'strict-transport-security'
-p80
-(S'strict-transport-security'
-p81
-S'max-age=31536000; includeSubdomains; preload'
-p82
-tp83
-sS'server'
-p84
-(S'server'
-p85
-S'GitHub.com'
-p86
-tp87
-sS'x-ratelimit-limit'
-p88
-(S'x-ratelimit-limit'
-p89
-S'60'
-p90
-tp91
-sS'x-frame-options'
-p92
-(S'x-frame-options'
-p93
-S'deny'
-p94
-tp95
-sS'content-type'
-p96
-(S'content-type'
-p97
-S'application/json; charset=utf-8'
-p98
-tp99
-sS'x-ratelimit-reset'
-p100
-(S'x-ratelimit-reset'
-p101
-S'1416444745'
-p102
-tp103
-ssb.
-[19/Nov/2014 23:54:51] DEBUG [github.views:110] S'"7521b4905b06195c90edf501cdcef530"'
-p0
-.
-[19/Nov/2014 23:55:26] DEBUG [github.views:110] S'"7521b4905b06195c90edf501cdcef530"'
-p0
-.
-[19/Nov/2014 23:57:55] DEBUG [github.views:110] S'"7521b4905b06195c90edf501cdcef530"'
-p0
-.
-[19/Nov/2014 23:59:10] DEBUG [github.views:110] "7521b4905b06195c90edf501cdcef530"
-[20/Nov/2014 00:01:36] DEBUG [github.views:110] 7521b4905b06195c90edf501cdcef530
-[20/Nov/2014 00:04:44] DEBUG [github.views:100] Using ETag
-[20/Nov/2014 00:04:45] DEBUG [github.views:112] 7521b4905b06195c90edf501cdcef530
-[20/Nov/2014 00:04:45] DEBUG [github.views:133] found new data
-[20/Nov/2014 00:06:29] DEBUG [github.views:100] Using ETag
-[20/Nov/2014 00:06:31] DEBUG [github.views:111] 7521b4905b06195c90edf501cdcef530
-[20/Nov/2014 00:06:31] DEBUG [github.views:132] found new data
-[20/Nov/2014 00:08:07] DEBUG [github.views:100] Using ETag
-[20/Nov/2014 00:08:09] DEBUG [github.views:111] Saving ETag: "7521b4905b06195c90edf501cdcef530"
-[20/Nov/2014 00:08:09] DEBUG [github.views:132] found new data
-[20/Nov/2014 00:08:13] DEBUG [github.views:100] Using ETag
-[20/Nov/2014 00:08:14] DEBUG [github.views:111] Saving ETag: "7521b4905b06195c90edf501cdcef530"
-[20/Nov/2014 00:08:14] DEBUG [github.views:132] found new data
-[20/Nov/2014 00:10:20] DEBUG [github.views:111] Saving ETag: "7521b4905b06195c90edf501cdcef530"
-[20/Nov/2014 00:10:20] DEBUG [github.views:132] found new data
-[20/Nov/2014 00:10:59] DEBUG [github.views:111] Saving ETag: "7521b4905b06195c90edf501cdcef530"
-[20/Nov/2014 00:10:59] DEBUG [github.views:132] found new data
-[20/Nov/2014 00:11:50] DEBUG [github.views:112] Saving ETag: "7521b4905b06195c90edf501cdcef530"
-[20/Nov/2014 00:11:51] DEBUG [github.views:133] found new data
-[20/Nov/2014 00:12:41] DEBUG [github.views:95] Making GitHubRequest: repositories
-[20/Nov/2014 00:12:44] DEBUG [github.views:112] Saving ETag: "7521b4905b06195c90edf501cdcef530"
-[20/Nov/2014 00:12:44] DEBUG [github.views:133] found new data
-[20/Nov/2014 00:14:24] DEBUG [github.views:95] Making GitHubRequest: repositories
-[20/Nov/2014 00:15:17] DEBUG [github.views:95] Making GitHubRequest: repositories
-[20/Nov/2014 00:15:17] DEBUG [github.views:99] Checking cache
-[20/Nov/2014 00:15:19] DEBUG [github.views:113] Saving ETag: "7521b4905b06195c90edf501cdcef530"
-[20/Nov/2014 00:15:19] DEBUG [github.views:134] found new data
-[20/Nov/2014 00:17:09] DEBUG [github.views:95] Making GitHubRequest: repositories
-[20/Nov/2014 00:17:09] DEBUG [github.views:99] Checking cache
-[20/Nov/2014 00:17:18] DEBUG [github.views:95] Making GitHubRequest: repositories
-[20/Nov/2014 00:17:18] DEBUG [github.views:99] Checking cache
-[20/Nov/2014 00:17:30] DEBUG [github.views:95] Making GitHubRequest: repositories
-[20/Nov/2014 00:17:30] DEBUG [github.views:99] Checking cache
-[20/Nov/2014 00:17:30] DEBUG [github.views:101] Using ETag: 7521b4905b06195c90edf501cdcef530
-[20/Nov/2014 00:17:32] DEBUG [github.views:113] Saving ETag: "7521b4905b06195c90edf501cdcef530"
-[20/Nov/2014 00:17:32] DEBUG [github.views:134] found new data
-[20/Nov/2014 00:18:27] DEBUG [github.views:95] Making GitHubRequest: repositories
-[20/Nov/2014 00:18:27] DEBUG [github.views:99] Checking cache
-[20/Nov/2014 00:18:27] DEBUG [github.views:101] Using ETag: 7521b4905b06195c90edf501cdcef530
-[20/Nov/2014 00:18:28] DEBUG [github.views:113] Saving ETag: "7521b4905b06195c90edf501cdcef530"
-[20/Nov/2014 00:18:28] DEBUG [github.views:134] found new data
-[20/Nov/2014 00:18:37] DEBUG [github.views:95] Making GitHubRequest: repositories
-[20/Nov/2014 00:18:37] DEBUG [github.views:99] Checking cache
-[20/Nov/2014 00:18:37] DEBUG [github.views:101] Using ETag: "7521b4905b06195c90edf501cdcef530"
-[20/Nov/2014 00:18:38] DEBUG [github.views:113] Saving ETag: "7521b4905b06195c90edf501cdcef530"
-[20/Nov/2014 00:18:38] DEBUG [github.views:141] No new data found
-[20/Nov/2014 00:25:55] INFO [github.views:84] Making GitHubRequest: repositories
-[20/Nov/2014 00:25:55] DEBUG [github.views:88] Checking cache
-[20/Nov/2014 00:25:55] DEBUG [github.views:90] Using ETag: "7521b4905b06195c90edf501cdcef530"
-[20/Nov/2014 00:25:56] DEBUG [github.views:102] Saving ETag: "7521b4905b06195c90edf501cdcef530"
-[20/Nov/2014 00:25:56] DEBUG [github.views:130] No new data found
-[20/Nov/2014 00:27:49] INFO [github.views:84] Making GitHubRequest: repositories
-[20/Nov/2014 00:27:49] DEBUG [github.views:88] Checking cache
-[20/Nov/2014 00:27:49] DEBUG [github.views:92] Unknown API Request
-[20/Nov/2014 00:27:52] DEBUG [github.views:102] Saving ETag: "7521b4905b06195c90edf501cdcef530"
-[20/Nov/2014 00:27:52] DEBUG [github.views:123] found new data
-[20/Nov/2014 00:27:52] INFO [github.views:48] pulls url: repos/mojombo/grit/pulls?state=all
-[20/Nov/2014 00:27:52] INFO [github.views:84] Making GitHubRequest: repos/mojombo/grit/pulls?state=all
-[20/Nov/2014 00:27:52] DEBUG [github.views:88] Checking cache
-[20/Nov/2014 00:27:52] DEBUG [github.views:92] Unknown API Request
-[20/Nov/2014 00:27:53] DEBUG [github.views:102] Saving ETag: "4ccc7721820da3f95809ebc5efe52b37"
-[20/Nov/2014 00:27:53] DEBUG [github.views:123] found new data
-[20/Nov/2014 00:27:53] INFO [github.views:51] importing pull requests
-[20/Nov/2014 00:28:57] INFO [github.views:84] Making GitHubRequest: repositories
-[20/Nov/2014 00:28:57] DEBUG [github.views:88] Checking cache
-[20/Nov/2014 00:28:57] DEBUG [github.views:92] Unknown API Request
-[20/Nov/2014 00:29:00] DEBUG [github.views:102] Saving ETag: "7521b4905b06195c90edf501cdcef530"
-[20/Nov/2014 00:29:00] DEBUG [github.views:123] found new data
-[20/Nov/2014 00:29:00] INFO [github.views:48] pulls url: repos/mojombo/grit/pulls?state=all
-[20/Nov/2014 00:29:00] INFO [github.views:84] Making GitHubRequest: repos/mojombo/grit/pulls?state=all
-[20/Nov/2014 00:29:00] DEBUG [github.views:88] Checking cache
-[20/Nov/2014 00:29:00] DEBUG [github.views:92] Unknown API Request
-[20/Nov/2014 00:29:01] DEBUG [github.views:102] Saving ETag: "4ccc7721820da3f95809ebc5efe52b37"
-[20/Nov/2014 00:29:01] DEBUG [github.views:123] found new data
-[20/Nov/2014 00:29:01] INFO [github.views:51] importing pull requests
-[20/Nov/2014 00:58:46] INFO [github.views:101] Making GitHubRequest: repositories
-[20/Nov/2014 00:58:46] DEBUG [github.views:104] Checking cache
-[20/Nov/2014 00:58:46] DEBUG [github.views:106] Using ETag: "7521b4905b06195c90edf501cdcef530"
-[20/Nov/2014 00:58:47] DEBUG [github.views:118] Saving ETag: "7521b4905b06195c90edf501cdcef530"
-[20/Nov/2014 00:58:47] DEBUG [github.views:137] No new data found
-[20/Nov/2014 00:59:04] INFO [github.views:101] Making GitHubRequest: repositories
-[20/Nov/2014 00:59:04] DEBUG [github.views:104] Checking cache
-[20/Nov/2014 00:59:04] DEBUG [github.views:108] Unknown API Request
-[20/Nov/2014 00:59:05] DEBUG [github.views:118] Saving ETag: "7521b4905b06195c90edf501cdcef530"
-[20/Nov/2014 00:59:05] DEBUG [github.views:130] found new data
-[20/Nov/2014 00:59:05] INFO [github.views:49] pulls url: repos/mojombo/grit/pulls?state=all
-[20/Nov/2014 00:59:05] INFO [github.views:101] Making GitHubRequest: repos/mojombo/grit/pulls?state=all
-[20/Nov/2014 00:59:05] DEBUG [github.views:104] Checking cache
-[20/Nov/2014 00:59:05] DEBUG [github.views:106] Using ETag: "4ccc7721820da3f95809ebc5efe52b37"
-[20/Nov/2014 00:59:06] DEBUG [github.views:118] Saving ETag: "4ccc7721820da3f95809ebc5efe52b37"
-[20/Nov/2014 00:59:06] DEBUG [github.views:137] No new data found
-[20/Nov/2014 00:59:06] INFO [github.views:52] importing pull requests
-[20/Nov/2014 01:18:41] INFO [github.views:120] Making GitHubRequest: rate_limit
-[20/Nov/2014 01:18:41] DEBUG [github.views:123] Checking cache
-[20/Nov/2014 01:18:41] DEBUG [github.views:127] Unknown API Request
-[20/Nov/2014 01:20:52] INFO [github.views:120] Making GitHubRequest: rate_limit
-[20/Nov/2014 01:20:52] DEBUG [github.views:123] Checking cache
-[20/Nov/2014 01:20:52] DEBUG [github.views:127] Unknown API Request
-[20/Nov/2014 01:21:22] INFO [github.views:120] Making GitHubRequest: rate_limit
-[20/Nov/2014 01:21:22] DEBUG [github.views:123] Checking cache
-[20/Nov/2014 01:21:22] DEBUG [github.views:127] Unknown API Request
-[20/Nov/2014 01:21:25] DEBUG [github.views:149] found new data
-[20/Nov/2014 01:21:42] INFO [github.views:120] Making GitHubRequest: rate_limit
-[20/Nov/2014 01:21:42] DEBUG [github.views:123] Checking cache
-[20/Nov/2014 01:21:42] DEBUG [github.views:127] Unknown API Request
-[20/Nov/2014 01:21:45] DEBUG [github.views:149] found new data
-[20/Nov/2014 01:22:18] INFO [github.views:120] Making GitHubRequest: rate_limit
-[20/Nov/2014 01:22:18] DEBUG [github.views:123] Checking cache
-[20/Nov/2014 01:22:18] DEBUG [github.views:127] Unknown API Request
-[20/Nov/2014 01:22:21] DEBUG [github.views:149] found new data
-[20/Nov/2014 01:23:14] INFO [github.views:121] Making GitHubRequest: rate_limit
-[20/Nov/2014 01:23:14] DEBUG [github.views:124] Checking cache
-[20/Nov/2014 01:23:14] DEBUG [github.views:128] Unknown API Request
-[20/Nov/2014 01:23:17] DEBUG [github.views:150] found new data
-[20/Nov/2014 01:23:58] INFO [github.views:121] Making GitHubRequest: rate_limit
-[20/Nov/2014 01:23:58] DEBUG [github.views:124] Checking cache
-[20/Nov/2014 01:23:58] DEBUG [github.views:128] Unknown API Request
-[20/Nov/2014 01:23:59] DEBUG [github.views:150] found new data
-[20/Nov/2014 01:24:36] INFO [github.views:121] Making GitHubRequest: rate_limit
-[20/Nov/2014 01:24:36] DEBUG [github.views:124] Checking cache
-[20/Nov/2014 01:24:36] DEBUG [github.views:128] Unknown API Request
-[20/Nov/2014 01:24:37] DEBUG [github.views:150] found new data
-[20/Nov/2014 01:24:50] INFO [github.views:121] Making GitHubRequest: rate_limit
-[20/Nov/2014 01:24:50] DEBUG [github.views:124] Checking cache
-[20/Nov/2014 01:24:50] DEBUG [github.views:128] Unknown API Request
-[20/Nov/2014 01:24:52] DEBUG [github.views:150] found new data
-[20/Nov/2014 01:25:11] INFO [github.views:121] Making GitHubRequest: rate_limit
-[20/Nov/2014 01:25:11] DEBUG [github.views:124] Checking cache
-[20/Nov/2014 01:25:11] DEBUG [github.views:128] Unknown API Request
-[20/Nov/2014 01:25:13] DEBUG [github.views:150] found new data
-[20/Nov/2014 01:25:13] INFO [github.views:121] Making GitHubRequest: repositories?since=0
-[20/Nov/2014 01:25:13] DEBUG [github.views:124] Checking cache
-[20/Nov/2014 01:25:13] DEBUG [github.views:128] Unknown API Request
-[20/Nov/2014 01:25:14] DEBUG [github.views:137] Saving ETag: "7521b4905b06195c90edf501cdcef530"
-[20/Nov/2014 01:25:14] DEBUG [github.views:150] found new data
-[20/Nov/2014 01:25:14] INFO [github.views:57] pulls url: repos/mojombo/grit/pulls?state=all
-[20/Nov/2014 01:25:14] INFO [github.views:121] Making GitHubRequest: repos/mojombo/grit/pulls?state=all
-[20/Nov/2014 01:25:14] DEBUG [github.views:124] Checking cache
-[20/Nov/2014 01:25:14] DEBUG [github.views:126] Using ETag: "4ccc7721820da3f95809ebc5efe52b37"
-[20/Nov/2014 01:25:15] DEBUG [github.views:137] Saving ETag: "4ccc7721820da3f95809ebc5efe52b37"
-[20/Nov/2014 01:25:15] DEBUG [github.views:157] No new data found
-[20/Nov/2014 01:25:15] INFO [github.views:60] importing pull requests
-[20/Nov/2014 01:26:09] INFO [github.views:123] Making GitHubRequest: rate_limit
-[20/Nov/2014 01:26:09] DEBUG [github.views:126] Checking cache
-[20/Nov/2014 01:26:09] DEBUG [github.views:130] Unknown API Request
-[20/Nov/2014 01:26:10] DEBUG [github.views:152] found new data
-[20/Nov/2014 01:26:10] INFO [github.views:123] Making GitHubRequest: repositories?since=0
-[20/Nov/2014 01:26:10] DEBUG [github.views:126] Checking cache
-[20/Nov/2014 01:26:10] DEBUG [github.views:128] Using ETag: "7521b4905b06195c90edf501cdcef530"
-[20/Nov/2014 01:26:11] DEBUG [github.views:139] Saving ETag: "7521b4905b06195c90edf501cdcef530"
-[20/Nov/2014 01:26:11] DEBUG [github.views:159] No new data found
-[20/Nov/2014 01:26:25] INFO [github.views:122] Making GitHubRequest: rate_limit
-[20/Nov/2014 01:26:25] DEBUG [github.views:125] Checking cache
-[20/Nov/2014 01:26:25] DEBUG [github.views:129] Unknown API Request
-[20/Nov/2014 01:26:26] DEBUG [github.views:151] found new data
-[20/Nov/2014 01:26:26] INFO [github.views:122] Making GitHubRequest: repositories?since=0
-[20/Nov/2014 01:26:27] DEBUG [github.views:125] Checking cache
-[20/Nov/2014 01:26:27] DEBUG [github.views:127] Using ETag: "7521b4905b06195c90edf501cdcef530"
-[20/Nov/2014 01:26:27] DEBUG [github.views:138] Saving ETag: "7521b4905b06195c90edf501cdcef530"
-[20/Nov/2014 01:26:27] DEBUG [github.views:158] No new data found
-[20/Nov/2014 02:04:20] INFO [github.views:124] Making GitHubRequest: rate_limit
-[20/Nov/2014 02:04:20] DEBUG [github.views:127] Checking cache
-[20/Nov/2014 02:04:20] DEBUG [github.views:131] Unknown API Request
-[20/Nov/2014 02:04:22] DEBUG [github.views:153] found new data
-[20/Nov/2014 02:04:22] INFO [github.views:124] Making GitHubRequest: repositories?since=0
-[20/Nov/2014 02:04:22] DEBUG [github.views:127] Checking cache
-[20/Nov/2014 02:04:22] DEBUG [github.views:129] Using ETag: "7521b4905b06195c90edf501cdcef530"
-[20/Nov/2014 02:04:22] DEBUG [github.views:140] Saving ETag: "7521b4905b06195c90edf501cdcef530"
-[20/Nov/2014 02:04:22] DEBUG [github.views:160] No new data found
-[20/Nov/2014 02:06:29] INFO [github.views:124] Making GitHubRequest: rate_limit
-[20/Nov/2014 02:06:29] DEBUG [github.views:127] Checking cache
-[20/Nov/2014 02:06:29] DEBUG [github.views:131] Unknown API Request
-[20/Nov/2014 02:06:30] DEBUG [github.views:153] found new data
-[20/Nov/2014 02:06:30] INFO [github.views:124] Making GitHubRequest: repositories?since=0
-[20/Nov/2014 02:06:30] DEBUG [github.views:127] Checking cache
-[20/Nov/2014 02:06:30] DEBUG [github.views:129] Using ETag: "7521b4905b06195c90edf501cdcef530"
-[20/Nov/2014 02:06:31] DEBUG [github.views:140] Saving ETag: "7521b4905b06195c90edf501cdcef530"
-[20/Nov/2014 02:06:31] DEBUG [github.views:160] No new data found
-[20/Nov/2014 02:08:36] INFO [github.views:124] Making GitHubRequest: rate_limit
-[20/Nov/2014 02:08:36] DEBUG [github.views:127] Checking cache
-[20/Nov/2014 02:08:36] DEBUG [github.views:131] Unknown API Request
-[20/Nov/2014 02:08:36] DEBUG [github.views:153] found new data
-[20/Nov/2014 02:08:36] INFO [github.views:124] Making GitHubRequest: repositories?since=0
-[20/Nov/2014 02:08:36] DEBUG [github.views:127] Checking cache
-[20/Nov/2014 02:08:36] DEBUG [github.views:129] Using ETag: "7521b4905b06195c90edf501cdcef530"
-[20/Nov/2014 02:08:37] DEBUG [github.views:140] Saving ETag: "7521b4905b06195c90edf501cdcef530"
-[20/Nov/2014 02:08:37] DEBUG [github.views:160] No new data found
+[20/Nov/2014 02:55:17] INFO [github.views:130] Making GitHubRequest: rate_limit
+[20/Nov/2014 02:55:17] DEBUG [github.views:133] Checking cache
+[20/Nov/2014 02:55:17] DEBUG [github.views:137] Unknown API Request
+[20/Nov/2014 02:55:19] DEBUG [github.views:168] found new data
+[20/Nov/2014 02:55:19] INFO [github.views:130] Making GitHubRequest: repositories?since=0
+[20/Nov/2014 02:55:19] DEBUG [github.views:133] Checking cache
+[20/Nov/2014 02:55:19] DEBUG [github.views:135] Using ETag: "7521b4905b06195c90edf501cdcef530"
+[20/Nov/2014 02:55:20] DEBUG [github.views:155] Saving ETag: "7521b4905b06195c90edf501cdcef530"
+[20/Nov/2014 02:55:20] DEBUG [github.views:175] No new data found
+[20/Nov/2014 02:55:31] INFO [github.views:130] Making GitHubRequest: rate_limit
+[20/Nov/2014 02:55:31] DEBUG [github.views:133] Checking cache
+[20/Nov/2014 02:55:31] DEBUG [github.views:137] Unknown API Request
+[20/Nov/2014 02:55:32] DEBUG [github.views:168] found new data
+[20/Nov/2014 02:55:32] INFO [github.views:130] Making GitHubRequest: repositories?since=0
+[20/Nov/2014 02:55:32] DEBUG [github.views:133] Checking cache
+[20/Nov/2014 02:55:32] DEBUG [github.views:137] Unknown API Request
+[20/Nov/2014 02:55:33] DEBUG [github.views:155] Saving ETag: "7521b4905b06195c90edf501cdcef530"
+[20/Nov/2014 02:55:33] DEBUG [github.views:168] found new data
+[20/Nov/2014 02:55:33] INFO [github.views:39] Getting id:1
+[20/Nov/2014 02:55:33] INFO [github.views:55] pulls url: repos/mojombo/grit/pulls?state=all
+[20/Nov/2014 02:55:33] INFO [github.views:130] Making GitHubRequest: repos/mojombo/grit/pulls?state=all
+[20/Nov/2014 02:55:33] DEBUG [github.views:133] Checking cache
+[20/Nov/2014 02:55:33] DEBUG [github.views:137] Unknown API Request
+[20/Nov/2014 02:55:34] DEBUG [github.views:155] Saving ETag: "4ccc7721820da3f95809ebc5efe52b37"
+[20/Nov/2014 02:55:34] DEBUG [github.views:168] found new data
+[20/Nov/2014 02:55:34] INFO [github.views:59] importing pull requests
+[20/Nov/2014 02:55:34] INFO [github.views:62] Processing Pull Number 186
+[20/Nov/2014 02:55:34] INFO [github.views:62] Processing Pull Number 183
+[20/Nov/2014 02:55:34] INFO [github.views:62] Processing Pull Number 182
+[20/Nov/2014 02:55:34] INFO [github.views:62] Processing Pull Number 180
+[20/Nov/2014 02:55:34] INFO [github.views:62] Processing Pull Number 179
+[20/Nov/2014 02:55:34] INFO [github.views:62] Processing Pull Number 178
+[20/Nov/2014 02:55:34] INFO [github.views:62] Processing Pull Number 177
+[20/Nov/2014 02:55:34] INFO [github.views:62] Processing Pull Number 175
+[20/Nov/2014 02:55:34] INFO [github.views:62] Processing Pull Number 169
+[20/Nov/2014 02:55:34] INFO [github.views:62] Processing Pull Number 168
+[20/Nov/2014 02:55:34] INFO [github.views:62] Processing Pull Number 167
+[20/Nov/2014 02:55:34] INFO [github.views:62] Processing Pull Number 165
+[20/Nov/2014 02:55:34] INFO [github.views:62] Processing Pull Number 164
+[20/Nov/2014 02:55:34] INFO [github.views:62] Processing Pull Number 162
+[20/Nov/2014 02:55:34] INFO [github.views:62] Processing Pull Number 161
+[20/Nov/2014 02:55:34] INFO [github.views:62] Processing Pull Number 160
+[20/Nov/2014 02:55:34] INFO [github.views:62] Processing Pull Number 159
+[20/Nov/2014 02:55:34] INFO [github.views:62] Processing Pull Number 158
+[20/Nov/2014 02:55:34] INFO [github.views:62] Processing Pull Number 157
+[20/Nov/2014 02:55:34] INFO [github.views:62] Processing Pull Number 156
+[20/Nov/2014 02:55:34] INFO [github.views:62] Processing Pull Number 155
+[20/Nov/2014 02:55:34] INFO [github.views:62] Processing Pull Number 154
+[20/Nov/2014 02:55:34] INFO [github.views:62] Processing Pull Number 152
+[20/Nov/2014 02:55:34] INFO [github.views:62] Processing Pull Number 150
+[20/Nov/2014 02:55:34] INFO [github.views:62] Processing Pull Number 149
+[20/Nov/2014 02:55:34] INFO [github.views:62] Processing Pull Number 147
+[20/Nov/2014 02:55:34] INFO [github.views:62] Processing Pull Number 146
+[20/Nov/2014 02:55:34] INFO [github.views:62] Processing Pull Number 145
+[20/Nov/2014 02:55:34] INFO [github.views:62] Processing Pull Number 144
+[20/Nov/2014 02:55:34] INFO [github.views:62] Processing Pull Number 143
+[20/Nov/2014 02:55:34] INFO [github.views:39] Getting id:26
+[20/Nov/2014 02:55:34] INFO [github.views:55] pulls url: repos/wycats/merb-core/pulls?state=all
+[20/Nov/2014 02:55:34] INFO [github.views:130] Making GitHubRequest: repos/wycats/merb-core/pulls?state=all
+[20/Nov/2014 02:55:34] DEBUG [github.views:133] Checking cache
+[20/Nov/2014 02:55:34] DEBUG [github.views:137] Unknown API Request
+[20/Nov/2014 02:55:34] DEBUG [github.views:155] Saving ETag: "98f0c1b396a4e5d54f4d5fe561d54b44"
+[20/Nov/2014 02:55:34] DEBUG [github.views:168] found new data
+[20/Nov/2014 02:55:34] INFO [github.views:59] importing pull requests
+[20/Nov/2014 02:55:34] INFO [github.views:39] Getting id:27
+[20/Nov/2014 02:55:34] INFO [github.views:55] pulls url: repos/rubinius/rubinius/pulls?state=all
+[20/Nov/2014 02:55:34] INFO [github.views:130] Making GitHubRequest: repos/rubinius/rubinius/pulls?state=all
+[20/Nov/2014 02:55:34] DEBUG [github.views:133] Checking cache
+[20/Nov/2014 02:55:34] DEBUG [github.views:137] Unknown API Request
+[20/Nov/2014 02:55:35] DEBUG [github.views:155] Saving ETag: "cdbcb44237f097b67b0e99b73b8d6c94"
+[20/Nov/2014 02:55:35] DEBUG [github.views:168] found new data
+[20/Nov/2014 02:55:35] INFO [github.views:59] importing pull requests
+[20/Nov/2014 02:55:35] INFO [github.views:62] Processing Pull Number 3215
+[20/Nov/2014 02:55:35] INFO [github.views:62] Processing Pull Number 3214
+[20/Nov/2014 02:55:35] INFO [github.views:62] Processing Pull Number 3209
+[20/Nov/2014 02:55:35] INFO [github.views:62] Processing Pull Number 3203
+[20/Nov/2014 02:55:35] INFO [github.views:62] Processing Pull Number 3200
+[20/Nov/2014 02:55:35] INFO [github.views:62] Processing Pull Number 3199
+[20/Nov/2014 02:55:35] INFO [github.views:62] Processing Pull Number 3198
+[20/Nov/2014 02:55:35] INFO [github.views:62] Processing Pull Number 3196
+[20/Nov/2014 02:55:35] INFO [github.views:62] Processing Pull Number 3195
+[20/Nov/2014 02:55:35] INFO [github.views:62] Processing Pull Number 3194
+[20/Nov/2014 02:55:35] INFO [github.views:62] Processing Pull Number 3193
+[20/Nov/2014 02:55:35] INFO [github.views:62] Processing Pull Number 3192
+[20/Nov/2014 02:55:35] INFO [github.views:62] Processing Pull Number 3191
+[20/Nov/2014 02:55:35] INFO [github.views:62] Processing Pull Number 3190
+[20/Nov/2014 02:55:35] INFO [github.views:62] Processing Pull Number 3188
+[20/Nov/2014 02:55:35] INFO [github.views:62] Processing Pull Number 3187
+[20/Nov/2014 02:55:35] INFO [github.views:62] Processing Pull Number 3186
+[20/Nov/2014 02:55:35] INFO [github.views:62] Processing Pull Number 3185
+[20/Nov/2014 02:55:35] INFO [github.views:62] Processing Pull Number 3183
+[20/Nov/2014 02:55:35] INFO [github.views:62] Processing Pull Number 3182
+[20/Nov/2014 02:55:35] INFO [github.views:62] Processing Pull Number 3178
+[20/Nov/2014 02:55:35] INFO [github.views:62] Processing Pull Number 3175
+[20/Nov/2014 02:55:35] INFO [github.views:62] Processing Pull Number 3167
+[20/Nov/2014 02:55:35] INFO [github.views:62] Processing Pull Number 3161
+[20/Nov/2014 02:55:35] INFO [github.views:62] Processing Pull Number 3158
+[20/Nov/2014 02:55:35] INFO [github.views:62] Processing Pull Number 3157
+[20/Nov/2014 02:55:35] INFO [github.views:62] Processing Pull Number 3154
+[20/Nov/2014 02:55:35] INFO [github.views:62] Processing Pull Number 3150
+[20/Nov/2014 02:55:35] INFO [github.views:62] Processing Pull Number 3144
+[20/Nov/2014 02:55:35] INFO [github.views:62] Processing Pull Number 3143
+[20/Nov/2014 02:55:35] INFO [github.views:39] Getting id:28
+[20/Nov/2014 02:55:35] INFO [github.views:55] pulls url: repos/mojombo/god/pulls?state=all
+[20/Nov/2014 02:55:35] INFO [github.views:130] Making GitHubRequest: repos/mojombo/god/pulls?state=all
+[20/Nov/2014 02:55:35] DEBUG [github.views:133] Checking cache
+[20/Nov/2014 02:55:35] DEBUG [github.views:137] Unknown API Request
+[20/Nov/2014 02:55:36] DEBUG [github.views:155] Saving ETag: "de0ad114ff012d659198d1460fe67d17"
+[20/Nov/2014 02:55:36] DEBUG [github.views:168] found new data
+[20/Nov/2014 02:55:36] INFO [github.views:59] importing pull requests
+[20/Nov/2014 02:55:36] INFO [github.views:62] Processing Pull Number 196
+[20/Nov/2014 02:55:36] INFO [github.views:62] Processing Pull Number 192
+[20/Nov/2014 02:55:36] INFO [github.views:62] Processing Pull Number 191
+[20/Nov/2014 02:55:36] INFO [github.views:62] Processing Pull Number 179
+[20/Nov/2014 02:55:36] INFO [github.views:62] Processing Pull Number 178
+[20/Nov/2014 02:55:36] INFO [github.views:62] Processing Pull Number 176
+[20/Nov/2014 02:55:36] INFO [github.views:62] Processing Pull Number 174
+[20/Nov/2014 02:55:36] INFO [github.views:62] Processing Pull Number 173
+[20/Nov/2014 02:55:36] INFO [github.views:62] Processing Pull Number 172
+[20/Nov/2014 02:55:36] INFO [github.views:62] Processing Pull Number 171
+[20/Nov/2014 02:55:36] INFO [github.views:62] Processing Pull Number 170
+[20/Nov/2014 02:55:36] INFO [github.views:62] Processing Pull Number 169
+[20/Nov/2014 02:55:36] INFO [github.views:62] Processing Pull Number 168
+[20/Nov/2014 02:55:36] INFO [github.views:62] Processing Pull Number 164
+[20/Nov/2014 02:55:36] INFO [github.views:62] Processing Pull Number 162
+[20/Nov/2014 02:55:36] INFO [github.views:62] Processing Pull Number 160
+[20/Nov/2014 02:55:36] INFO [github.views:62] Processing Pull Number 159
+[20/Nov/2014 02:55:36] INFO [github.views:62] Processing Pull Number 157
+[20/Nov/2014 02:55:36] INFO [github.views:62] Processing Pull Number 153
+[20/Nov/2014 02:55:36] INFO [github.views:62] Processing Pull Number 150
+[20/Nov/2014 02:55:36] INFO [github.views:62] Processing Pull Number 148
+[20/Nov/2014 02:55:36] INFO [github.views:62] Processing Pull Number 146
+[20/Nov/2014 02:55:36] INFO [github.views:62] Processing Pull Number 144
+[20/Nov/2014 02:55:36] INFO [github.views:62] Processing Pull Number 142
+[20/Nov/2014 02:55:36] INFO [github.views:62] Processing Pull Number 141
+[20/Nov/2014 02:55:36] INFO [github.views:62] Processing Pull Number 139
+[20/Nov/2014 02:55:36] INFO [github.views:62] Processing Pull Number 138
+[20/Nov/2014 02:55:36] INFO [github.views:62] Processing Pull Number 137
+[20/Nov/2014 02:55:36] INFO [github.views:62] Processing Pull Number 136
+[20/Nov/2014 02:55:36] INFO [github.views:62] Processing Pull Number 134
+[20/Nov/2014 02:55:36] INFO [github.views:39] Getting id:29
+[20/Nov/2014 02:55:36] INFO [github.views:55] pulls url: repos/vanpelt/jsawesome/pulls?state=all
+[20/Nov/2014 02:55:36] INFO [github.views:130] Making GitHubRequest: repos/vanpelt/jsawesome/pulls?state=all
+[20/Nov/2014 02:55:36] DEBUG [github.views:133] Checking cache
+[20/Nov/2014 02:55:36] DEBUG [github.views:137] Unknown API Request
+[20/Nov/2014 02:55:37] DEBUG [github.views:155] Saving ETag: "98f0c1b396a4e5d54f4d5fe561d54b44"
+[20/Nov/2014 02:55:37] DEBUG [github.views:168] found new data
+[20/Nov/2014 02:55:37] INFO [github.views:59] importing pull requests
+[20/Nov/2014 02:55:37] INFO [github.views:39] Getting id:31
+[20/Nov/2014 02:55:37] INFO [github.views:55] pulls url: repos/wycats/jspec/pulls?state=all
+[20/Nov/2014 02:55:37] INFO [github.views:130] Making GitHubRequest: repos/wycats/jspec/pulls?state=all
+[20/Nov/2014 02:55:37] DEBUG [github.views:133] Checking cache
+[20/Nov/2014 02:55:37] DEBUG [github.views:137] Unknown API Request
+[20/Nov/2014 02:55:37] DEBUG [github.views:155] Saving ETag: "98f0c1b396a4e5d54f4d5fe561d54b44"
+[20/Nov/2014 02:55:37] DEBUG [github.views:168] found new data
+[20/Nov/2014 02:55:37] INFO [github.views:59] importing pull requests
+[20/Nov/2014 02:55:37] INFO [github.views:39] Getting id:35
+[20/Nov/2014 02:55:37] INFO [github.views:55] pulls url: repos/defunkt/exception_logger/pulls?state=all
+[20/Nov/2014 02:55:37] INFO [github.views:130] Making GitHubRequest: repos/defunkt/exception_logger/pulls?state=all
+[20/Nov/2014 02:55:37] DEBUG [github.views:133] Checking cache
+[20/Nov/2014 02:55:37] DEBUG [github.views:137] Unknown API Request
+[20/Nov/2014 02:55:38] DEBUG [github.views:155] Saving ETag: "98f0c1b396a4e5d54f4d5fe561d54b44"
+[20/Nov/2014 02:55:38] DEBUG [github.views:168] found new data
+[20/Nov/2014 02:55:38] INFO [github.views:59] importing pull requests
+[20/Nov/2014 02:55:38] INFO [github.views:39] Getting id:36
+[20/Nov/2014 02:55:38] INFO [github.views:55] pulls url: repos/defunkt/ambition/pulls?state=all
+[20/Nov/2014 02:55:38] INFO [github.views:130] Making GitHubRequest: repos/defunkt/ambition/pulls?state=all
+[20/Nov/2014 02:55:38] DEBUG [github.views:133] Checking cache
+[20/Nov/2014 02:55:38] DEBUG [github.views:137] Unknown API Request
+[20/Nov/2014 02:55:38] DEBUG [github.views:155] Saving ETag: "d7f1a9ef9bbee7efa54d7e816aa90f96"
+[20/Nov/2014 02:55:38] DEBUG [github.views:168] found new data
+[20/Nov/2014 02:55:38] INFO [github.views:59] importing pull requests
+[20/Nov/2014 02:55:38] INFO [github.views:62] Processing Pull Number 2
+[20/Nov/2014 02:55:38] INFO [github.views:62] Processing Pull Number 1
+[20/Nov/2014 02:55:38] INFO [github.views:39] Getting id:42
+[20/Nov/2014 02:55:38] INFO [github.views:55] pulls url: repos/technoweenie/restful-authentication/pulls?state=all
+[20/Nov/2014 02:55:38] INFO [github.views:130] Making GitHubRequest: repos/technoweenie/restful-authentication/pulls?state=all
+[20/Nov/2014 02:55:38] DEBUG [github.views:133] Checking cache
+[20/Nov/2014 02:55:38] DEBUG [github.views:137] Unknown API Request
+[20/Nov/2014 02:55:39] DEBUG [github.views:155] Saving ETag: "41c2c27847108339b56044f5814915f6"
+[20/Nov/2014 02:55:39] DEBUG [github.views:168] found new data
+[20/Nov/2014 02:55:39] INFO [github.views:59] importing pull requests
+[20/Nov/2014 02:55:39] INFO [github.views:62] Processing Pull Number 30
+[20/Nov/2014 02:55:39] INFO [github.views:62] Processing Pull Number 28
+[20/Nov/2014 02:55:39] INFO [github.views:62] Processing Pull Number 26
+[20/Nov/2014 02:55:39] INFO [github.views:62] Processing Pull Number 23
+[20/Nov/2014 02:55:39] INFO [github.views:62] Processing Pull Number 20
+[20/Nov/2014 02:55:39] INFO [github.views:39] Getting id:43
+[20/Nov/2014 02:55:39] INFO [github.views:55] pulls url: repos/technoweenie/attachment_fu/pulls?state=all
+[20/Nov/2014 02:55:39] INFO [github.views:130] Making GitHubRequest: repos/technoweenie/attachment_fu/pulls?state=all
+[20/Nov/2014 02:55:39] DEBUG [github.views:133] Checking cache
+[20/Nov/2014 02:55:39] DEBUG [github.views:137] Unknown API Request
+[20/Nov/2014 02:55:39] DEBUG [github.views:155] Saving ETag: "034db59bab184a9ce390ad3723e1bfe5"
+[20/Nov/2014 02:55:39] DEBUG [github.views:168] found new data
+[20/Nov/2014 02:55:39] INFO [github.views:59] importing pull requests
+[20/Nov/2014 02:55:39] INFO [github.views:62] Processing Pull Number 52
+[20/Nov/2014 02:55:39] INFO [github.views:62] Processing Pull Number 51
+[20/Nov/2014 02:55:39] INFO [github.views:62] Processing Pull Number 50
+[20/Nov/2014 02:55:39] INFO [github.views:62] Processing Pull Number 49
+[20/Nov/2014 02:55:39] INFO [github.views:62] Processing Pull Number 47
+[20/Nov/2014 02:55:39] INFO [github.views:62] Processing Pull Number 46
+[20/Nov/2014 02:55:39] INFO [github.views:62] Processing Pull Number 45
+[20/Nov/2014 02:55:39] INFO [github.views:62] Processing Pull Number 43
+[20/Nov/2014 02:55:39] INFO [github.views:62] Processing Pull Number 42
+[20/Nov/2014 02:55:39] INFO [github.views:62] Processing Pull Number 40
+[20/Nov/2014 02:55:39] INFO [github.views:62] Processing Pull Number 38
+[20/Nov/2014 02:55:39] INFO [github.views:62] Processing Pull Number 37
+[20/Nov/2014 02:55:39] INFO [github.views:62] Processing Pull Number 36
+[20/Nov/2014 02:55:39] INFO [github.views:62] Processing Pull Number 35
+[20/Nov/2014 02:55:39] INFO [github.views:62] Processing Pull Number 30
+[20/Nov/2014 02:55:39] INFO [github.views:62] Processing Pull Number 26
+[20/Nov/2014 02:55:39] INFO [github.views:39] Getting id:47
+[20/Nov/2014 02:55:39] INFO [github.views:55] pulls url: repos/topfunky/bong/pulls?state=all
+[20/Nov/2014 02:55:39] INFO [github.views:130] Making GitHubRequest: repos/topfunky/bong/pulls?state=all
+[20/Nov/2014 02:55:39] DEBUG [github.views:133] Checking cache
+[20/Nov/2014 02:55:39] DEBUG [github.views:137] Unknown API Request
+[20/Nov/2014 02:55:40] DEBUG [github.views:155] Saving ETag: "3b0a7b4b42a741fcc071f84f825df6e7"
+[20/Nov/2014 02:55:40] DEBUG [github.views:168] found new data
+[20/Nov/2014 02:55:40] INFO [github.views:59] importing pull requests
+[20/Nov/2014 02:55:40] INFO [github.views:62] Processing Pull Number 2
+[20/Nov/2014 02:55:40] INFO [github.views:39] Getting id:48
+[20/Nov/2014 02:55:40] INFO [github.views:55] pulls url: repos/Caged/microsis/pulls?state=all
+[20/Nov/2014 02:55:40] INFO [github.views:130] Making GitHubRequest: repos/Caged/microsis/pulls?state=all
+[20/Nov/2014 02:55:40] DEBUG [github.views:133] Checking cache
+[20/Nov/2014 02:55:40] DEBUG [github.views:137] Unknown API Request
+[20/Nov/2014 02:55:40] DEBUG [github.views:155] Saving ETag: "98f0c1b396a4e5d54f4d5fe561d54b44"
+[20/Nov/2014 02:55:40] DEBUG [github.views:168] found new data
+[20/Nov/2014 02:55:40] INFO [github.views:59] importing pull requests
+[20/Nov/2014 02:55:40] INFO [github.views:39] Getting id:52
+[20/Nov/2014 02:55:40] INFO [github.views:55] pulls url: repos/anotherjesse/s3/pulls?state=all
+[20/Nov/2014 02:55:40] INFO [github.views:130] Making GitHubRequest: repos/anotherjesse/s3/pulls?state=all
+[20/Nov/2014 02:55:40] DEBUG [github.views:133] Checking cache
+[20/Nov/2014 02:55:40] DEBUG [github.views:137] Unknown API Request
+[20/Nov/2014 02:55:41] DEBUG [github.views:155] Saving ETag: "03f77c4a10bd678f0f2c190532be2792"
+[20/Nov/2014 02:55:41] DEBUG [github.views:168] found new data
+[20/Nov/2014 02:55:41] INFO [github.views:59] importing pull requests
+[20/Nov/2014 02:55:41] INFO [github.views:62] Processing Pull Number 2
+[20/Nov/2014 02:55:41] INFO [github.views:62] Processing Pull Number 1
+[20/Nov/2014 02:55:41] INFO [github.views:39] Getting id:53
+[20/Nov/2014 02:55:41] INFO [github.views:55] pulls url: repos/anotherjesse/taboo/pulls?state=all
+[20/Nov/2014 02:55:41] INFO [github.views:130] Making GitHubRequest: repos/anotherjesse/taboo/pulls?state=all
+[20/Nov/2014 02:55:41] DEBUG [github.views:133] Checking cache
+[20/Nov/2014 02:55:41] DEBUG [github.views:137] Unknown API Request
+[20/Nov/2014 02:55:41] DEBUG [github.views:155] Saving ETag: "eadb0bf35fa37a1315f5db98c1a71183"
+[20/Nov/2014 02:55:41] DEBUG [github.views:168] found new data
+[20/Nov/2014 02:55:41] INFO [github.views:59] importing pull requests
+[20/Nov/2014 02:55:41] INFO [github.views:62] Processing Pull Number 1
+[20/Nov/2014 02:55:41] INFO [github.views:39] Getting id:54
+[20/Nov/2014 02:55:41] INFO [github.views:55] pulls url: repos/anotherjesse/foxtracs/pulls?state=all
+[20/Nov/2014 02:55:41] INFO [github.views:130] Making GitHubRequest: repos/anotherjesse/foxtracs/pulls?state=all
+[20/Nov/2014 02:55:41] DEBUG [github.views:133] Checking cache
+[20/Nov/2014 02:55:41] DEBUG [github.views:137] Unknown API Request
+[20/Nov/2014 02:55:42] DEBUG [github.views:155] Saving ETag: "edca84745f1acac0218caffddf31d11e"
+[20/Nov/2014 02:55:42] DEBUG [github.views:168] found new data
+[20/Nov/2014 02:55:42] INFO [github.views:59] importing pull requests
+[20/Nov/2014 02:55:42] INFO [github.views:62] Processing Pull Number 2
+[20/Nov/2014 02:55:42] INFO [github.views:62] Processing Pull Number 1
+[20/Nov/2014 02:55:42] INFO [github.views:39] Getting id:56
+[20/Nov/2014 02:55:42] INFO [github.views:55] pulls url: repos/anotherjesse/fotomatic/pulls?state=all
+[20/Nov/2014 02:55:42] INFO [github.views:130] Making GitHubRequest: repos/anotherjesse/fotomatic/pulls?state=all
+[20/Nov/2014 02:55:42] DEBUG [github.views:133] Checking cache
+[20/Nov/2014 02:55:42] DEBUG [github.views:137] Unknown API Request
+[20/Nov/2014 02:55:42] DEBUG [github.views:155] Saving ETag: "98f0c1b396a4e5d54f4d5fe561d54b44"
+[20/Nov/2014 02:55:42] DEBUG [github.views:168] found new data
+[20/Nov/2014 02:55:42] INFO [github.views:59] importing pull requests
+[20/Nov/2014 02:55:42] INFO [github.views:39] Getting id:61
+[20/Nov/2014 02:55:42] INFO [github.views:55] pulls url: repos/mojombo/glowstick/pulls?state=all
+[20/Nov/2014 02:55:42] INFO [github.views:130] Making GitHubRequest: repos/mojombo/glowstick/pulls?state=all
+[20/Nov/2014 02:55:42] DEBUG [github.views:133] Checking cache
+[20/Nov/2014 02:55:42] DEBUG [github.views:137] Unknown API Request
+[20/Nov/2014 02:55:42] DEBUG [github.views:155] Saving ETag: "98f0c1b396a4e5d54f4d5fe561d54b44"
+[20/Nov/2014 02:55:42] DEBUG [github.views:168] found new data
+[20/Nov/2014 02:55:42] INFO [github.views:59] importing pull requests
+[20/Nov/2014 02:55:42] INFO [github.views:39] Getting id:63
+[20/Nov/2014 02:55:42] INFO [github.views:55] pulls url: repos/defunkt/starling/pulls?state=all
+[20/Nov/2014 02:55:42] INFO [github.views:130] Making GitHubRequest: repos/defunkt/starling/pulls?state=all
+[20/Nov/2014 02:55:42] DEBUG [github.views:133] Checking cache
+[20/Nov/2014 02:55:42] DEBUG [github.views:137] Unknown API Request
+[20/Nov/2014 02:55:43] DEBUG [github.views:155] Saving ETag: "98f0c1b396a4e5d54f4d5fe561d54b44"
+[20/Nov/2014 02:55:43] DEBUG [github.views:168] found new data
+[20/Nov/2014 02:55:43] INFO [github.views:59] importing pull requests
+[20/Nov/2014 02:55:43] INFO [github.views:39] Getting id:65
+[20/Nov/2014 02:55:43] INFO [github.views:55] pulls url: repos/wycats/merb-more/pulls?state=all
+[20/Nov/2014 02:55:43] INFO [github.views:130] Making GitHubRequest: repos/wycats/merb-more/pulls?state=all
+[20/Nov/2014 02:55:43] DEBUG [github.views:133] Checking cache
+[20/Nov/2014 02:55:43] DEBUG [github.views:137] Unknown API Request
+[20/Nov/2014 02:55:43] DEBUG [github.views:155] Saving ETag: "98f0c1b396a4e5d54f4d5fe561d54b44"
+[20/Nov/2014 02:55:43] DEBUG [github.views:168] found new data
+[20/Nov/2014 02:55:43] INFO [github.views:59] importing pull requests
+[20/Nov/2014 02:55:43] INFO [github.views:39] Getting id:68
+[20/Nov/2014 02:55:43] INFO [github.views:55] pulls url: repos/macournoyer/thin/pulls?state=all
+[20/Nov/2014 02:55:43] INFO [github.views:130] Making GitHubRequest: repos/macournoyer/thin/pulls?state=all
+[20/Nov/2014 02:55:43] DEBUG [github.views:133] Checking cache
+[20/Nov/2014 02:55:43] DEBUG [github.views:137] Unknown API Request
+[20/Nov/2014 02:55:44] DEBUG [github.views:155] Saving ETag: "10d0745c6dab5ce569c744966d95bba1"
+[20/Nov/2014 02:55:44] DEBUG [github.views:168] found new data
+[20/Nov/2014 02:55:44] INFO [github.views:59] importing pull requests
+[20/Nov/2014 02:55:44] INFO [github.views:62] Processing Pull Number 249
+[20/Nov/2014 02:55:44] INFO [github.views:62] Processing Pull Number 245
+[20/Nov/2014 02:55:44] INFO [github.views:62] Processing Pull Number 238
+[20/Nov/2014 02:55:44] INFO [github.views:62] Processing Pull Number 237
+[20/Nov/2014 02:55:44] INFO [github.views:62] Processing Pull Number 236
+[20/Nov/2014 02:55:44] INFO [github.views:62] Processing Pull Number 227
+[20/Nov/2014 02:55:44] INFO [github.views:62] Processing Pull Number 225
+[20/Nov/2014 02:55:44] INFO [github.views:62] Processing Pull Number 224
+[20/Nov/2014 02:55:44] INFO [github.views:62] Processing Pull Number 219
+[20/Nov/2014 02:55:44] INFO [github.views:62] Processing Pull Number 213
+[20/Nov/2014 02:55:44] INFO [github.views:62] Processing Pull Number 209
+[20/Nov/2014 02:55:44] INFO [github.views:86] Failed to Process
+[20/Nov/2014 02:55:44] INFO [github.views:87] {
+    "merge_commit_sha": "28b3333762f417f6ac66981c75cd9f8e63c6b400",
+    "number": 209,
+    "assignee": null,
+    "closed_at": "2013-12-15T19:24:17Z",
+    "statuses_url": "https://api.github.com/repos/macournoyer/thin/statuses/5a78d69cd999046b8bca12b64662717184d6ed9a",
+    "id": 10536928,
+    "title": "Fix Rakefile to prevent 'uninitialized constant CLEAN'",
+    "merged_at": "2013-12-15T19:24:17Z",
+    "state": "closed",
+    "_links": {
+        "review_comment": {
+            "href": "https://api.github.com/repos/macournoyer/thin/pulls/comments/{number}"
+        },
+        "commits": {
+            "href": "https://api.github.com/repos/macournoyer/thin/pulls/209/commits"
+        },
+        "self": {
+            "href": "https://api.github.com/repos/macournoyer/thin/pulls/209"
+        },
+        "review_comments": {
+            "href": "https://api.github.com/repos/macournoyer/thin/pulls/209/comments"
+        },
+        "html": {
+            "href": "https://github.com/macournoyer/thin/pull/209"
+        },
+        "comments": {
+            "href": "https://api.github.com/repos/macournoyer/thin/issues/209/comments"
+        },
+        "issue": {
+            "href": "https://api.github.com/repos/macournoyer/thin/issues/209"
+        },
+        "statuses": {
+            "href": "https://api.github.com/repos/macournoyer/thin/statuses/5a78d69cd999046b8bca12b64662717184d6ed9a"
+        }
+    },
+    "diff_url": "https://github.com/macournoyer/thin/pull/209.diff",
+    "issue_url": "https://api.github.com/repos/macournoyer/thin/issues/209",
+    "body": "When building on ruby-2.0.0-p353 this happens:\r\n\r\n% git clone git://github.com/macournoyer/thin.git\r\n% cd thin\r\n% rake install\r\nrake aborted!\r\nuninitialized constant CLEAN\r\ntasks/spec.rake:1:in `<top (required)>'\r\n/home/david.smyth/ruby/fail/thin/Rakefile:5:in `load'\r\n/home/david.smyth/ruby/fail/thin/Rakefile:5:in `block in <top (required)>'\r\n/home/david.smyth/ruby/fail/thin/Rakefile:5:in `each'\r\n/home/david.smyth/ruby/fail/thin/Rakefile:5:in `<top (required)>'\r\n(See full trace by running task with --trace)\r\n\r\nAdding the one line to Rakefile fixed the problem.",
+    "head": {
+        "repo": null,
+        "sha": "5a78d69cd999046b8bca12b64662717184d6ed9a",
+        "ref": "Fix-uninitialized-constant-CLEAN",
+        "user": null,
+        "label": "ghost:Fix-uninitialized-constant-CLEAN"
+    },
+    "commits_url": "https://api.github.com/repos/macournoyer/thin/pulls/209/commits",
+    "comments_url": "https://api.github.com/repos/macournoyer/thin/issues/209/comments",
+    "html_url": "https://github.com/macournoyer/thin/pull/209",
+    "updated_at": "2014-06-25T23:00:30Z",
+    "base": {
+        "repo": {
+            "issues_url": "https://api.github.com/repos/macournoyer/thin/issues{/number}",
+            "stargazers_count": 1458,
+            "forks_url": "https://api.github.com/repos/macournoyer/thin/forks",
+            "mirror_url": null,
+            "subscription_url": "https://api.github.com/repos/macournoyer/thin/subscription",
+            "notifications_url": "https://api.github.com/repos/macournoyer/thin/notifications{?since,all,participating}",
+            "collaborators_url": "https://api.github.com/repos/macournoyer/thin/collaborators{/collaborator}",
+            "updated_at": "2014-11-19T10:48:58Z",
+            "private": false,
+            "pulls_url": "https://api.github.com/repos/macournoyer/thin/pulls{/number}",
+            "issue_comment_url": "https://api.github.com/repos/macournoyer/thin/issues/comments/{number}",
+            "labels_url": "https://api.github.com/repos/macournoyer/thin/labels{/name}",
+            "has_wiki": false,
+            "full_name": "macournoyer/thin",
+            "owner": {
+                "following_url": "https://api.github.com/users/macournoyer/following{/other_user}",
+                "events_url": "https://api.github.com/users/macournoyer/events{/privacy}",
+                "organizations_url": "https://api.github.com/users/macournoyer/orgs",
+                "url": "https://api.github.com/users/macournoyer",
+                "gists_url": "https://api.github.com/users/macournoyer/gists{/gist_id}",
+                "html_url": "https://github.com/macournoyer",
+                "subscriptions_url": "https://api.github.com/users/macournoyer/subscriptions",
+                "avatar_url": "https://avatars.githubusercontent.com/u/22?v=3",
+                "repos_url": "https://api.github.com/users/macournoyer/repos",
+                "received_events_url": "https://api.github.com/users/macournoyer/received_events",
+                "gravatar_id": "",
+                "starred_url": "https://api.github.com/users/macournoyer/starred{/owner}{/repo}",
+                "site_admin": false,
+                "login": "macournoyer",
+                "type": "User",
+                "id": 22,
+                "followers_url": "https://api.github.com/users/macournoyer/followers"
+            },
+            "statuses_url": "https://api.github.com/repos/macournoyer/thin/statuses/{sha}",
+            "id": 68,
+            "keys_url": "https://api.github.com/repos/macournoyer/thin/keys{/key_id}",
+            "description": "A very fast & simple Ruby web server",
+            "tags_url": "https://api.github.com/repos/macournoyer/thin/tags",
+            "downloads_url": "https://api.github.com/repos/macournoyer/thin/downloads",
+            "assignees_url": "https://api.github.com/repos/macournoyer/thin/assignees{/user}",
+            "contents_url": "https://api.github.com/repos/macournoyer/thin/contents/{+path}",
+            "has_pages": false,
+            "git_refs_url": "https://api.github.com/repos/macournoyer/thin/git/refs{/sha}",
+            "open_issues_count": 59,
+            "clone_url": "https://github.com/macournoyer/thin.git",
+            "watchers_count": 1458,
+            "git_tags_url": "https://api.github.com/repos/macournoyer/thin/git/tags{/sha}",
+            "milestones_url": "https://api.github.com/repos/macournoyer/thin/milestones{/number}",
+            "languages_url": "https://api.github.com/repos/macournoyer/thin/languages",
+            "size": 3581,
+            "homepage": "http://code.macournoyer.com/thin/",
+            "fork": false,
+            "commits_url": "https://api.github.com/repos/macournoyer/thin/commits{/sha}",
+            "releases_url": "https://api.github.com/repos/macournoyer/thin/releases{/id}",
+            "issue_events_url": "https://api.github.com/repos/macournoyer/thin/issues/events{/number}",
+            "archive_url": "https://api.github.com/repos/macournoyer/thin/{archive_format}{/ref}",
+            "comments_url": "https://api.github.com/repos/macournoyer/thin/comments{/number}",
+            "events_url": "https://api.github.com/repos/macournoyer/thin/events",
+            "contributors_url": "https://api.github.com/repos/macournoyer/thin/contributors",
+            "html_url": "https://github.com/macournoyer/thin",
+            "forks": 210,
+            "compare_url": "https://api.github.com/repos/macournoyer/thin/compare/{base}...{head}",
+            "open_issues": 59,
+            "git_url": "git://github.com/macournoyer/thin.git",
+            "svn_url": "https://github.com/macournoyer/thin",
+            "merges_url": "https://api.github.com/repos/macournoyer/thin/merges",
+            "has_issues": true,
+            "ssh_url": "git@github.com:macournoyer/thin.git",
+            "blobs_url": "https://api.github.com/repos/macournoyer/thin/git/blobs{/sha}",
+            "git_commits_url": "https://api.github.com/repos/macournoyer/thin/git/commits{/sha}",
+            "hooks_url": "https://api.github.com/repos/macournoyer/thin/hooks",
+            "has_downloads": true,
+            "watchers": 1458,
+            "name": "thin",
+            "language": "Ruby",
+            "url": "https://api.github.com/repos/macournoyer/thin",
+            "created_at": "2008-01-19T05:39:04Z",
+            "pushed_at": "2014-10-02T00:22:21Z",
+            "forks_count": 210,
+            "default_branch": "master",
+            "teams_url": "https://api.github.com/repos/macournoyer/thin/teams",
+            "trees_url": "https://api.github.com/repos/macournoyer/thin/git/trees{/sha}",
+            "branches_url": "https://api.github.com/repos/macournoyer/thin/branches{/branch}",
+            "subscribers_url": "https://api.github.com/repos/macournoyer/thin/subscribers",
+            "stargazers_url": "https://api.github.com/repos/macournoyer/thin/stargazers"
+        },
+        "sha": "1f95aba2dabdfa8fdc43ca7b2207895cd5f6606f",
+        "ref": "master",
+        "user": {
+            "following_url": "https://api.github.com/users/macournoyer/following{/other_user}",
+            "events_url": "https://api.github.com/users/macournoyer/events{/privacy}",
+            "organizations_url": "https://api.github.com/users/macournoyer/orgs",
+            "url": "https://api.github.com/users/macournoyer",
+            "gists_url": "https://api.github.com/users/macournoyer/gists{/gist_id}",
+            "html_url": "https://github.com/macournoyer",
+            "subscriptions_url": "https://api.github.com/users/macournoyer/subscriptions",
+            "avatar_url": "https://avatars.githubusercontent.com/u/22?v=3",
+            "repos_url": "https://api.github.com/users/macournoyer/repos",
+            "received_events_url": "https://api.github.com/users/macournoyer/received_events",
+            "gravatar_id": "",
+            "starred_url": "https://api.github.com/users/macournoyer/starred{/owner}{/repo}",
+            "site_admin": false,
+            "login": "macournoyer",
+            "type": "User",
+            "id": 22,
+            "followers_url": "https://api.github.com/users/macournoyer/followers"
+        },
+        "label": "macournoyer:master"
+    },
+    "user": null,
+    "milestone": null,
+    "locked": false,
+    "url": "https://api.github.com/repos/macournoyer/thin/pulls/209",
+    "created_at": "2013-12-05T00:07:20Z",
+    "review_comments_url": "https://api.github.com/repos/macournoyer/thin/pulls/209/comments",
+    "review_comment_url": "https://api.github.com/repos/macournoyer/thin/pulls/comments/{number}",
+    "patch_url": "https://github.com/macournoyer/thin/pull/209.patch"
+}
+[20/Nov/2014 02:55:44] INFO [github.views:92] Repo Info
+[20/Nov/2014 02:55:44] DEBUG [github.views:93] Repo Object{
+    "issues_url": "https://api.github.com/repos/macournoyer/thin/issues{/number}",
+    "forks_url": "https://api.github.com/repos/macournoyer/thin/forks",
+    "subscription_url": "https://api.github.com/repos/macournoyer/thin/subscription",
+    "notifications_url": "https://api.github.com/repos/macournoyer/thin/notifications{?since,all,participating}",
+    "collaborators_url": "https://api.github.com/repos/macournoyer/thin/collaborators{/collaborator}",
+    "private": false,
+    "pulls_url": "https://api.github.com/repos/macournoyer/thin/pulls{/number}",
+    "issue_comment_url": "https://api.github.com/repos/macournoyer/thin/issues/comments/{number}",
+    "labels_url": "https://api.github.com/repos/macournoyer/thin/labels{/name}",
+    "full_name": "macournoyer/thin",
+    "owner": {
+        "following_url": "https://api.github.com/users/macournoyer/following{/other_user}",
+        "events_url": "https://api.github.com/users/macournoyer/events{/privacy}",
+        "organizations_url": "https://api.github.com/users/macournoyer/orgs",
+        "url": "https://api.github.com/users/macournoyer",
+        "gists_url": "https://api.github.com/users/macournoyer/gists{/gist_id}",
+        "html_url": "https://github.com/macournoyer",
+        "subscriptions_url": "https://api.github.com/users/macournoyer/subscriptions",
+        "avatar_url": "https://avatars.githubusercontent.com/u/22?v=3",
+        "repos_url": "https://api.github.com/users/macournoyer/repos",
+        "received_events_url": "https://api.github.com/users/macournoyer/received_events",
+        "gravatar_id": "",
+        "starred_url": "https://api.github.com/users/macournoyer/starred{/owner}{/repo}",
+        "site_admin": false,
+        "login": "macournoyer",
+        "type": "User",
+        "id": 22,
+        "followers_url": "https://api.github.com/users/macournoyer/followers"
+    },
+    "statuses_url": "https://api.github.com/repos/macournoyer/thin/statuses/{sha}",
+    "id": 68,
+    "keys_url": "https://api.github.com/repos/macournoyer/thin/keys{/key_id}",
+    "description": "A very fast & simple Ruby web server",
+    "tags_url": "https://api.github.com/repos/macournoyer/thin/tags",
+    "downloads_url": "https://api.github.com/repos/macournoyer/thin/downloads",
+    "assignees_url": "https://api.github.com/repos/macournoyer/thin/assignees{/user}",
+    "contents_url": "https://api.github.com/repos/macournoyer/thin/contents/{+path}",
+    "git_refs_url": "https://api.github.com/repos/macournoyer/thin/git/refs{/sha}",
+    "git_tags_url": "https://api.github.com/repos/macournoyer/thin/git/tags{/sha}",
+    "milestones_url": "https://api.github.com/repos/macournoyer/thin/milestones{/number}",
+    "languages_url": "https://api.github.com/repos/macournoyer/thin/languages",
+    "fork": false,
+    "commits_url": "https://api.github.com/repos/macournoyer/thin/commits{/sha}",
+    "releases_url": "https://api.github.com/repos/macournoyer/thin/releases{/id}",
+    "issue_events_url": "https://api.github.com/repos/macournoyer/thin/issues/events{/number}",
+    "archive_url": "https://api.github.com/repos/macournoyer/thin/{archive_format}{/ref}",
+    "comments_url": "https://api.github.com/repos/macournoyer/thin/comments{/number}",
+    "events_url": "https://api.github.com/repos/macournoyer/thin/events",
+    "contributors_url": "https://api.github.com/repos/macournoyer/thin/contributors",
+    "html_url": "https://github.com/macournoyer/thin",
+    "compare_url": "https://api.github.com/repos/macournoyer/thin/compare/{base}...{head}",
+    "merges_url": "https://api.github.com/repos/macournoyer/thin/merges",
+    "blobs_url": "https://api.github.com/repos/macournoyer/thin/git/blobs{/sha}",
+    "git_commits_url": "https://api.github.com/repos/macournoyer/thin/git/commits{/sha}",
+    "hooks_url": "https://api.github.com/repos/macournoyer/thin/hooks",
+    "name": "thin",
+    "url": "https://api.github.com/repos/macournoyer/thin",
+    "teams_url": "https://api.github.com/repos/macournoyer/thin/teams",
+    "trees_url": "https://api.github.com/repos/macournoyer/thin/git/trees{/sha}",
+    "branches_url": "https://api.github.com/repos/macournoyer/thin/branches{/branch}",
+    "subscribers_url": "https://api.github.com/repos/macournoyer/thin/subscribers",
+    "stargazers_url": "https://api.github.com/repos/macournoyer/thin/stargazers"
+}
+[20/Nov/2014 03:06:05] INFO [github.views:131] Making GitHubRequest: rate_limit
+[20/Nov/2014 03:06:05] DEBUG [github.views:134] Checking cache
+[20/Nov/2014 03:06:05] DEBUG [github.views:138] Unknown API Request
+[20/Nov/2014 03:06:06] DEBUG [github.views:169] found new data
+[20/Nov/2014 03:06:06] INFO [github.views:131] Making GitHubRequest: repositories?since=0
+[20/Nov/2014 03:06:06] DEBUG [github.views:134] Checking cache
+[20/Nov/2014 03:06:06] DEBUG [github.views:138] Unknown API Request
+[20/Nov/2014 03:06:07] DEBUG [github.views:156] Saving ETag: "7521b4905b06195c90edf501cdcef530"
+[20/Nov/2014 03:06:07] DEBUG [github.views:169] found new data
+[20/Nov/2014 03:06:07] INFO [github.views:39] Getting id:1
+[20/Nov/2014 03:06:07] INFO [github.views:55] pulls url: repos/mojombo/grit/pulls?state=all
+[20/Nov/2014 03:06:07] INFO [github.views:131] Making GitHubRequest: repos/mojombo/grit/pulls?state=all
+[20/Nov/2014 03:06:07] DEBUG [github.views:134] Checking cache
+[20/Nov/2014 03:06:07] DEBUG [github.views:138] Unknown API Request
+[20/Nov/2014 03:06:08] DEBUG [github.views:156] Saving ETag: "4ccc7721820da3f95809ebc5efe52b37"
+[20/Nov/2014 03:06:08] DEBUG [github.views:169] found new data
+[20/Nov/2014 03:06:08] INFO [github.views:59] importing pull requests
+[20/Nov/2014 03:06:08] INFO [github.views:62] Processing Pull Number 186
+[20/Nov/2014 03:06:08] INFO [github.views:62] Processing Pull Number 183
+[20/Nov/2014 03:06:08] INFO [github.views:62] Processing Pull Number 182
+[20/Nov/2014 03:06:08] INFO [github.views:62] Processing Pull Number 180
+[20/Nov/2014 03:06:08] INFO [github.views:62] Processing Pull Number 179
+[20/Nov/2014 03:06:08] INFO [github.views:62] Processing Pull Number 178
+[20/Nov/2014 03:06:08] INFO [github.views:62] Processing Pull Number 177
+[20/Nov/2014 03:06:08] INFO [github.views:62] Processing Pull Number 175
+[20/Nov/2014 03:06:08] INFO [github.views:62] Processing Pull Number 169
+[20/Nov/2014 03:06:08] INFO [github.views:62] Processing Pull Number 168
+[20/Nov/2014 03:06:08] INFO [github.views:62] Processing Pull Number 167
+[20/Nov/2014 03:06:08] INFO [github.views:62] Processing Pull Number 165
+[20/Nov/2014 03:06:08] INFO [github.views:62] Processing Pull Number 164
+[20/Nov/2014 03:06:08] INFO [github.views:62] Processing Pull Number 162
+[20/Nov/2014 03:06:08] INFO [github.views:62] Processing Pull Number 161
+[20/Nov/2014 03:06:08] INFO [github.views:62] Processing Pull Number 160
+[20/Nov/2014 03:06:08] INFO [github.views:62] Processing Pull Number 159
+[20/Nov/2014 03:06:08] INFO [github.views:62] Processing Pull Number 158
+[20/Nov/2014 03:06:08] INFO [github.views:62] Processing Pull Number 157
+[20/Nov/2014 03:06:08] INFO [github.views:62] Processing Pull Number 156
+[20/Nov/2014 03:06:08] INFO [github.views:62] Processing Pull Number 155
+[20/Nov/2014 03:06:08] INFO [github.views:62] Processing Pull Number 154
+[20/Nov/2014 03:06:08] INFO [github.views:62] Processing Pull Number 152
+[20/Nov/2014 03:06:08] INFO [github.views:62] Processing Pull Number 150
+[20/Nov/2014 03:06:08] INFO [github.views:62] Processing Pull Number 149
+[20/Nov/2014 03:06:08] INFO [github.views:62] Processing Pull Number 147
+[20/Nov/2014 03:06:08] INFO [github.views:62] Processing Pull Number 146
+[20/Nov/2014 03:06:08] INFO [github.views:62] Processing Pull Number 145
+[20/Nov/2014 03:06:08] INFO [github.views:62] Processing Pull Number 144
+[20/Nov/2014 03:06:08] INFO [github.views:62] Processing Pull Number 143
+[20/Nov/2014 03:06:08] INFO [github.views:39] Getting id:26
+[20/Nov/2014 03:06:08] INFO [github.views:55] pulls url: repos/wycats/merb-core/pulls?state=all
+[20/Nov/2014 03:06:08] INFO [github.views:131] Making GitHubRequest: repos/wycats/merb-core/pulls?state=all
+[20/Nov/2014 03:06:08] DEBUG [github.views:134] Checking cache
+[20/Nov/2014 03:06:08] DEBUG [github.views:138] Unknown API Request
+[20/Nov/2014 03:06:09] DEBUG [github.views:156] Saving ETag: "98f0c1b396a4e5d54f4d5fe561d54b44"
+[20/Nov/2014 03:06:09] DEBUG [github.views:169] found new data
+[20/Nov/2014 03:06:09] INFO [github.views:59] importing pull requests
+[20/Nov/2014 03:06:09] INFO [github.views:39] Getting id:27
+[20/Nov/2014 03:06:09] INFO [github.views:55] pulls url: repos/rubinius/rubinius/pulls?state=all
+[20/Nov/2014 03:06:09] INFO [github.views:131] Making GitHubRequest: repos/rubinius/rubinius/pulls?state=all
+[20/Nov/2014 03:06:09] DEBUG [github.views:134] Checking cache
+[20/Nov/2014 03:06:09] DEBUG [github.views:138] Unknown API Request
+[20/Nov/2014 03:06:10] DEBUG [github.views:156] Saving ETag: "cdbcb44237f097b67b0e99b73b8d6c94"
+[20/Nov/2014 03:06:10] DEBUG [github.views:169] found new data
+[20/Nov/2014 03:06:10] INFO [github.views:59] importing pull requests
+[20/Nov/2014 03:06:10] INFO [github.views:62] Processing Pull Number 3215
+[20/Nov/2014 03:06:10] INFO [github.views:62] Processing Pull Number 3214
+[20/Nov/2014 03:06:10] INFO [github.views:62] Processing Pull Number 3209
+[20/Nov/2014 03:06:10] INFO [github.views:62] Processing Pull Number 3203
+[20/Nov/2014 03:06:10] INFO [github.views:62] Processing Pull Number 3200
+[20/Nov/2014 03:06:10] INFO [github.views:62] Processing Pull Number 3199
+[20/Nov/2014 03:06:10] INFO [github.views:62] Processing Pull Number 3198
+[20/Nov/2014 03:06:10] INFO [github.views:62] Processing Pull Number 3196
+[20/Nov/2014 03:06:10] INFO [github.views:62] Processing Pull Number 3195
+[20/Nov/2014 03:06:10] INFO [github.views:62] Processing Pull Number 3194
+[20/Nov/2014 03:06:10] INFO [github.views:62] Processing Pull Number 3193
+[20/Nov/2014 03:06:10] INFO [github.views:62] Processing Pull Number 3192
+[20/Nov/2014 03:06:10] INFO [github.views:62] Processing Pull Number 3191
+[20/Nov/2014 03:06:10] INFO [github.views:62] Processing Pull Number 3190
+[20/Nov/2014 03:06:10] INFO [github.views:62] Processing Pull Number 3188
+[20/Nov/2014 03:06:10] INFO [github.views:62] Processing Pull Number 3187
+[20/Nov/2014 03:06:10] INFO [github.views:62] Processing Pull Number 3186
+[20/Nov/2014 03:06:10] INFO [github.views:62] Processing Pull Number 3185
+[20/Nov/2014 03:06:10] INFO [github.views:62] Processing Pull Number 3183
+[20/Nov/2014 03:06:10] INFO [github.views:62] Processing Pull Number 3182
+[20/Nov/2014 03:06:10] INFO [github.views:62] Processing Pull Number 3178
+[20/Nov/2014 03:06:10] INFO [github.views:62] Processing Pull Number 3175
+[20/Nov/2014 03:06:10] INFO [github.views:62] Processing Pull Number 3167
+[20/Nov/2014 03:06:10] INFO [github.views:62] Processing Pull Number 3161
+[20/Nov/2014 03:06:10] INFO [github.views:62] Processing Pull Number 3158
+[20/Nov/2014 03:06:10] INFO [github.views:62] Processing Pull Number 3157
+[20/Nov/2014 03:06:10] INFO [github.views:62] Processing Pull Number 3154
+[20/Nov/2014 03:06:10] INFO [github.views:62] Processing Pull Number 3150
+[20/Nov/2014 03:06:10] INFO [github.views:62] Processing Pull Number 3144
+[20/Nov/2014 03:06:10] INFO [github.views:62] Processing Pull Number 3143
+[20/Nov/2014 03:06:10] INFO [github.views:39] Getting id:28
+[20/Nov/2014 03:06:10] INFO [github.views:55] pulls url: repos/mojombo/god/pulls?state=all
+[20/Nov/2014 03:06:10] INFO [github.views:131] Making GitHubRequest: repos/mojombo/god/pulls?state=all
+[20/Nov/2014 03:06:10] DEBUG [github.views:134] Checking cache
+[20/Nov/2014 03:06:10] DEBUG [github.views:138] Unknown API Request
+[20/Nov/2014 03:06:11] DEBUG [github.views:156] Saving ETag: "de0ad114ff012d659198d1460fe67d17"
+[20/Nov/2014 03:06:11] DEBUG [github.views:169] found new data
+[20/Nov/2014 03:06:11] INFO [github.views:59] importing pull requests
+[20/Nov/2014 03:06:11] INFO [github.views:62] Processing Pull Number 196
+[20/Nov/2014 03:06:11] INFO [github.views:62] Processing Pull Number 192
+[20/Nov/2014 03:06:11] INFO [github.views:62] Processing Pull Number 191
+[20/Nov/2014 03:06:11] INFO [github.views:62] Processing Pull Number 179
+[20/Nov/2014 03:06:11] INFO [github.views:62] Processing Pull Number 178
+[20/Nov/2014 03:06:11] INFO [github.views:62] Processing Pull Number 176
+[20/Nov/2014 03:06:11] INFO [github.views:62] Processing Pull Number 174
+[20/Nov/2014 03:06:11] INFO [github.views:62] Processing Pull Number 173
+[20/Nov/2014 03:06:11] INFO [github.views:62] Processing Pull Number 172
+[20/Nov/2014 03:06:11] INFO [github.views:62] Processing Pull Number 171
+[20/Nov/2014 03:06:11] INFO [github.views:62] Processing Pull Number 170
+[20/Nov/2014 03:06:11] INFO [github.views:62] Processing Pull Number 169
+[20/Nov/2014 03:06:11] INFO [github.views:62] Processing Pull Number 168
+[20/Nov/2014 03:06:11] INFO [github.views:62] Processing Pull Number 164
+[20/Nov/2014 03:06:11] INFO [github.views:62] Processing Pull Number 162
+[20/Nov/2014 03:06:11] INFO [github.views:62] Processing Pull Number 160
+[20/Nov/2014 03:06:11] INFO [github.views:62] Processing Pull Number 159
+[20/Nov/2014 03:06:11] INFO [github.views:62] Processing Pull Number 157
+[20/Nov/2014 03:06:11] INFO [github.views:62] Processing Pull Number 153
+[20/Nov/2014 03:06:11] INFO [github.views:62] Processing Pull Number 150
+[20/Nov/2014 03:06:11] INFO [github.views:62] Processing Pull Number 148
+[20/Nov/2014 03:06:11] INFO [github.views:62] Processing Pull Number 146
+[20/Nov/2014 03:06:11] INFO [github.views:62] Processing Pull Number 144
+[20/Nov/2014 03:06:11] INFO [github.views:62] Processing Pull Number 142
+[20/Nov/2014 03:06:11] INFO [github.views:62] Processing Pull Number 141
+[20/Nov/2014 03:06:11] INFO [github.views:62] Processing Pull Number 139
+[20/Nov/2014 03:06:11] INFO [github.views:62] Processing Pull Number 138
+[20/Nov/2014 03:06:11] INFO [github.views:62] Processing Pull Number 137
+[20/Nov/2014 03:06:11] INFO [github.views:62] Processing Pull Number 136
+[20/Nov/2014 03:06:11] INFO [github.views:62] Processing Pull Number 134
+[20/Nov/2014 03:06:11] INFO [github.views:39] Getting id:29
+[20/Nov/2014 03:06:11] INFO [github.views:55] pulls url: repos/vanpelt/jsawesome/pulls?state=all
+[20/Nov/2014 03:06:11] INFO [github.views:131] Making GitHubRequest: repos/vanpelt/jsawesome/pulls?state=all
+[20/Nov/2014 03:06:11] DEBUG [github.views:134] Checking cache
+[20/Nov/2014 03:06:11] DEBUG [github.views:138] Unknown API Request
+[20/Nov/2014 03:06:11] DEBUG [github.views:156] Saving ETag: "98f0c1b396a4e5d54f4d5fe561d54b44"
+[20/Nov/2014 03:06:11] DEBUG [github.views:169] found new data
+[20/Nov/2014 03:06:11] INFO [github.views:59] importing pull requests
+[20/Nov/2014 03:06:11] INFO [github.views:39] Getting id:31
+[20/Nov/2014 03:06:11] INFO [github.views:55] pulls url: repos/wycats/jspec/pulls?state=all
+[20/Nov/2014 03:06:11] INFO [github.views:131] Making GitHubRequest: repos/wycats/jspec/pulls?state=all
+[20/Nov/2014 03:06:11] DEBUG [github.views:134] Checking cache
+[20/Nov/2014 03:06:11] DEBUG [github.views:138] Unknown API Request
+[20/Nov/2014 03:06:12] DEBUG [github.views:156] Saving ETag: "98f0c1b396a4e5d54f4d5fe561d54b44"
+[20/Nov/2014 03:06:12] DEBUG [github.views:169] found new data
+[20/Nov/2014 03:06:12] INFO [github.views:59] importing pull requests
+[20/Nov/2014 03:06:12] INFO [github.views:39] Getting id:35
+[20/Nov/2014 03:06:12] INFO [github.views:55] pulls url: repos/defunkt/exception_logger/pulls?state=all
+[20/Nov/2014 03:06:12] INFO [github.views:131] Making GitHubRequest: repos/defunkt/exception_logger/pulls?state=all
+[20/Nov/2014 03:06:12] DEBUG [github.views:134] Checking cache
+[20/Nov/2014 03:06:12] DEBUG [github.views:138] Unknown API Request
+[20/Nov/2014 03:06:12] DEBUG [github.views:156] Saving ETag: "98f0c1b396a4e5d54f4d5fe561d54b44"
+[20/Nov/2014 03:06:12] DEBUG [github.views:169] found new data
+[20/Nov/2014 03:06:12] INFO [github.views:59] importing pull requests
+[20/Nov/2014 03:06:12] INFO [github.views:39] Getting id:36
+[20/Nov/2014 03:06:12] INFO [github.views:55] pulls url: repos/defunkt/ambition/pulls?state=all
+[20/Nov/2014 03:06:13] INFO [github.views:39] Getting id:42
