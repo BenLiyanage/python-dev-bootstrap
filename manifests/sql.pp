@@ -6,7 +6,7 @@ class sql {
   }
 
   package {
-    ["mysql-client", "mysql-server", "libmysqlclient-dev", "redis-server", "postgresql", "postgresql-client"]: 
+    ["mysql-client-core-5.5","mysql-client", "mysql-server", "libmysqlclient-dev", "redis-server", "postgresql", "postgresql-client"]: 
       ensure => installed, 
       require => Exec['apt-update']
   }
@@ -23,7 +23,7 @@ class sql {
     require => Package["redis-server"],  
   }
 
-  service { "postgresql-8.4":
+  service { "postgresql":
     ensure    => running,
     enable    => true,
     require => Package["postgresql"],  

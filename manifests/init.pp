@@ -218,8 +218,8 @@ include networking
 #include gui
 #include keepuptodate
 include web
-#include sql
-include mongodb
+include sql
+#include mongodb
 
 #include science
 #include pythononwheels
