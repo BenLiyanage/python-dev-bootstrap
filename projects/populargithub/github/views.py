@@ -30,6 +30,12 @@ def Graph(request):
     template = loader.get_template('github/graph.html')
     context = RequestContext(request, {'repoSet': repoSet })
     return HttpResponse(template.render(context))
+
+def GetStats(request):
+    fullName = request.GET.get('full_name')
+    ProcessRepo()
+    myRepo = Repo.object.get(full_name = fullName)
+    return 
     
 def populate(request):
     output = BulkImport()
