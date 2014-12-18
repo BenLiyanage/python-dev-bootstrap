@@ -1,10 +1,15 @@
 function formatGitHubDate(gitHubDate)
 {
     resetDate = new Date(gitHubDate * 1000)
+    minutes = resetDate.getMinutes()
+    if (minutes < 10)
+    {
+        minutes = "0" + minutes;
+    }
     dateString = 
         resetDate.getMonth() + '/' + resetDate.getDate() + '/' + resetDate.getFullYear() 
         + ' ' + 
-        resetDate.getHours() % 12 + ':' + resetDate.getMinutes()
+        resetDate.getHours() % 12 + ':' + minutes
     return dateString
 }
 

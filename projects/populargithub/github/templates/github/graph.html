@@ -1,32 +1,30 @@
-<html ng-app="githubApp">{% load staticfiles %}
-  <head>
-    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
-    <script src="{% static "github/js/compareController.js" %}"></script>
-  </head>
-  <body ng-controller="searchCtrl">
-    <h1>Search for GitHub Repos</h1>
-    <input type="text" auto-complete placeholder="search for repos to compare" size="30" />
-    <p>There are <strong>{%verbatim%} {{rateLimitRemaining}} {% endverbatim %}</strong> searches left on this IP, due to the GitHub API limit.</p>
-    <p ng-show="rateLimit!=rateLimitRemaining">This will reset to <strong>{%verbatim%} {{rateLimit}} {% endverbatim %}</strong> at <strong>{%verbatim%} {{rateLimitReset}} {%endverbatim%}</strong></p>
-    
-    <div ng-show="selectedRepo.length!=0">
-        <h2>Selected for Comparison</h2>
-        <table>
+{% extends "github/__base.html" %}
+
+{% block content %}
+<h1 class="page-header">Compare Repositories</h1>
+<div>We've queued up a couple repositories for you to compare.  Feel free to adjust the list below.</div>
+<div id="chart_div" style="width: 900px; height: 200px;"></div>
+
+<h2 class="sub-header">GitHub Repositories to Compare</h2>
+<input type="text" auto-complete placeholder="search for repos to compare" size="30" />
+<span>There are <strong>{%verbatim%} {{rateLimitRemaining}} {% endverbatim %}</strong> searches left on this IP, due to the GitHub API limit. <span ng-show="rateLimit!=rateLimitRemaining">This will reset to <strong>{%verbatim%} {{rateLimit}} {% endverbatim %}</strong> at <strong>{%verbatim%} {{rateLimitReset}} {%endverbatim%}</strong></span></span>
+
+<div ng-show="selectedRepo.length!=0" class="table-responsive">
+    <table class="table table-striped">
+        <thead>
             <tr>
-                <th>Repo Name</td>
-                <th>Proccessed?</td>
-                <th>&nbsp;</td>
+                <th>Repo Name</th>
+                <th>Proccessed?</th>
+                <th>&nbsp;</th>
             </tr>
+        </thead>
+        <tbody>
             <tr ng-repeat="repo in selectedRepo">
                 <td>{%verbatim%} {{ repo.full_name }} {% endverbatim %}</td>
                 <td>?</td>
                 <td><a href="javascript: return false;" ng-click="remove(repo)">Remove</a></td>
-            <tr>
-        </table>
-    </div>
-    <div id="chart_div" style="width: 900px; height: 500px;"></div>
-  </body>
-</html>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}
