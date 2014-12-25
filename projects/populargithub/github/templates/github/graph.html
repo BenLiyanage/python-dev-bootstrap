@@ -3,7 +3,10 @@
 {% block content %}
 <h1 class="page-header">Compare Repositories</h1>
 <div>We've queued up a couple repositories for you to compare.  Feel free to adjust the list below.</div>
-<div id="chart_div" style="width: 900px; height: 200px;"></div>
+<div class="row">
+    <div id="chart_MergesPerMonth" class="col-md-6" style="height:200px"></div>
+    <div id="chart_IssueReopenRate" class="col-md-6" style="height:200px"></div>
+</div>
 
 <h2 class="sub-header">GitHub Repositories to Compare</h2>
 <input type="text" auto-complete placeholder="search for repos to compare" size="30" />
@@ -27,4 +30,30 @@
         </tbody>
     </table>
 </div>
+<script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Repo1', 'Repo2'],
+          ['2004',  1000,      400],
+          ['2005',  1170,      460],
+          ['2006',  660,       1120],
+          ['2007',  1030,      540]
+        ]);
+        json = $.ajax({url:'/github/comparedata', dataType:'json', async: false})
+        data = new google.visualization.DataTable(json.responseText);
+        
+        var mergesOptions = {
+          title: 'Code Merges Per Month',
+          chartArea: {left:0, width:'70%'}
+        };
+
+        var chart_MergesPerMonth = new google.visualization.LineChart(document.getElementById('chart_MergesPerMonth'));
+        var chart_IssueReopenRate = new google.visualization.LineChart(document.getElementById('chart_IssueReopenRate'));
+
+        chart_MergesPerMonth.draw(data, mergesOptions);
+        chart_IssueReopenRate.draw(data, {title: 'Issue Reopen Rate'});
+      }
+    </script>
 {% endblock %}
