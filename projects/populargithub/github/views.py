@@ -33,10 +33,11 @@ def Graph(request):
 
 def CompareData(request):
     #TODO: Replace with dynamic values
-    repo_ids = [364,360,322]
+    # need to be ordered from low to high
+    repo_ids = [322,364]
     
     #Initialize our JSON Object
-    myJson = {'cols': [{'label':'Month','type':'string'}], 'rows':[{'c':[{'v':'2004'},{'v':1000},{'v':400}]}]}
+    myJson = {'cols': [{'label':'Month','type':'string'}], 'rows':[]}
     
     ### Populate Columns
     
@@ -59,48 +60,67 @@ def CompareData(request):
         .values('repo_id','created_year', 'created_month') \
         .annotate(created_count=Count('repo_id')) \
         .order_by('created_year','created_month','repo_id')
+
+    log.info(repoSummary.query)
     
-    nextRepoToWrite=1
     numberOfRepos = len(repo_ids)
-    nextRepoIndex = 0
-    nextRepo = repoSummary[0]
-    myRow = None
+    nextRepoToWrite = 0
+    #initialize the first row
+    myRow = {'c':[{'v':str(currentDate.year) + '-' + str(currentDate.month)}]}
     
-    # this while loop is bad and should be changed to a for loop over the query set
-    while currentDate < today:
-        if nextRepoIndex >= len(repoSummary):
-            break
+    log.info(numberOfRepos)
+    
+    for repo in repoSummary:
+        # check if the current repo is the right month
+        log.info(repo)
         
-        if nextRepo is None:
-            nextRepo = repoSummary[nextRepoIndex]
-        #prime a row array
-        if not myRow:
-            myRow = {'c':[{'v':str(currentDate.year) + '-' + str(currentDate.month)}]}
+        if currentDate.month != repo['created_month'] or currentDate.year != repo['created_year']:
+            log.info("repo date: {0}-{1}".format(repo['created_year'], repo['created_month']))
+            # add blank rows until we've reached the repo's time frame
+            while currentDate.month != repo['created_month'] or currentDate.year != repo['created_year']:
+                # write our current row, we have a new time row to deal with.
+                
+                # pad out the columns with 0s otherwise the graph looks funky
+                while nextRepoToWrite < numberOfRepos:
+                    myRow['c'].append({'v':0})
+                    nextRepoToWrite+=1
+                
+                # reset the column filter
+                nextRepoToWrite = 0
+            
+                # note: this should write the current row first, and then leave us with a new empty row by the time the loop is finished.
+                log.info(myRow)
+                myJson['rows'].append(myRow)
+                
+                # set up a row of data
+                log.info("setting up new row of data")
+                log.info("current date: {0}-{1}".format(currentDate.year, currentDate.month))
+                currentDate = currentDate.replace(month=(currentDate.month) % 12 + 1, year=currentDate.year + currentDate.month / 12)
+                month = str(currentDate.month)
+                if (currentDate.month < 10):
+                    month = "0" + month
+                myRow = {'c':[{'v':str(currentDate.year) + '-' + month}]}
+            
+            
+        # check if it's time to write the repos, or if we skipped one
+    
+        #no data for this column, pad with 0s
+        log.info(repo_ids)
+        while repo_ids[nextRepoToWrite] != repo['repo_id']:
+            log.info("skipping column {0}".format(nextRepoToWrite))
+            myRow['c'].append({'v':0})
+            nextRepoToWrite+=1
+            
+        #write our column
+        log.info("writing column {0}".format(nextRepoToWrite))
+        myRow['c'].append({'v':repo['created_count']})
+    
+        #increment column counter
+        nextRepoToWrite = nextRepoToWrite + 1
+            
+    # append the last row of data
+    myJson['rows'].append(myRow)
         
-        #check if the current repo is in the right year
-        if currentDate.month == nextRepo['created_month'] and currentDate.year == nextRepo['created_year']:
-            #check if its time to write the current repo's column
-            if repo_ids[nextRepoToWrite] == nextRepo['repo_id']:
-                #write the count
-                myRow['c'].append({'v':nextRepo['created_count']})
-                #reset the repo so we grab another
-                nextRepoIndex = nextRepoIndex+1
-                nextRepo = None
-            else:
-                #write 0
-                myRow['c'].append({'v':0})
-            
-            #increment nextRepoToWrite
-            nextRepoToWrite = nextRepoToWrite + 1 % numberOfRepos -1
-        else:
-            #append current row and start a new one
-            
-            currentDate = currentDate.replace(month=(currentDate.month+1) % 12, year=currentDate.year + (currentDate.month+1) % 13)
-            myJson['rows'].append(myRow)
-            myRow = None
-            continue
-   
-    #myJson['rows'].append({'c':[{'v':'2008'},{'v':500},{'v':400},{'v':1000}]})
     return HttpResponse(json.dumps(myJson))
 
 def GetStats(request):

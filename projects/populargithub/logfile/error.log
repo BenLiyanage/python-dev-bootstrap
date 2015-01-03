@@ -1,8 +1,622 @@
-[24/Dec/2014 23:54:10] INFO [github.views:65] 22
-[24/Dec/2014 23:54:35] INFO [github.views:66] 22
-[24/Dec/2014 23:58:30] INFO [github.views:66] 22
-[25/Dec/2014 00:27:32] INFO [github.views:67] 22
-[25/Dec/2014 00:28:14] INFO [github.views:68] 22
-[25/Dec/2014 00:28:25] INFO [github.views:68] 22
-[25/Dec/2014 00:30:15] INFO [github.views:68] 22
-[25/Dec/2014 00:30:37] INFO [github.views:69] 22
+[03/Jan/2015 00:45:07] INFO [github.views:64] SELECT (YEAR(created_at)) AS `created_year`, (MONTH(created_at)) AS `created_month`, `github_pullrequest`.`repo_id`, COUNT(`github_pullrequest`.`repo_id`) AS `created_count` FROM `github_pullrequest` WHERE `github_pullrequest`.`repo_id` IN (322, 364) GROUP BY `github_pullrequest`.`repo_id`, (YEAR(created_at)), (MONTH(created_at)) ORDER BY `created_year` ASC, `created_month` ASC, `github_pullrequest`.`repo_id` ASC
+[03/Jan/2015 00:45:07] INFO [github.views:73] {'created_year': 2011L, 'created_count': 1, 'created_month': 6L, 'repo_id': 322L}
+[03/Jan/2015 00:45:07] INFO [github.views:103] [322, 364]
+[03/Jan/2015 00:45:07] INFO [github.views:110] writing column 0
+[03/Jan/2015 00:45:07] INFO [github.views:73] {'created_year': 2011L, 'created_count': 1, 'created_month': 6L, 'repo_id': 364L}
+[03/Jan/2015 00:45:07] INFO [github.views:103] [322, 364]
+[03/Jan/2015 00:45:07] INFO [github.views:105] skipping column 0
+[03/Jan/2015 00:45:07] INFO [github.views:110] writing column 1
+[03/Jan/2015 00:45:07] INFO [github.views:73] {'created_year': 2011L, 'created_count': 1, 'created_month': 7L, 'repo_id': 322L}
+[03/Jan/2015 00:45:07] INFO [github.views:76] repo date: 2011-7
+[03/Jan/2015 00:45:07] INFO [github.views:90] {'c': [{'v': '2011-6'}, {'v': 1}, {'v': 0}, {'v': 1}, {'v': 0}]}
+[03/Jan/2015 00:45:07] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:07] INFO [github.views:95] current date: 2011-6
+[03/Jan/2015 00:45:07] INFO [github.views:103] [322, 364]
+[03/Jan/2015 00:45:07] INFO [github.views:110] writing column 0
+[03/Jan/2015 00:45:07] INFO [github.views:73] {'created_year': 2011L, 'created_count': 3, 'created_month': 9L, 'repo_id': 322L}
+[03/Jan/2015 00:45:07] INFO [github.views:76] repo date: 2011-9
+[03/Jan/2015 00:45:07] INFO [github.views:90] {'c': [{'v': '2011-7'}, {'v': 1}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:07] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:07] INFO [github.views:95] current date: 2011-7
+[03/Jan/2015 00:45:07] INFO [github.views:90] {'c': [{'v': '2011-8'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:07] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:07] INFO [github.views:95] current date: 2011-8
+[03/Jan/2015 00:45:07] INFO [github.views:103] [322, 364]
+[03/Jan/2015 00:45:07] INFO [github.views:110] writing column 0
+[03/Jan/2015 00:45:08] INFO [github.views:73] {'created_year': 2011L, 'created_count': 1, 'created_month': 10L, 'repo_id': 364L}
+[03/Jan/2015 00:45:08] INFO [github.views:76] repo date: 2011-10
+[03/Jan/2015 00:45:08] INFO [github.views:90] {'c': [{'v': '2011-9'}, {'v': 3}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:08] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:08] INFO [github.views:95] current date: 2011-9
+[03/Jan/2015 00:45:08] INFO [github.views:103] [322, 364]
+[03/Jan/2015 00:45:08] INFO [github.views:105] skipping column 0
+[03/Jan/2015 00:45:08] INFO [github.views:110] writing column 1
+[03/Jan/2015 00:45:08] INFO [github.views:73] {'created_year': 2012L, 'created_count': 1, 'created_month': 2L, 'repo_id': 322L}
+[03/Jan/2015 00:45:08] INFO [github.views:76] repo date: 2012-2
+[03/Jan/2015 00:45:08] INFO [github.views:90] {'c': [{'v': '2011-10'}, {'v': 0}, {'v': 1}, {'v': 0}]}
+[03/Jan/2015 00:45:08] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:08] INFO [github.views:95] current date: 2011-10
+[03/Jan/2015 00:45:08] INFO [github.views:90] {'c': [{'v': '2011-11'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:08] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:08] INFO [github.views:95] current date: 2011-11
+[03/Jan/2015 00:45:08] INFO [github.views:90] {'c': [{'v': '2011-12'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:08] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:08] INFO [github.views:95] current date: 2011-12
+[03/Jan/2015 00:45:08] INFO [github.views:90] {'c': [{'v': '2012-1'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:08] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:08] INFO [github.views:95] current date: 2012-1
+[03/Jan/2015 00:45:08] INFO [github.views:103] [322, 364]
+[03/Jan/2015 00:45:08] INFO [github.views:110] writing column 0
+[03/Jan/2015 00:45:08] INFO [github.views:73] {'created_year': 2012L, 'created_count': 2, 'created_month': 4L, 'repo_id': 322L}
+[03/Jan/2015 00:45:08] INFO [github.views:76] repo date: 2012-4
+[03/Jan/2015 00:45:08] INFO [github.views:90] {'c': [{'v': '2012-2'}, {'v': 1}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:08] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:08] INFO [github.views:95] current date: 2012-2
+[03/Jan/2015 00:45:08] INFO [github.views:90] {'c': [{'v': '2012-3'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:08] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:08] INFO [github.views:95] current date: 2012-3
+[03/Jan/2015 00:45:08] INFO [github.views:103] [322, 364]
+[03/Jan/2015 00:45:08] INFO [github.views:110] writing column 0
+[03/Jan/2015 00:45:08] INFO [github.views:73] {'created_year': 2012L, 'created_count': 1, 'created_month': 4L, 'repo_id': 364L}
+[03/Jan/2015 00:45:08] INFO [github.views:103] [322, 364]
+[03/Jan/2015 00:45:08] INFO [github.views:105] skipping column 0
+[03/Jan/2015 00:45:08] INFO [github.views:110] writing column 1
+[03/Jan/2015 00:45:08] INFO [github.views:73] {'created_year': 2012L, 'created_count': 1, 'created_month': 5L, 'repo_id': 322L}
+[03/Jan/2015 00:45:08] INFO [github.views:76] repo date: 2012-5
+[03/Jan/2015 00:45:08] INFO [github.views:90] {'c': [{'v': '2012-4'}, {'v': 2}, {'v': 0}, {'v': 1}, {'v': 0}]}
+[03/Jan/2015 00:45:08] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:08] INFO [github.views:95] current date: 2012-4
+[03/Jan/2015 00:45:08] INFO [github.views:103] [322, 364]
+[03/Jan/2015 00:45:08] INFO [github.views:110] writing column 0
+[03/Jan/2015 00:45:08] INFO [github.views:73] {'created_year': 2012L, 'created_count': 1, 'created_month': 7L, 'repo_id': 322L}
+[03/Jan/2015 00:45:08] INFO [github.views:76] repo date: 2012-7
+[03/Jan/2015 00:45:08] INFO [github.views:90] {'c': [{'v': '2012-5'}, {'v': 1}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:08] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:08] INFO [github.views:95] current date: 2012-5
+[03/Jan/2015 00:45:08] INFO [github.views:90] {'c': [{'v': '2012-6'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:08] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:08] INFO [github.views:95] current date: 2012-6
+[03/Jan/2015 00:45:08] INFO [github.views:103] [322, 364]
+[03/Jan/2015 00:45:08] INFO [github.views:110] writing column 0
+[03/Jan/2015 00:45:08] INFO [github.views:73] {'created_year': 2012L, 'created_count': 1, 'created_month': 8L, 'repo_id': 364L}
+[03/Jan/2015 00:45:08] INFO [github.views:76] repo date: 2012-8
+[03/Jan/2015 00:45:08] INFO [github.views:90] {'c': [{'v': '2012-7'}, {'v': 1}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:08] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:08] INFO [github.views:95] current date: 2012-7
+[03/Jan/2015 00:45:08] INFO [github.views:103] [322, 364]
+[03/Jan/2015 00:45:08] INFO [github.views:105] skipping column 0
+[03/Jan/2015 00:45:08] INFO [github.views:110] writing column 1
+[03/Jan/2015 00:45:08] INFO [github.views:73] {'created_year': 2013L, 'created_count': 1, 'created_month': 3L, 'repo_id': 322L}
+[03/Jan/2015 00:45:08] INFO [github.views:76] repo date: 2013-3
+[03/Jan/2015 00:45:08] INFO [github.views:90] {'c': [{'v': '2012-8'}, {'v': 0}, {'v': 1}, {'v': 0}]}
+[03/Jan/2015 00:45:08] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:08] INFO [github.views:95] current date: 2012-8
+[03/Jan/2015 00:45:08] INFO [github.views:90] {'c': [{'v': '2012-9'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:08] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:08] INFO [github.views:95] current date: 2012-9
+[03/Jan/2015 00:45:08] INFO [github.views:90] {'c': [{'v': '2012-10'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:08] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:08] INFO [github.views:95] current date: 2012-10
+[03/Jan/2015 00:45:08] INFO [github.views:90] {'c': [{'v': '2012-11'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:08] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:08] INFO [github.views:95] current date: 2012-11
+[03/Jan/2015 00:45:08] INFO [github.views:90] {'c': [{'v': '2012-12'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:08] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:08] INFO [github.views:95] current date: 2012-12
+[03/Jan/2015 00:45:08] INFO [github.views:90] {'c': [{'v': '2013-1'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:08] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:08] INFO [github.views:95] current date: 2013-1
+[03/Jan/2015 00:45:08] INFO [github.views:90] {'c': [{'v': '2013-2'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:08] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:08] INFO [github.views:95] current date: 2013-2
+[03/Jan/2015 00:45:08] INFO [github.views:103] [322, 364]
+[03/Jan/2015 00:45:08] INFO [github.views:110] writing column 0
+[03/Jan/2015 00:45:08] INFO [github.views:73] {'created_year': 2013L, 'created_count': 4, 'created_month': 4L, 'repo_id': 322L}
+[03/Jan/2015 00:45:08] INFO [github.views:76] repo date: 2013-4
+[03/Jan/2015 00:45:08] INFO [github.views:90] {'c': [{'v': '2013-3'}, {'v': 1}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:08] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:08] INFO [github.views:95] current date: 2013-3
+[03/Jan/2015 00:45:08] INFO [github.views:103] [322, 364]
+[03/Jan/2015 00:45:08] INFO [github.views:110] writing column 0
+[03/Jan/2015 00:45:08] INFO [github.views:73] {'created_year': 2014L, 'created_count': 1, 'created_month': 2L, 'repo_id': 322L}
+[03/Jan/2015 00:45:08] INFO [github.views:76] repo date: 2014-2
+[03/Jan/2015 00:45:08] INFO [github.views:90] {'c': [{'v': '2013-4'}, {'v': 4}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:08] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:08] INFO [github.views:95] current date: 2013-4
+[03/Jan/2015 00:45:08] INFO [github.views:90] {'c': [{'v': '2013-5'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:08] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:08] INFO [github.views:95] current date: 2013-5
+[03/Jan/2015 00:45:08] INFO [github.views:90] {'c': [{'v': '2013-6'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:08] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:08] INFO [github.views:95] current date: 2013-6
+[03/Jan/2015 00:45:08] INFO [github.views:90] {'c': [{'v': '2013-7'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:08] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:08] INFO [github.views:95] current date: 2013-7
+[03/Jan/2015 00:45:08] INFO [github.views:90] {'c': [{'v': '2013-8'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:08] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:08] INFO [github.views:95] current date: 2013-8
+[03/Jan/2015 00:45:08] INFO [github.views:90] {'c': [{'v': '2013-9'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:08] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:08] INFO [github.views:95] current date: 2013-9
+[03/Jan/2015 00:45:08] INFO [github.views:90] {'c': [{'v': '2013-10'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:08] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:08] INFO [github.views:95] current date: 2013-10
+[03/Jan/2015 00:45:08] INFO [github.views:90] {'c': [{'v': '2013-11'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:08] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:08] INFO [github.views:95] current date: 2013-11
+[03/Jan/2015 00:45:08] INFO [github.views:90] {'c': [{'v': '2013-12'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:08] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:08] INFO [github.views:95] current date: 2013-12
+[03/Jan/2015 00:45:08] INFO [github.views:90] {'c': [{'v': '2014-1'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:08] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:08] INFO [github.views:95] current date: 2014-1
+[03/Jan/2015 00:45:08] INFO [github.views:103] [322, 364]
+[03/Jan/2015 00:45:08] INFO [github.views:110] writing column 0
+[03/Jan/2015 00:45:08] INFO [github.views:73] {'created_year': 2014L, 'created_count': 1, 'created_month': 4L, 'repo_id': 364L}
+[03/Jan/2015 00:45:08] INFO [github.views:76] repo date: 2014-4
+[03/Jan/2015 00:45:08] INFO [github.views:90] {'c': [{'v': '2014-2'}, {'v': 1}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:08] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:08] INFO [github.views:95] current date: 2014-2
+[03/Jan/2015 00:45:08] INFO [github.views:90] {'c': [{'v': '2014-3'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:08] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:08] INFO [github.views:95] current date: 2014-3
+[03/Jan/2015 00:45:08] INFO [github.views:103] [322, 364]
+[03/Jan/2015 00:45:08] INFO [github.views:105] skipping column 0
+[03/Jan/2015 00:45:08] INFO [github.views:110] writing column 1
+[03/Jan/2015 00:45:08] INFO [github.views:73] {'created_year': 2014L, 'created_count': 3, 'created_month': 5L, 'repo_id': 322L}
+[03/Jan/2015 00:45:08] INFO [github.views:76] repo date: 2014-5
+[03/Jan/2015 00:45:08] INFO [github.views:90] {'c': [{'v': '2014-4'}, {'v': 0}, {'v': 1}, {'v': 0}]}
+[03/Jan/2015 00:45:08] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:08] INFO [github.views:95] current date: 2014-4
+[03/Jan/2015 00:45:08] INFO [github.views:103] [322, 364]
+[03/Jan/2015 00:45:08] INFO [github.views:110] writing column 0
+[03/Jan/2015 00:45:08] INFO [github.views:73] {'created_year': 2014L, 'created_count': 7, 'created_month': 6L, 'repo_id': 364L}
+[03/Jan/2015 00:45:08] INFO [github.views:76] repo date: 2014-6
+[03/Jan/2015 00:45:08] INFO [github.views:90] {'c': [{'v': '2014-5'}, {'v': 3}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:08] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:08] INFO [github.views:95] current date: 2014-5
+[03/Jan/2015 00:45:08] INFO [github.views:103] [322, 364]
+[03/Jan/2015 00:45:08] INFO [github.views:105] skipping column 0
+[03/Jan/2015 00:45:08] INFO [github.views:110] writing column 1
+[03/Jan/2015 00:45:08] INFO [github.views:73] {'created_year': 2014L, 'created_count': 1, 'created_month': 7L, 'repo_id': 322L}
+[03/Jan/2015 00:45:08] INFO [github.views:76] repo date: 2014-7
+[03/Jan/2015 00:45:08] INFO [github.views:90] {'c': [{'v': '2014-6'}, {'v': 0}, {'v': 7}, {'v': 0}]}
+[03/Jan/2015 00:45:08] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:08] INFO [github.views:95] current date: 2014-6
+[03/Jan/2015 00:45:08] INFO [github.views:103] [322, 364]
+[03/Jan/2015 00:45:08] INFO [github.views:110] writing column 0
+[03/Jan/2015 00:45:08] INFO [github.views:73] {'created_year': 2014L, 'created_count': 1, 'created_month': 10L, 'repo_id': 322L}
+[03/Jan/2015 00:45:08] INFO [github.views:76] repo date: 2014-10
+[03/Jan/2015 00:45:08] INFO [github.views:90] {'c': [{'v': '2014-7'}, {'v': 1}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:08] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:08] INFO [github.views:95] current date: 2014-7
+[03/Jan/2015 00:45:08] INFO [github.views:90] {'c': [{'v': '2014-8'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:08] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:08] INFO [github.views:95] current date: 2014-8
+[03/Jan/2015 00:45:08] INFO [github.views:90] {'c': [{'v': '2014-9'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:08] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:08] INFO [github.views:95] current date: 2014-9
+[03/Jan/2015 00:45:08] INFO [github.views:103] [322, 364]
+[03/Jan/2015 00:45:08] INFO [github.views:110] writing column 0
+[03/Jan/2015 00:45:08] INFO [github.views:73] {'created_year': 2014L, 'created_count': 2, 'created_month': 11L, 'repo_id': 322L}
+[03/Jan/2015 00:45:08] INFO [github.views:76] repo date: 2014-11
+[03/Jan/2015 00:45:08] INFO [github.views:90] {'c': [{'v': '2014-10'}, {'v': 1}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:08] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:08] INFO [github.views:95] current date: 2014-10
+[03/Jan/2015 00:45:08] INFO [github.views:103] [322, 364]
+[03/Jan/2015 00:45:08] INFO [github.views:110] writing column 0
+[03/Jan/2015 00:45:08] INFO [github.views:73] {'created_year': 2014L, 'created_count': 2, 'created_month': 12L, 'repo_id': 322L}
+[03/Jan/2015 00:45:08] INFO [github.views:76] repo date: 2014-12
+[03/Jan/2015 00:45:08] INFO [github.views:90] {'c': [{'v': '2014-11'}, {'v': 2}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:08] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:08] INFO [github.views:95] current date: 2014-11
+[03/Jan/2015 00:45:08] INFO [github.views:103] [322, 364]
+[03/Jan/2015 00:45:08] INFO [github.views:110] writing column 0
+[03/Jan/2015 00:45:11] INFO [github.views:64] SELECT (YEAR(created_at)) AS `created_year`, (MONTH(created_at)) AS `created_month`, `github_pullrequest`.`repo_id`, COUNT(`github_pullrequest`.`repo_id`) AS `created_count` FROM `github_pullrequest` WHERE `github_pullrequest`.`repo_id` IN (322, 364) GROUP BY `github_pullrequest`.`repo_id`, (YEAR(created_at)), (MONTH(created_at)) ORDER BY `created_year` ASC, `created_month` ASC, `github_pullrequest`.`repo_id` ASC
+[03/Jan/2015 00:45:11] INFO [github.views:73] {'created_year': 2011L, 'created_count': 1, 'created_month': 6L, 'repo_id': 322L}
+[03/Jan/2015 00:45:11] INFO [github.views:103] [322, 364]
+[03/Jan/2015 00:45:11] INFO [github.views:110] writing column 0
+[03/Jan/2015 00:45:11] INFO [github.views:73] {'created_year': 2011L, 'created_count': 1, 'created_month': 6L, 'repo_id': 364L}
+[03/Jan/2015 00:45:11] INFO [github.views:103] [322, 364]
+[03/Jan/2015 00:45:11] INFO [github.views:105] skipping column 0
+[03/Jan/2015 00:45:11] INFO [github.views:110] writing column 1
+[03/Jan/2015 00:45:11] INFO [github.views:73] {'created_year': 2011L, 'created_count': 1, 'created_month': 7L, 'repo_id': 322L}
+[03/Jan/2015 00:45:11] INFO [github.views:76] repo date: 2011-7
+[03/Jan/2015 00:45:11] INFO [github.views:90] {'c': [{'v': '2011-6'}, {'v': 1}, {'v': 0}, {'v': 1}, {'v': 0}]}
+[03/Jan/2015 00:45:11] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:11] INFO [github.views:95] current date: 2011-6
+[03/Jan/2015 00:45:11] INFO [github.views:103] [322, 364]
+[03/Jan/2015 00:45:11] INFO [github.views:110] writing column 0
+[03/Jan/2015 00:45:11] INFO [github.views:73] {'created_year': 2011L, 'created_count': 3, 'created_month': 9L, 'repo_id': 322L}
+[03/Jan/2015 00:45:11] INFO [github.views:76] repo date: 2011-9
+[03/Jan/2015 00:45:11] INFO [github.views:90] {'c': [{'v': '2011-7'}, {'v': 1}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:11] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:11] INFO [github.views:95] current date: 2011-7
+[03/Jan/2015 00:45:11] INFO [github.views:90] {'c': [{'v': '2011-8'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:11] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:11] INFO [github.views:95] current date: 2011-8
+[03/Jan/2015 00:45:11] INFO [github.views:103] [322, 364]
+[03/Jan/2015 00:45:11] INFO [github.views:110] writing column 0
+[03/Jan/2015 00:45:11] INFO [github.views:73] {'created_year': 2011L, 'created_count': 1, 'created_month': 10L, 'repo_id': 364L}
+[03/Jan/2015 00:45:11] INFO [github.views:76] repo date: 2011-10
+[03/Jan/2015 00:45:11] INFO [github.views:90] {'c': [{'v': '2011-9'}, {'v': 3}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:11] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:11] INFO [github.views:95] current date: 2011-9
+[03/Jan/2015 00:45:11] INFO [github.views:103] [322, 364]
+[03/Jan/2015 00:45:11] INFO [github.views:105] skipping column 0
+[03/Jan/2015 00:45:11] INFO [github.views:110] writing column 1
+[03/Jan/2015 00:45:11] INFO [github.views:73] {'created_year': 2012L, 'created_count': 1, 'created_month': 2L, 'repo_id': 322L}
+[03/Jan/2015 00:45:11] INFO [github.views:76] repo date: 2012-2
+[03/Jan/2015 00:45:11] INFO [github.views:90] {'c': [{'v': '2011-10'}, {'v': 0}, {'v': 1}, {'v': 0}]}
+[03/Jan/2015 00:45:11] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:11] INFO [github.views:95] current date: 2011-10
+[03/Jan/2015 00:45:11] INFO [github.views:90] {'c': [{'v': '2011-11'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:11] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:11] INFO [github.views:95] current date: 2011-11
+[03/Jan/2015 00:45:11] INFO [github.views:90] {'c': [{'v': '2011-12'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:11] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:11] INFO [github.views:95] current date: 2011-12
+[03/Jan/2015 00:45:11] INFO [github.views:90] {'c': [{'v': '2012-1'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:11] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:11] INFO [github.views:95] current date: 2012-1
+[03/Jan/2015 00:45:11] INFO [github.views:103] [322, 364]
+[03/Jan/2015 00:45:11] INFO [github.views:110] writing column 0
+[03/Jan/2015 00:45:11] INFO [github.views:73] {'created_year': 2012L, 'created_count': 2, 'created_month': 4L, 'repo_id': 322L}
+[03/Jan/2015 00:45:11] INFO [github.views:76] repo date: 2012-4
+[03/Jan/2015 00:45:11] INFO [github.views:90] {'c': [{'v': '2012-2'}, {'v': 1}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:11] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:11] INFO [github.views:95] current date: 2012-2
+[03/Jan/2015 00:45:11] INFO [github.views:90] {'c': [{'v': '2012-3'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:11] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:11] INFO [github.views:95] current date: 2012-3
+[03/Jan/2015 00:45:11] INFO [github.views:103] [322, 364]
+[03/Jan/2015 00:45:11] INFO [github.views:110] writing column 0
+[03/Jan/2015 00:45:11] INFO [github.views:73] {'created_year': 2012L, 'created_count': 1, 'created_month': 4L, 'repo_id': 364L}
+[03/Jan/2015 00:45:11] INFO [github.views:103] [322, 364]
+[03/Jan/2015 00:45:11] INFO [github.views:105] skipping column 0
+[03/Jan/2015 00:45:11] INFO [github.views:110] writing column 1
+[03/Jan/2015 00:45:11] INFO [github.views:73] {'created_year': 2012L, 'created_count': 1, 'created_month': 5L, 'repo_id': 322L}
+[03/Jan/2015 00:45:11] INFO [github.views:76] repo date: 2012-5
+[03/Jan/2015 00:45:11] INFO [github.views:90] {'c': [{'v': '2012-4'}, {'v': 2}, {'v': 0}, {'v': 1}, {'v': 0}]}
+[03/Jan/2015 00:45:11] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:11] INFO [github.views:95] current date: 2012-4
+[03/Jan/2015 00:45:11] INFO [github.views:103] [322, 364]
+[03/Jan/2015 00:45:11] INFO [github.views:110] writing column 0
+[03/Jan/2015 00:45:11] INFO [github.views:73] {'created_year': 2012L, 'created_count': 1, 'created_month': 7L, 'repo_id': 322L}
+[03/Jan/2015 00:45:11] INFO [github.views:76] repo date: 2012-7
+[03/Jan/2015 00:45:11] INFO [github.views:90] {'c': [{'v': '2012-5'}, {'v': 1}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:11] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:11] INFO [github.views:95] current date: 2012-5
+[03/Jan/2015 00:45:11] INFO [github.views:90] {'c': [{'v': '2012-6'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:11] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:11] INFO [github.views:95] current date: 2012-6
+[03/Jan/2015 00:45:11] INFO [github.views:103] [322, 364]
+[03/Jan/2015 00:45:11] INFO [github.views:110] writing column 0
+[03/Jan/2015 00:45:11] INFO [github.views:73] {'created_year': 2012L, 'created_count': 1, 'created_month': 8L, 'repo_id': 364L}
+[03/Jan/2015 00:45:11] INFO [github.views:76] repo date: 2012-8
+[03/Jan/2015 00:45:11] INFO [github.views:90] {'c': [{'v': '2012-7'}, {'v': 1}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:11] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:11] INFO [github.views:95] current date: 2012-7
+[03/Jan/2015 00:45:11] INFO [github.views:103] [322, 364]
+[03/Jan/2015 00:45:11] INFO [github.views:105] skipping column 0
+[03/Jan/2015 00:45:11] INFO [github.views:110] writing column 1
+[03/Jan/2015 00:45:11] INFO [github.views:73] {'created_year': 2013L, 'created_count': 1, 'created_month': 3L, 'repo_id': 322L}
+[03/Jan/2015 00:45:11] INFO [github.views:76] repo date: 2013-3
+[03/Jan/2015 00:45:11] INFO [github.views:90] {'c': [{'v': '2012-8'}, {'v': 0}, {'v': 1}, {'v': 0}]}
+[03/Jan/2015 00:45:11] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:11] INFO [github.views:95] current date: 2012-8
+[03/Jan/2015 00:45:11] INFO [github.views:90] {'c': [{'v': '2012-9'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:11] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:11] INFO [github.views:95] current date: 2012-9
+[03/Jan/2015 00:45:11] INFO [github.views:90] {'c': [{'v': '2012-10'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:11] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:11] INFO [github.views:95] current date: 2012-10
+[03/Jan/2015 00:45:11] INFO [github.views:90] {'c': [{'v': '2012-11'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:11] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:11] INFO [github.views:95] current date: 2012-11
+[03/Jan/2015 00:45:11] INFO [github.views:90] {'c': [{'v': '2012-12'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:12] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:12] INFO [github.views:95] current date: 2012-12
+[03/Jan/2015 00:45:12] INFO [github.views:90] {'c': [{'v': '2013-1'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:12] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:12] INFO [github.views:95] current date: 2013-1
+[03/Jan/2015 00:45:12] INFO [github.views:90] {'c': [{'v': '2013-2'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:12] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:12] INFO [github.views:95] current date: 2013-2
+[03/Jan/2015 00:45:12] INFO [github.views:103] [322, 364]
+[03/Jan/2015 00:45:12] INFO [github.views:110] writing column 0
+[03/Jan/2015 00:45:12] INFO [github.views:73] {'created_year': 2013L, 'created_count': 4, 'created_month': 4L, 'repo_id': 322L}
+[03/Jan/2015 00:45:12] INFO [github.views:76] repo date: 2013-4
+[03/Jan/2015 00:45:12] INFO [github.views:90] {'c': [{'v': '2013-3'}, {'v': 1}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:12] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:12] INFO [github.views:95] current date: 2013-3
+[03/Jan/2015 00:45:12] INFO [github.views:103] [322, 364]
+[03/Jan/2015 00:45:12] INFO [github.views:110] writing column 0
+[03/Jan/2015 00:45:12] INFO [github.views:73] {'created_year': 2014L, 'created_count': 1, 'created_month': 2L, 'repo_id': 322L}
+[03/Jan/2015 00:45:12] INFO [github.views:76] repo date: 2014-2
+[03/Jan/2015 00:45:12] INFO [github.views:90] {'c': [{'v': '2013-4'}, {'v': 4}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:12] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:12] INFO [github.views:95] current date: 2013-4
+[03/Jan/2015 00:45:12] INFO [github.views:90] {'c': [{'v': '2013-5'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:12] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:12] INFO [github.views:95] current date: 2013-5
+[03/Jan/2015 00:45:12] INFO [github.views:90] {'c': [{'v': '2013-6'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:12] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:12] INFO [github.views:95] current date: 2013-6
+[03/Jan/2015 00:45:12] INFO [github.views:90] {'c': [{'v': '2013-7'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:12] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:12] INFO [github.views:95] current date: 2013-7
+[03/Jan/2015 00:45:12] INFO [github.views:90] {'c': [{'v': '2013-8'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:12] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:12] INFO [github.views:95] current date: 2013-8
+[03/Jan/2015 00:45:12] INFO [github.views:90] {'c': [{'v': '2013-9'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:12] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:12] INFO [github.views:95] current date: 2013-9
+[03/Jan/2015 00:45:12] INFO [github.views:90] {'c': [{'v': '2013-10'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:12] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:12] INFO [github.views:95] current date: 2013-10
+[03/Jan/2015 00:45:12] INFO [github.views:90] {'c': [{'v': '2013-11'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:12] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:12] INFO [github.views:95] current date: 2013-11
+[03/Jan/2015 00:45:12] INFO [github.views:90] {'c': [{'v': '2013-12'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:12] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:12] INFO [github.views:95] current date: 2013-12
+[03/Jan/2015 00:45:12] INFO [github.views:90] {'c': [{'v': '2014-1'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:12] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:12] INFO [github.views:95] current date: 2014-1
+[03/Jan/2015 00:45:12] INFO [github.views:103] [322, 364]
+[03/Jan/2015 00:45:12] INFO [github.views:110] writing column 0
+[03/Jan/2015 00:45:12] INFO [github.views:73] {'created_year': 2014L, 'created_count': 1, 'created_month': 4L, 'repo_id': 364L}
+[03/Jan/2015 00:45:12] INFO [github.views:76] repo date: 2014-4
+[03/Jan/2015 00:45:12] INFO [github.views:90] {'c': [{'v': '2014-2'}, {'v': 1}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:12] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:12] INFO [github.views:95] current date: 2014-2
+[03/Jan/2015 00:45:12] INFO [github.views:90] {'c': [{'v': '2014-3'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:12] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:12] INFO [github.views:95] current date: 2014-3
+[03/Jan/2015 00:45:12] INFO [github.views:103] [322, 364]
+[03/Jan/2015 00:45:12] INFO [github.views:105] skipping column 0
+[03/Jan/2015 00:45:12] INFO [github.views:110] writing column 1
+[03/Jan/2015 00:45:12] INFO [github.views:73] {'created_year': 2014L, 'created_count': 3, 'created_month': 5L, 'repo_id': 322L}
+[03/Jan/2015 00:45:12] INFO [github.views:76] repo date: 2014-5
+[03/Jan/2015 00:45:12] INFO [github.views:90] {'c': [{'v': '2014-4'}, {'v': 0}, {'v': 1}, {'v': 0}]}
+[03/Jan/2015 00:45:12] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:12] INFO [github.views:95] current date: 2014-4
+[03/Jan/2015 00:45:12] INFO [github.views:103] [322, 364]
+[03/Jan/2015 00:45:12] INFO [github.views:110] writing column 0
+[03/Jan/2015 00:45:12] INFO [github.views:73] {'created_year': 2014L, 'created_count': 7, 'created_month': 6L, 'repo_id': 364L}
+[03/Jan/2015 00:45:12] INFO [github.views:76] repo date: 2014-6
+[03/Jan/2015 00:45:12] INFO [github.views:90] {'c': [{'v': '2014-5'}, {'v': 3}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:12] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:12] INFO [github.views:95] current date: 2014-5
+[03/Jan/2015 00:45:12] INFO [github.views:103] [322, 364]
+[03/Jan/2015 00:45:12] INFO [github.views:105] skipping column 0
+[03/Jan/2015 00:45:12] INFO [github.views:110] writing column 1
+[03/Jan/2015 00:45:12] INFO [github.views:73] {'created_year': 2014L, 'created_count': 1, 'created_month': 7L, 'repo_id': 322L}
+[03/Jan/2015 00:45:12] INFO [github.views:76] repo date: 2014-7
+[03/Jan/2015 00:45:12] INFO [github.views:90] {'c': [{'v': '2014-6'}, {'v': 0}, {'v': 7}, {'v': 0}]}
+[03/Jan/2015 00:45:12] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:12] INFO [github.views:95] current date: 2014-6
+[03/Jan/2015 00:45:12] INFO [github.views:103] [322, 364]
+[03/Jan/2015 00:45:12] INFO [github.views:110] writing column 0
+[03/Jan/2015 00:45:12] INFO [github.views:73] {'created_year': 2014L, 'created_count': 1, 'created_month': 10L, 'repo_id': 322L}
+[03/Jan/2015 00:45:12] INFO [github.views:76] repo date: 2014-10
+[03/Jan/2015 00:45:12] INFO [github.views:90] {'c': [{'v': '2014-7'}, {'v': 1}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:12] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:12] INFO [github.views:95] current date: 2014-7
+[03/Jan/2015 00:45:12] INFO [github.views:90] {'c': [{'v': '2014-8'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:12] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:12] INFO [github.views:95] current date: 2014-8
+[03/Jan/2015 00:45:12] INFO [github.views:90] {'c': [{'v': '2014-9'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:12] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:12] INFO [github.views:95] current date: 2014-9
+[03/Jan/2015 00:45:12] INFO [github.views:103] [322, 364]
+[03/Jan/2015 00:45:12] INFO [github.views:110] writing column 0
+[03/Jan/2015 00:45:12] INFO [github.views:73] {'created_year': 2014L, 'created_count': 2, 'created_month': 11L, 'repo_id': 322L}
+[03/Jan/2015 00:45:12] INFO [github.views:76] repo date: 2014-11
+[03/Jan/2015 00:45:12] INFO [github.views:90] {'c': [{'v': '2014-10'}, {'v': 1}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:12] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:12] INFO [github.views:95] current date: 2014-10
+[03/Jan/2015 00:45:12] INFO [github.views:103] [322, 364]
+[03/Jan/2015 00:45:12] INFO [github.views:110] writing column 0
+[03/Jan/2015 00:45:12] INFO [github.views:73] {'created_year': 2014L, 'created_count': 2, 'created_month': 12L, 'repo_id': 322L}
+[03/Jan/2015 00:45:12] INFO [github.views:76] repo date: 2014-12
+[03/Jan/2015 00:45:12] INFO [github.views:90] {'c': [{'v': '2014-11'}, {'v': 2}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:45:12] INFO [github.views:94] setting up new row of data
+[03/Jan/2015 00:45:12] INFO [github.views:95] current date: 2014-11
+[03/Jan/2015 00:45:12] INFO [github.views:103] [322, 364]
+[03/Jan/2015 00:45:12] INFO [github.views:110] writing column 0
+[03/Jan/2015 00:46:28] INFO [github.views:64] SELECT (YEAR(created_at)) AS `created_year`, (MONTH(created_at)) AS `created_month`, `github_pullrequest`.`repo_id`, COUNT(`github_pullrequest`.`repo_id`) AS `created_count` FROM `github_pullrequest` WHERE `github_pullrequest`.`repo_id` IN (322, 364) GROUP BY `github_pullrequest`.`repo_id`, (YEAR(created_at)), (MONTH(created_at)) ORDER BY `created_year` ASC, `created_month` ASC, `github_pullrequest`.`repo_id` ASC
+[03/Jan/2015 00:46:28] INFO [github.views:71] 2
+[03/Jan/2015 00:46:28] INFO [github.views:75] {'created_year': 2011L, 'created_count': 1, 'created_month': 6L, 'repo_id': 322L}
+[03/Jan/2015 00:46:28] INFO [github.views:105] [322, 364]
+[03/Jan/2015 00:46:28] INFO [github.views:112] writing column 0
+[03/Jan/2015 00:46:28] INFO [github.views:75] {'created_year': 2011L, 'created_count': 1, 'created_month': 6L, 'repo_id': 364L}
+[03/Jan/2015 00:46:28] INFO [github.views:105] [322, 364]
+[03/Jan/2015 00:46:28] INFO [github.views:107] skipping column 0
+[03/Jan/2015 00:46:28] INFO [github.views:112] writing column 1
+[03/Jan/2015 00:46:28] INFO [github.views:75] {'created_year': 2011L, 'created_count': 1, 'created_month': 7L, 'repo_id': 322L}
+[03/Jan/2015 00:46:28] INFO [github.views:78] repo date: 2011-7
+[03/Jan/2015 00:46:28] INFO [github.views:92] {'c': [{'v': '2011-6'}, {'v': 1}, {'v': 0}, {'v': 1}, {'v': 0}]}
+[03/Jan/2015 00:46:28] INFO [github.views:96] setting up new row of data
+[03/Jan/2015 00:46:28] INFO [github.views:97] current date: 2011-6
+[03/Jan/2015 00:46:28] INFO [github.views:105] [322, 364]
+[03/Jan/2015 00:46:28] INFO [github.views:112] writing column 0
+[03/Jan/2015 00:46:28] INFO [github.views:75] {'created_year': 2011L, 'created_count': 3, 'created_month': 9L, 'repo_id': 322L}
+[03/Jan/2015 00:46:28] INFO [github.views:78] repo date: 2011-9
+[03/Jan/2015 00:46:28] INFO [github.views:92] {'c': [{'v': '2011-7'}, {'v': 1}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:46:28] INFO [github.views:96] setting up new row of data
+[03/Jan/2015 00:46:28] INFO [github.views:97] current date: 2011-7
+[03/Jan/2015 00:46:28] INFO [github.views:92] {'c': [{'v': '2011-8'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:46:28] INFO [github.views:96] setting up new row of data
+[03/Jan/2015 00:46:28] INFO [github.views:97] current date: 2011-8
+[03/Jan/2015 00:46:28] INFO [github.views:105] [322, 364]
+[03/Jan/2015 00:46:28] INFO [github.views:112] writing column 0
+[03/Jan/2015 00:46:28] INFO [github.views:75] {'created_year': 2011L, 'created_count': 1, 'created_month': 10L, 'repo_id': 364L}
+[03/Jan/2015 00:46:28] INFO [github.views:78] repo date: 2011-10
+[03/Jan/2015 00:46:28] INFO [github.views:92] {'c': [{'v': '2011-9'}, {'v': 3}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:46:28] INFO [github.views:96] setting up new row of data
+[03/Jan/2015 00:46:28] INFO [github.views:97] current date: 2011-9
+[03/Jan/2015 00:46:28] INFO [github.views:105] [322, 364]
+[03/Jan/2015 00:46:28] INFO [github.views:107] skipping column 0
+[03/Jan/2015 00:46:28] INFO [github.views:112] writing column 1
+[03/Jan/2015 00:46:28] INFO [github.views:75] {'created_year': 2012L, 'created_count': 1, 'created_month': 2L, 'repo_id': 322L}
+[03/Jan/2015 00:46:28] INFO [github.views:78] repo date: 2012-2
+[03/Jan/2015 00:46:28] INFO [github.views:92] {'c': [{'v': '2011-10'}, {'v': 0}, {'v': 1}, {'v': 0}]}
+[03/Jan/2015 00:46:28] INFO [github.views:96] setting up new row of data
+[03/Jan/2015 00:46:28] INFO [github.views:97] current date: 2011-10
+[03/Jan/2015 00:46:28] INFO [github.views:92] {'c': [{'v': '2011-11'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:46:28] INFO [github.views:96] setting up new row of data
+[03/Jan/2015 00:46:28] INFO [github.views:97] current date: 2011-11
+[03/Jan/2015 00:46:28] INFO [github.views:92] {'c': [{'v': '2011-12'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:46:28] INFO [github.views:96] setting up new row of data
+[03/Jan/2015 00:46:28] INFO [github.views:97] current date: 2011-12
+[03/Jan/2015 00:46:28] INFO [github.views:92] {'c': [{'v': '2012-1'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:46:28] INFO [github.views:96] setting up new row of data
+[03/Jan/2015 00:46:28] INFO [github.views:97] current date: 2012-1
+[03/Jan/2015 00:46:28] INFO [github.views:105] [322, 364]
+[03/Jan/2015 00:46:28] INFO [github.views:112] writing column 0
+[03/Jan/2015 00:46:28] INFO [github.views:75] {'created_year': 2012L, 'created_count': 2, 'created_month': 4L, 'repo_id': 322L}
+[03/Jan/2015 00:46:28] INFO [github.views:78] repo date: 2012-4
+[03/Jan/2015 00:46:28] INFO [github.views:92] {'c': [{'v': '2012-2'}, {'v': 1}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:46:28] INFO [github.views:96] setting up new row of data
+[03/Jan/2015 00:46:28] INFO [github.views:97] current date: 2012-2
+[03/Jan/2015 00:46:28] INFO [github.views:92] {'c': [{'v': '2012-3'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:46:28] INFO [github.views:96] setting up new row of data
+[03/Jan/2015 00:46:28] INFO [github.views:97] current date: 2012-3
+[03/Jan/2015 00:46:28] INFO [github.views:105] [322, 364]
+[03/Jan/2015 00:46:28] INFO [github.views:112] writing column 0
+[03/Jan/2015 00:46:28] INFO [github.views:75] {'created_year': 2012L, 'created_count': 1, 'created_month': 4L, 'repo_id': 364L}
+[03/Jan/2015 00:46:28] INFO [github.views:105] [322, 364]
+[03/Jan/2015 00:46:28] INFO [github.views:107] skipping column 0
+[03/Jan/2015 00:46:28] INFO [github.views:112] writing column 1
+[03/Jan/2015 00:46:28] INFO [github.views:75] {'created_year': 2012L, 'created_count': 1, 'created_month': 5L, 'repo_id': 322L}
+[03/Jan/2015 00:46:28] INFO [github.views:78] repo date: 2012-5
+[03/Jan/2015 00:46:28] INFO [github.views:92] {'c': [{'v': '2012-4'}, {'v': 2}, {'v': 0}, {'v': 1}, {'v': 0}]}
+[03/Jan/2015 00:46:28] INFO [github.views:96] setting up new row of data
+[03/Jan/2015 00:46:28] INFO [github.views:97] current date: 2012-4
+[03/Jan/2015 00:46:28] INFO [github.views:105] [322, 364]
+[03/Jan/2015 00:46:28] INFO [github.views:112] writing column 0
+[03/Jan/2015 00:46:28] INFO [github.views:75] {'created_year': 2012L, 'created_count': 1, 'created_month': 7L, 'repo_id': 322L}
+[03/Jan/2015 00:46:28] INFO [github.views:78] repo date: 2012-7
+[03/Jan/2015 00:46:28] INFO [github.views:92] {'c': [{'v': '2012-5'}, {'v': 1}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:46:28] INFO [github.views:96] setting up new row of data
+[03/Jan/2015 00:46:28] INFO [github.views:97] current date: 2012-5
+[03/Jan/2015 00:46:28] INFO [github.views:92] {'c': [{'v': '2012-6'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:46:28] INFO [github.views:96] setting up new row of data
+[03/Jan/2015 00:46:28] INFO [github.views:97] current date: 2012-6
+[03/Jan/2015 00:46:28] INFO [github.views:105] [322, 364]
+[03/Jan/2015 00:46:28] INFO [github.views:112] writing column 0
+[03/Jan/2015 00:46:28] INFO [github.views:75] {'created_year': 2012L, 'created_count': 1, 'created_month': 8L, 'repo_id': 364L}
+[03/Jan/2015 00:46:28] INFO [github.views:78] repo date: 2012-8
+[03/Jan/2015 00:46:28] INFO [github.views:92] {'c': [{'v': '2012-7'}, {'v': 1}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:46:28] INFO [github.views:96] setting up new row of data
+[03/Jan/2015 00:46:28] INFO [github.views:97] current date: 2012-7
+[03/Jan/2015 00:46:28] INFO [github.views:105] [322, 364]
+[03/Jan/2015 00:46:28] INFO [github.views:107] skipping column 0
+[03/Jan/2015 00:46:28] INFO [github.views:112] writing column 1
+[03/Jan/2015 00:46:28] INFO [github.views:75] {'created_year': 2013L, 'created_count': 1, 'created_month': 3L, 'repo_id': 322L}
+[03/Jan/2015 00:46:28] INFO [github.views:78] repo date: 2013-3
+[03/Jan/2015 00:46:28] INFO [github.views:92] {'c': [{'v': '2012-8'}, {'v': 0}, {'v': 1}, {'v': 0}]}
+[03/Jan/2015 00:46:28] INFO [github.views:96] setting up new row of data
+[03/Jan/2015 00:46:28] INFO [github.views:97] current date: 2012-8
+[03/Jan/2015 00:46:28] INFO [github.views:92] {'c': [{'v': '2012-9'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:46:28] INFO [github.views:96] setting up new row of data
+[03/Jan/2015 00:46:28] INFO [github.views:97] current date: 2012-9
+[03/Jan/2015 00:46:28] INFO [github.views:92] {'c': [{'v': '2012-10'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:46:28] INFO [github.views:96] setting up new row of data
+[03/Jan/2015 00:46:28] INFO [github.views:97] current date: 2012-10
+[03/Jan/2015 00:46:28] INFO [github.views:92] {'c': [{'v': '2012-11'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:46:28] INFO [github.views:96] setting up new row of data
+[03/Jan/2015 00:46:28] INFO [github.views:97] current date: 2012-11
+[03/Jan/2015 00:46:28] INFO [github.views:92] {'c': [{'v': '2012-12'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:46:28] INFO [github.views:96] setting up new row of data
+[03/Jan/2015 00:46:28] INFO [github.views:97] current date: 2012-12
+[03/Jan/2015 00:46:28] INFO [github.views:92] {'c': [{'v': '2013-1'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:46:28] INFO [github.views:96] setting up new row of data
+[03/Jan/2015 00:46:28] INFO [github.views:97] current date: 2013-1
+[03/Jan/2015 00:46:28] INFO [github.views:92] {'c': [{'v': '2013-2'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:46:28] INFO [github.views:96] setting up new row of data
+[03/Jan/2015 00:46:28] INFO [github.views:97] current date: 2013-2
+[03/Jan/2015 00:46:28] INFO [github.views:105] [322, 364]
+[03/Jan/2015 00:46:28] INFO [github.views:112] writing column 0
+[03/Jan/2015 00:46:28] INFO [github.views:75] {'created_year': 2013L, 'created_count': 4, 'created_month': 4L, 'repo_id': 322L}
+[03/Jan/2015 00:46:28] INFO [github.views:78] repo date: 2013-4
+[03/Jan/2015 00:46:28] INFO [github.views:92] {'c': [{'v': '2013-3'}, {'v': 1}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:46:28] INFO [github.views:96] setting up new row of data
+[03/Jan/2015 00:46:28] INFO [github.views:97] current date: 2013-3
+[03/Jan/2015 00:46:28] INFO [github.views:105] [322, 364]
+[03/Jan/2015 00:46:28] INFO [github.views:112] writing column 0
+[03/Jan/2015 00:46:28] INFO [github.views:75] {'created_year': 2014L, 'created_count': 1, 'created_month': 2L, 'repo_id': 322L}
+[03/Jan/2015 00:46:28] INFO [github.views:78] repo date: 2014-2
+[03/Jan/2015 00:46:28] INFO [github.views:92] {'c': [{'v': '2013-4'}, {'v': 4}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:46:28] INFO [github.views:96] setting up new row of data
+[03/Jan/2015 00:46:28] INFO [github.views:97] current date: 2013-4
+[03/Jan/2015 00:46:28] INFO [github.views:92] {'c': [{'v': '2013-5'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:46:28] INFO [github.views:96] setting up new row of data
+[03/Jan/2015 00:46:28] INFO [github.views:97] current date: 2013-5
+[03/Jan/2015 00:46:28] INFO [github.views:92] {'c': [{'v': '2013-6'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:46:28] INFO [github.views:96] setting up new row of data
+[03/Jan/2015 00:46:28] INFO [github.views:97] current date: 2013-6
+[03/Jan/2015 00:46:28] INFO [github.views:92] {'c': [{'v': '2013-7'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:46:28] INFO [github.views:96] setting up new row of data
+[03/Jan/2015 00:46:28] INFO [github.views:97] current date: 2013-7
+[03/Jan/2015 00:46:28] INFO [github.views:92] {'c': [{'v': '2013-8'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:46:28] INFO [github.views:96] setting up new row of data
+[03/Jan/2015 00:46:28] INFO [github.views:97] current date: 2013-8
+[03/Jan/2015 00:46:28] INFO [github.views:92] {'c': [{'v': '2013-9'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:46:28] INFO [github.views:96] setting up new row of data
+[03/Jan/2015 00:46:28] INFO [github.views:97] current date: 2013-9
+[03/Jan/2015 00:46:28] INFO [github.views:92] {'c': [{'v': '2013-10'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:46:28] INFO [github.views:96] setting up new row of data
+[03/Jan/2015 00:46:28] INFO [github.views:97] current date: 2013-10
+[03/Jan/2015 00:46:28] INFO [github.views:92] {'c': [{'v': '2013-11'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:46:28] INFO [github.views:96] setting up new row of data
+[03/Jan/2015 00:46:28] INFO [github.views:97] current date: 2013-11
+[03/Jan/2015 00:46:28] INFO [github.views:92] {'c': [{'v': '2013-12'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:46:28] INFO [github.views:96] setting up new row of data
+[03/Jan/2015 00:46:28] INFO [github.views:97] current date: 2013-12
+[03/Jan/2015 00:46:28] INFO [github.views:92] {'c': [{'v': '2014-1'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:46:28] INFO [github.views:96] setting up new row of data
+[03/Jan/2015 00:46:28] INFO [github.views:97] current date: 2014-1
+[03/Jan/2015 00:46:28] INFO [github.views:105] [322, 364]
+[03/Jan/2015 00:46:28] INFO [github.views:112] writing column 0
+[03/Jan/2015 00:46:28] INFO [github.views:75] {'created_year': 2014L, 'created_count': 1, 'created_month': 4L, 'repo_id': 364L}
+[03/Jan/2015 00:46:28] INFO [github.views:78] repo date: 2014-4
+[03/Jan/2015 00:46:28] INFO [github.views:92] {'c': [{'v': '2014-2'}, {'v': 1}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:46:28] INFO [github.views:96] setting up new row of data
+[03/Jan/2015 00:46:28] INFO [github.views:97] current date: 2014-2
+[03/Jan/2015 00:46:28] INFO [github.views:92] {'c': [{'v': '2014-3'}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:46:28] INFO [github.views:96] setting up new row of data
+[03/Jan/2015 00:46:28] INFO [github.views:97] current date: 2014-3
+[03/Jan/2015 00:46:28] INFO [github.views:105] [322, 364]
+[03/Jan/2015 00:46:28] INFO [github.views:107] skipping column 0
+[03/Jan/2015 00:46:28] INFO [github.views:112] writing column 1
+[03/Jan/2015 00:46:28] INFO [github.views:75] {'created_year': 2014L, 'created_count': 3, 'created_month': 5L, 'repo_id': 322L}
+[03/Jan/2015 00:46:28] INFO [github.views:78] repo date: 2014-5
+[03/Jan/2015 00:46:28] INFO [github.views:92] {'c': [{'v': '2014-4'}, {'v': 0}, {'v': 1}, {'v': 0}]}
+[03/Jan/2015 00:46:28] INFO [github.views:96] setting up new row of data
+[03/Jan/2015 00:46:28] INFO [github.views:97] current date: 2014-4
+[03/Jan/2015 00:46:28] INFO [github.views:105] [322, 364]
+[03/Jan/2015 00:46:28] INFO [github.views:112] writing column 0
+[03/Jan/2015 00:46:28] INFO [github.views:75] {'created_year': 2014L, 'created_count': 7, 'created_month': 6L, 'repo_id': 364L}
+[03/Jan/2015 00:46:28] INFO [github.views:78] repo date: 2014-6
+[03/Jan/2015 00:46:28] INFO [github.views:92] {'c': [{'v': '2014-5'}, {'v': 3}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:46:28] INFO [github.views:96] setting up new row of data
+[03/Jan/2015 00:46:28] INFO [github.views:97] current date: 2014-5
+[03/Jan/2015 00:46:28] INFO [github.views:105] [322, 364]
+[03/Jan/2015 00:46:28] INFO [github.views:107] skipping column 0
+[03/Jan/2015 00:46:28] INFO [github.views:112] writing column 1
+[03/Jan/2015 00:46:28] INFO [github.views:75] {'created_year': 2014L, 'created_count': 1, 'created_month': 7L, 'repo_id': 322L}
+[03/Jan/2015 00:46:28] INFO [github.views:78] repo date: 2014-7
+[03/Jan/2015 00:46:28] INFO [github.views:92] {'c': [{'v': '2014-6'}, {'v': 0}, {'v': 7}, {'v': 0}]}
+[03/Jan/2015 00:46:28] INFO [github.views:96] setting up new row of data
+[03/Jan/2015 00:46:28] INFO [github.views:97] current date: 2014-6
+[03/Jan/2015 00:46:28] INFO [github.views:105] [322, 364]
+[03/Jan/2015 00:46:28] INFO [github.views:112] writing column 0
+[03/Jan/2015 00:46:28] INFO [github.views:75] {'created_year': 2014L, 'created_count': 1, 'created_month': 10L, 'repo_id': 322L}
+[03/Jan/2015 00:46:28] INFO [github.views:78] repo date: 2014-10
+[03/Jan/2015 00:46:28] INFO [github.views:92] {'c': [{'v': '2014-7'}, {'v': 1}, {'v': 0}, {'v': 0}]}
+[03/Jan/2015 00:46:28] INFO [github.views:96] setting up new row of data
+[03/Jan/2015 00:46:28] INFO [github.views:97] current date: 2014-7
+[03/Jan/2015 00:46:28] INFO [github.views:92] {'c': [{'v': '2014-8'}, {'v': 0}, {'v': 0}]}
