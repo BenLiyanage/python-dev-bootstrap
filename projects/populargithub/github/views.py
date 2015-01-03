@@ -11,6 +11,7 @@ from django.views import generic
 from processing import BulkImport, RateLimitRemaining
 
 from django.conf import settings
+from urllib import unquote
 
 log = logging.getLogger(__name__)
 apiBaseURL = 'https://api.github.com/'
@@ -32,12 +33,19 @@ def Graph(request):
     return HttpResponse(template.render(context))
 
 def CompareData(request):
-    #TODO: Replace with dynamic values
-    # need to be ordered from low to high
-    repo_ids = [322,364]
-    
     #Initialize our JSON Object
     myJson = {'cols': [{'label':'Month','type':'string'}], 'rows':[]}
+    
+    #parse and sanitize our data
+    repo_ids = unquote(request.GET.get('repo_ids'))
+    
+    if repo_ids is None:
+        return json.dumps(myJson)
+        
+    repo_ids = [int(n) for n in repo_ids.split('+')]
+    # need to be ordered from low to high
+    repo_ids.sort()
+    log.info(repo_ids)
     
     ### Populate Columns
     
@@ -72,10 +80,8 @@ def CompareData(request):
     
     for repo in repoSummary:
         # check if the current repo is the right month
-        log.info(repo)
         
         if currentDate.month != repo['created_month'] or currentDate.year != repo['created_year']:
-            log.info("repo date: {0}-{1}".format(repo['created_year'], repo['created_month']))
             # add blank rows until we've reached the repo's time frame
             while currentDate.month != repo['created_month'] or currentDate.year != repo['created_year']:
                 # write our current row, we have a new time row to deal with.
@@ -89,12 +95,9 @@ def CompareData(request):
                 nextRepoToWrite = 0
             
                 # note: this should write the current row first, and then leave us with a new empty row by the time the loop is finished.
-                log.info(myRow)
                 myJson['rows'].append(myRow)
                 
                 # set up a row of data
-                log.info("setting up new row of data")
-                log.info("current date: {0}-{1}".format(currentDate.year, currentDate.month))
                 currentDate = currentDate.replace(month=(currentDate.month) % 12 + 1, year=currentDate.year + currentDate.month / 12)
                 month = str(currentDate.month)
                 if (currentDate.month < 10):
@@ -105,14 +108,11 @@ def CompareData(request):
         # check if it's time to write the repos, or if we skipped one
     
         #no data for this column, pad with 0s
-        log.info(repo_ids)
         while repo_ids[nextRepoToWrite] != repo['repo_id']:
-            log.info("skipping column {0}".format(nextRepoToWrite))
             myRow['c'].append({'v':0})
             nextRepoToWrite+=1
             
         #write our column
-        log.info("writing column {0}".format(nextRepoToWrite))
         myRow['c'].append({'v':repo['created_count']})
     
         #increment column counter

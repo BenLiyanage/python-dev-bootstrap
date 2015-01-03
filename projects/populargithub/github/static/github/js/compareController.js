@@ -14,8 +14,8 @@ function formatGitHubDate(gitHubDate)
 }
 
 var githubApp = angular.module('githubApp', [])
-githubApp.controller('searchCtrl', function($scope, $http) {
-    $scope.selectedRepo = []
+githubApp.controller('searchCtrl', function($scope, $http, $timeout) {
+    $scope.selectedRepo = [{full_name: 'sevenwire/forgery', id: 322 }, {full_name: 'collectiveidea/acts_as_geocodable', id: 364 }]
     $scope.isNumber = angular.isNumber;
     
     $http({
@@ -31,13 +31,53 @@ githubApp.controller('searchCtrl', function($scope, $http) {
         
     $scope.remove = function(item) {
         var index = $scope.selectedRepo.indexOf(item)
-        console.log(index)
         if (index >= 0)
         {   
             $scope.selectedRepo.splice(index, 1)
         }
+        $scope.drawChart()
     }
+    
+    $scope.drawChart = function() {
+        if ($scope.length == 0)
+            return
+        
+        var repo_ids = ''    
+        $scope.selectedRepo.forEach(function(repo)
+        {
+            repo_ids = repo_ids + repo.id + '+'
+        })
+        
+        //remove trailing comma
+        repo_ids = repo_ids.substr(0, repo_ids.length-1)
+        
+        json = $.ajax({
+            url:'/github/comparedata', 
+            dataType:'json', 
+            async: false,
+            data: { 'repo_ids': repo_ids} 
+        })
+        var data = new google.visualization.DataTable(json.responseText);
+        
+        var mergesOptions = {
+          title: 'Code Merges Per Month',
+          chartArea: {left:30, width:'70%'}
+        };
+
+        var chart_MergesPerMonth = new google.visualization.LineChart(document.getElementById('chart_MergesPerMonth'));
+        //var chart_IssueReopenRate = new google.visualization.LineChart(document.getElementById('chart_IssueReopenRate'));
+
+        chart_MergesPerMonth.draw(data, mergesOptions);
+        //chart_IssueReopenRate.draw(data, {title: 'Issue Reopen Rate'});
+    }
+    
+    //Run the graph on load
+    //$timeout(google.load("visualization", "1", {packages:["corechart"]}))
+    $timeout($scope.drawChart)
 });
+
+google.load("visualization", "1", {packages:["corechart"]});
+
 githubApp.directive('autoComplete', function($timeout, $http)
     {
         return function (scope, iElement, iAttrs)
@@ -62,8 +102,10 @@ githubApp.directive('autoComplete', function($timeout, $http)
                                 .error(function() { response() })
                         },
                     select: function(event, ui) {
-                            scope['selectedRepo'].push({'full_name': ui.item.full_name})
+                            scope['selectedRepo'].push({'full_name': ui.item.full_name, id: ui.item.id})
+                            scope.drawChart();
                             scope.$apply();
+                            
                         }
                     })
                 .data('ui-autocomplete')._renderItem = function(ul, item) {
