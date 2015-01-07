@@ -1,5 +1,23 @@
 # Overview
 
+When choosing between different technical solutions in the open source world having a vibrant community backing the project can make the difference between a ful rewrite of your application, and a simple upgrade when maintaining your own systems.
+
+This application allows you to compare stats about different publically available github repositories.  Currently it is only comparing pull request rate.  Having current pull requests is an indicator that a repository is actively being maintained. Additional stats will be added at a later time like ticket reclosure rate, and number of contributors.
+
+## Technologies Used
+
+This is a full stack solution.  Technologies I have used in this project are:
+
+* Frontend
+** Angular.js
+** Bootstrap
+** jQuery
+* Backend
+** Python
+** Django
+** MySQL
+** Github API
+
 # Installation
 
 * Pull down this repository.  
@@ -11,8 +29,9 @@
 
 At the moment this application requires mysql--there are some mysql specific queries in it.
 
-## TODO
+# TODO
 * Add Pagination Processing for the pull requests.  Currently it only imports the last 30 pull requests that have been closed.
 * Parse out Month/Date from pull_request dates on cache so that the application can be database agnostic.
 * Automate Database setup
 * Log logging to database for Repo Processing to allow for rendering statistical success rates.
+* Mobile testing.
