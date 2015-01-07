@@ -9,14 +9,14 @@ This application allows you to compare stats about different publically availabl
 This is a full stack solution.  Technologies I have used in this project are:
 
 * Frontend
-** Angular.js
-** Bootstrap
-** jQuery
+  * Angular.js
+  * Bootstrap
+  * jQuery
 * Backend
-** Python
-** Django
-** MySQL
-** Github API
+  * Python
+  * Django
+  * MySQL
+  * Github API
 
 # Installation
 
