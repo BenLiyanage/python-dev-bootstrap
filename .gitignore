@@ -8,4 +8,5 @@ wikimedia
 projects/populargithub/populargithub/passwords.py
 *.log
 *.log
-projects/populargithub/logfile/error.log
+projects/populargithub/logfile
+projects/populargithub/github/migrations

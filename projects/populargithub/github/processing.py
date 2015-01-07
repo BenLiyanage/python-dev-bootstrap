@@ -68,12 +68,11 @@ def ProcessRepo(name):
                 
                 # get pull requests
                 # get request is dependant on ratelimiting parameters that we may have captured
-                remotePullRequestURL = "repos/" + myRepo.full_name + "/pulls?state=all"
-                log.info("pulls url: " + remotePullRequestURL)
+                remotePullRequestURL = "repos/" + myRepo.full_name + "/pulls?state=closed"
                 remotePullRequests = MakeGitHubRequest(remotePullRequestURL)
                 
                 if remotePullRequests is not None:
-                    log.info("importing pull requests")
+                    log.info("Importing {0} Pull Requests".format(len(remotePullRequests)))
                     for remotePullRequest in remotePullRequests:
                         try:
                             log.info("Processing Pull Number {0}".format(remotePullRequest['number']))
@@ -112,9 +111,9 @@ def ProcessRepo(name):
         else:
             return "Could not process repo: {0}".format(name)
     except Exception as e:
-        log.info("Repo Info")
+        log.info("Error Proccessing Repo {0}".format(name))
+        log.info(e)
         log.debug("Repo Object" + json.dumps(remoteRepo, indent=4, separators=(',', ': ')))
-        raise
     
 def RefreshRateLimitStats():
     rateInfo = MakeGitHubRequest('rate_limit')

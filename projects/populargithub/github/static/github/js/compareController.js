@@ -42,20 +42,20 @@ githubApp.controller('searchCtrl', function($scope, $http, $timeout) {
         if ($scope.length == 0)
             return
         
-        var repo_ids = ''    
+        var full_names = ''    
         $scope.selectedRepo.forEach(function(repo)
         {
-            repo_ids = repo_ids + repo.id + '+'
+            full_names = full_names + repo.full_name + '+'
         })
         
-        //remove trailing comma
-        repo_ids = repo_ids.substr(0, repo_ids.length-1)
-        
+        //remove trailing plus
+        full_names = full_names.substr(0, full_names.length-1)
+        console.log(full_names)
         json = $.ajax({
             url:'/github/comparedata', 
             dataType:'json', 
             async: false,
-            data: { 'repo_ids': repo_ids} 
+            data: { 'full_names': full_names} 
         })
         var data = new google.visualization.DataTable(json.responseText);
         

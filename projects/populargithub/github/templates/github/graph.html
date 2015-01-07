@@ -16,14 +16,12 @@
         <thead>
             <tr>
                 <th>Repo Name</th>
-                <th>Proccessed?</th>
                 <th>&nbsp;</th>
             </tr>
         </thead>
         <tbody>
             <tr ng-repeat="repo in selectedRepo">
                 <td>{%verbatim%} {{ repo.full_name }} {% endverbatim %}</td>
-                <td>?</td>
                 <td><a href="javascript: return false;" ng-click="remove(repo)">Remove</a></td>
             </tr>
         </tbody>

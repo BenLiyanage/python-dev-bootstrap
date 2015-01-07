@@ -23,7 +23,7 @@ class Repo(models.Model):
     # core stats
     id = models.IntegerField(primary_key=True)
     full_name = models.CharField(max_length=255)
-    description = models.CharField(max_length=255)
+    description = models.TextField()
     html_url = models.CharField(max_length=255)
     #used for rate limiting
     

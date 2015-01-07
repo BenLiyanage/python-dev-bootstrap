@@ -8,7 +8,7 @@ from django.db.models import Count, Min
 
 import logging
 from django.views import generic
-from processing import BulkImport, RateLimitRemaining
+from processing import BulkImport, RateLimitRemaining, ProcessRepo
 
 from django.conf import settings
 from urllib import unquote
@@ -37,20 +37,32 @@ def CompareData(request):
     myJson = {'cols': [{'label':'Month','type':'string'}], 'rows':[]}
     
     #parse and sanitize our data
-    repo_ids = unquote(request.GET.get('repo_ids'))
+    full_names = unquote(request.GET.get('full_names'))
     
-    if repo_ids is None:
-        return json.dumps(myJson)
+    if full_names =='':
+        return HttpResponse(json.dumps(myJson))
         
-    repo_ids = [int(n) for n in repo_ids.split('+')]
-    # need to be ordered from low to high
-    repo_ids.sort()
-    log.info(repo_ids)
+    full_names = [n for n in full_names.split('+')]
     
     ### Populate Columns
     
     # Get Column Headers for Repos
-    repos = Repo.objects.filter(id__in=repo_ids).values('id','full_name').order_by('id') # may want more data for the grid later
+    repos = Repo.objects.filter(full_name__in=full_names).values('id','full_name').order_by('id') # may want more data for the grid later
+    
+    #populate missing data
+    full_names_queried = [n['full_name'] for n in repos]
+    full_names_missing = list(set(full_names) - set(full_names_queried))
+    
+    for full_name in full_names_missing:
+        #repos should auto-update after the insert/update mentho
+        ProcessRepo(full_name)
+    
+    repos.update()
+    
+    #generate list of repo_ids for more efficient queries
+    repo_ids = [n['id'] for n in repos]
+    # need to be ordered from low to high
+    repo_ids.sort()
     
     for repo in repos:
         myJson['cols'].append({'label':repo['full_name'],'type':'number'})
