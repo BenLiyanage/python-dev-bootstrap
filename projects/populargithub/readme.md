@@ -12,6 +12,7 @@ This is a full stack solution.  Technologies I have used in this project are:
   * Angular.js
   * Bootstrap
   * jQuery
+  * Google Graph API
 * Backend
   * Python
   * Django
@@ -35,3 +36,4 @@ At the moment this application requires mysql--there are some mysql specific que
 * Automate Database setup
 * Log logging to database for Repo Processing to allow for rendering statistical success rates.
 * Mobile testing.
+* Throw in a D3.js example.
