@@ -18,7 +18,6 @@ function formatGitHubDate(gitHubDate)
 var githubApp = angular.module('githubApp', [])
 githubApp.controller('searchCtrl', function($scope, $http, $timeout) {
     $scope.selectedRepo = [{full_name: 'sevenwire/forgery', id: 322 }, {full_name: 'collectiveidea/acts_as_geocodable', id: 364 }]
-    $scope.isNumber = angular.isNumber;
     
     $http({
         method: 'get', 
