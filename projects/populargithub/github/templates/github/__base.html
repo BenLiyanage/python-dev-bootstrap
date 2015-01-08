@@ -32,9 +32,6 @@
           <a class="navbar-brand" href="#">Github Open Source Repository Statistics</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">About</a></li>
-          </ul>
           {% comment "search bar example" %}
           <form class="navbar-form navbar-right">
             <input type="text" class="form-control" placeholder="Search...">
@@ -50,11 +47,11 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar" id="sidebar">
           <ul class="nav nav-sidebar">
-            <li class="{% active request compare False %}"><a href="{{ compare }}">Compare Repositories {% active request compare True %}</a></li>
-            <li class="{% active request jasmine False %}"><a href="{{ jasmine }}">Angular Unit Tests {% active request jasmine True %}</a></li>
+            <li><a href="">About</a></li>
           </ul>
           <ul class="nav nav-sidebar">
-            <li><a href="">About</a></li>
+            <li class="{% active request compare False %}"><a href="{{ compare }}">Compare Repositories {% active request compare True %}</a></li>
+            <li class="{% active request jasmine False %}"><a href="{{ jasmine }}">Angular Unit Tests {% active request jasmine True %}</a></li>
           </ul>
           {% comment "example of how to do additional nav sections %}
           <ul class="nav nav-sidebar">

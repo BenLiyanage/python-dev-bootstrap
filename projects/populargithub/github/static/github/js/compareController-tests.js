@@ -6,8 +6,7 @@ describe("Formatting Functions", function() {
     })
 })
 
-describe("Angular - SearchController", function() {
-    
+describe("Angular Tests", function() {
     var controller, scope;
     
     beforeEach(function() {
@@ -17,13 +16,22 @@ describe("Angular - SearchController", function() {
             controller =  $controller('searchCtrl', { $scope: scope });
         })
     })
+    
     it("Tests Default Repositories", function() {
         expect(scope.selectedRepo.length).toBe(2)
+    })
+    
+    it("Tests Creating Our Directive", function() {
+        //directive example: http://jsfiddle.net/eitanp461/7nu2n/
     })
     
     it("Tests Removing a Repo", function() {
         scope.remove(scope.selectedRepo[1])
         expect(scope.selectedRepo.length).toBe(1)
         expect(scope.selectedRepo[0].full_name).toBe('sevenwire/forgery')
+    })
+    
+    it("Tests Adding a Repo", function() {
+    
     })
 })
