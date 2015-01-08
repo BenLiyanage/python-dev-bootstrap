@@ -1,4 +1,5 @@
 google.load("visualization", "1", {packages:["corechart"]});
+var githubApp = angular.module('githubApp', [])
 
 function formatGitHubDate(gitHubDate)
 {
@@ -15,7 +16,6 @@ function formatGitHubDate(gitHubDate)
     return dateString
 }
 
-var githubApp = angular.module('githubApp', [])
 githubApp.controller('searchCtrl', function($scope, $http, $timeout) {
     $scope.selectedRepo = [{full_name: 'sevenwire/forgery', id: 322 }, {full_name: 'collectiveidea/acts_as_geocodable', id: 364 }]
     
@@ -37,24 +37,9 @@ githubApp.controller('searchCtrl', function($scope, $http, $timeout) {
             $scope.selectedRepo.splice(index, 1)
         }
     }
-    
-    $scope.drawChart = function() {
-        var full_names = ''    
-        $scope.selectedRepo.forEach(function(repo)
-        {
-            full_names = full_names + repo.full_name + '+'
-        })
-        
-        //remove trailing plus
-        full_names = full_names.substr(0, full_names.length-1)
-        
-        json = $.ajax({
-            url:'/github/comparedata', 
-            dataType:'json', 
-            async: false,
-            data: { 'full_names': full_names} 
-        })
-        var data = new google.visualization.DataTable(json.responseText);
+    $scope.drawChart = function(json) {
+        console.log("drawing") 
+        var data = new google.visualization.DataTable(json);
         
         var mergesOptions = {
           title: 'Code Merges Per Month',
@@ -64,17 +49,36 @@ githubApp.controller('searchCtrl', function($scope, $http, $timeout) {
         var chart_MergesPerMonth = new google.visualization.LineChart(document.getElementById('chart_MergesPerMonth'));
         chart_MergesPerMonth.draw(data, mergesOptions);
     }
+    
+    $scope.updateChart = function() {
+        var full_names = ''    
+        $scope.selectedRepo.forEach(function(repo)
+        {
+            full_names = full_names + repo.full_name + '+'
+        })
+        
+        //remove trailing plus
+        full_names = full_names.substr(0, full_names.length-1)
+        
+        $.ajax({
+            url:'/github/comparedata', 
+            dataType:'json', 
+            data: { 'full_names': full_names} 
+        }).done($scope.drawChart)
+    }
+    
+    
 });
 
-githubApp.directive('mergesGraph', function($timeout) {
+githubApp.directive('mergesGraph', function() {
     return function(scope, iElement) {
         scope.$watch('selectedRepo', function() {
-            scope.drawChart() 
+            scope.updateChart() 
         },true)
     }
 })
 
-githubApp.directive('autoComplete', function($timeout, $http) {
+githubApp.directive('autoComplete', function($http) {
     return function (scope, iElement, iAttrs)
         {
             iElement.autocomplete({
