@@ -38,7 +38,7 @@ githubApp.controller('searchCtrl', function($scope, $http, $timeout) {
         }
     }
     
-    $scope.updateChart = function() {
+    $scope.updateChart = function(iElement) {
         var full_names = ''    
         $scope.selectedRepo.forEach(function(repo)
         {
@@ -53,16 +53,13 @@ githubApp.controller('searchCtrl', function($scope, $http, $timeout) {
             url: '/github/comparedata',
             params: { 'full_names': full_names}
         }).success(function(data, status, headers, config) {
-                console.log('drawing')
-                var chartData = new google.visualization.DataTable(data);
-                
-                var mergesOptions = {
-                    title: 'Code Merges Per Month',
-                    chartArea: {left:30, width:'70%'}
-                };
-
-                var chart_MergesPerMonth = new google.visualization.LineChart(document.getElementById('chart_MergesPerMonth'));
-                chart_MergesPerMonth.draw(chartData, mergesOptions);
+            var chartData = new google.visualization.DataTable(data);
+            var mergesOptions = {
+                title: 'Code Merges Per Month',
+                chartArea: {left:30, width:'70%'}
+            };
+            var chart_MergesPerMonth = new google.visualization.LineChart(iElement[0]);
+            chart_MergesPerMonth.draw(chartData, mergesOptions);
         }).error(function (data, status, headers, config) { console.log(data, status, headers, config) } )
     }
 });
@@ -70,7 +67,7 @@ githubApp.controller('searchCtrl', function($scope, $http, $timeout) {
 githubApp.directive('mergesGraph', function() {
     return function(scope, iElement) {
         scope.$watch('selectedRepo', function() {
-            scope.updateChart() 
+            scope.updateChart(iElement) 
         },true)
     }
 })
