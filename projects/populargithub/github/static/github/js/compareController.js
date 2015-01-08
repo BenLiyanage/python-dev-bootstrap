@@ -10,7 +10,7 @@ function formatGitHubDate(gitHubDate)
         minutes = "0" + minutes;
     }
     dateString = 
-        resetDate.getMonth() + '/' + resetDate.getDate() + '/' + resetDate.getFullYear() 
+        (resetDate.getMonth() + 1) + '/' + resetDate.getDate() + '/' + resetDate.getFullYear() 
         + ' ' + 
         resetDate.getHours() % 12 + ':' + minutes
     return dateString
