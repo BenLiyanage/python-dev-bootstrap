@@ -1,4 +1,3 @@
-
 google.load("visualization", "1", {packages:["corechart"]});
 
 function formatGitHubDate(gitHubDate)
@@ -38,13 +37,9 @@ githubApp.controller('searchCtrl', function($scope, $http, $timeout) {
         {   
             $scope.selectedRepo.splice(index, 1)
         }
-        $scope.drawChart()
     }
     
     $scope.drawChart = function() {
-        if ($scope.length == 0)
-            return
-        
         var full_names = ''    
         $scope.selectedRepo.forEach(function(repo)
         {
@@ -73,9 +68,10 @@ githubApp.controller('searchCtrl', function($scope, $http, $timeout) {
 });
 
 githubApp.directive('mergesGraph', function($timeout) {
-    return function(scope) {
-        //Run the graph on load
-        $timeout(scope.drawChart)
+    return function(scope, iElement) {
+        scope.$watch('selectedRepo', function() {
+            scope.drawChart() 
+        },true)
     }
 })
 
@@ -103,7 +99,6 @@ githubApp.directive('autoComplete', function($timeout, $http) {
                 },
                 select: function(event, ui) {
                     scope['selectedRepo'].push({'full_name': ui.item.full_name, id: ui.item.id})
-                    scope.drawChart();
                     scope.$apply();
                     
                 }
