@@ -1,3 +1,6 @@
+
+google.load("visualization", "1", {packages:["corechart"]});
+
 function formatGitHubDate(gitHubDate)
 {
     resetDate = new Date(gitHubDate * 1000)
@@ -50,7 +53,7 @@ githubApp.controller('searchCtrl', function($scope, $http, $timeout) {
         
         //remove trailing plus
         full_names = full_names.substr(0, full_names.length-1)
-        console.log(full_names)
+        
         json = $.ajax({
             url:'/github/comparedata', 
             dataType:'json', 
@@ -65,56 +68,51 @@ githubApp.controller('searchCtrl', function($scope, $http, $timeout) {
         };
 
         var chart_MergesPerMonth = new google.visualization.LineChart(document.getElementById('chart_MergesPerMonth'));
-        //var chart_IssueReopenRate = new google.visualization.LineChart(document.getElementById('chart_IssueReopenRate'));
-
         chart_MergesPerMonth.draw(data, mergesOptions);
-        //chart_IssueReopenRate.draw(data, {title: 'Issue Reopen Rate'});
     }
-    
-    //Run the graph on load
-    //$timeout(google.load("visualization", "1", {packages:["corechart"]}))
-    $timeout($scope.drawChart)
 });
 
-google.load("visualization", "1", {packages:["corechart"]});
-
-githubApp.directive('autoComplete', function($timeout, $http)
-    {
-        return function (scope, iElement, iAttrs)
-            {
-                iElement.autocomplete({
-                    minLength: 0,
-                    source: function(request, response) { 
-                            //need to do the dynamic search here using "term" as the current input
-                            //alert('hi')
-                            var req = { 
-                                method: 'get', 
-                                url: 'https://api.github.com/search/repositories',
-                                params: { q: request.term }
-                            }
-                            $http(req)
-                                .success(function(data, status, headers, config) { 
-                                    scope['rateLimit'] = headers('X-RateLimit-Limit');
-                                    scope['rateLimitRemaining'] = headers('X-RateLimit-Remaining');
-                                    scope['rateLimitReset'] = formatGitHubDate(headers('X-RateLimit-Reset'))
-                                    response(data.items); 
-                                })
-                                .error(function() { response() })
-                        },
-                    select: function(event, ui) {
-                            scope['selectedRepo'].push({'full_name': ui.item.full_name, id: ui.item.id})
-                            scope.drawChart();
-                            scope.$apply();
-                            
-                        }
-                    })
-                .data('ui-autocomplete')._renderItem = function(ul, item) {
-                        return $("<li></li>")
-                                    .data("item.autocomplete", item)
-                                    .append("<a>" + item.full_name + "</a>")
-                                    .appendTo(ul)
-                        
-                    }
-            }
+githubApp.directive('mergesGraph', function($timeout) {
+    return function(scope) {
+        //Run the graph on load
+        $timeout(scope.drawChart)
     }
-);
+})
+
+githubApp.directive('autoComplete', function($timeout, $http) {
+    return function (scope, iElement, iAttrs)
+        {
+            iElement.autocomplete({
+                minLength: 0,
+                source: function(request, response) { 
+                    //need to do the dynamic search here using "term" as the current input
+                    //alert('hi')
+                    var req = { 
+                        method: 'get', 
+                        url: 'https://api.github.com/search/repositories',
+                        params: { q: request.term }
+                    }
+                    $http(req)
+                        .success(function(data, status, headers, config) { 
+                            scope['rateLimit'] = headers('X-RateLimit-Limit');
+                            scope['rateLimitRemaining'] = headers('X-RateLimit-Remaining');
+                            scope['rateLimitReset'] = formatGitHubDate(headers('X-RateLimit-Reset'))
+                            response(data.items); 
+                        })
+                        .error(function() { response() })
+                },
+                select: function(event, ui) {
+                    scope['selectedRepo'].push({'full_name': ui.item.full_name, id: ui.item.id})
+                    scope.drawChart();
+                    scope.$apply();
+                    
+                }
+            }).data('ui-autocomplete')._renderItem = function(ul, item) {
+                return $("<li></li>")
+                            .data("item.autocomplete", item)
+                            .append("<a>" + item.full_name + "</a>")
+                            .appendTo(ul)
+                
+            }
+        }
+});

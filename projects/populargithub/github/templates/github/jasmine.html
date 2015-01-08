@@ -1,0 +1,25 @@
+{% extends "github/__base.html" %}
+{% load staticfiles %}
+
+{% block head %}
+<link rel="shortcut icon" type="image/png" href="{% static 'github/jasmine-2.1.3/jasmine_favicon.png' %}jasmine_favicon.png">
+<link rel="stylesheet" href="{% static 'github/jasmine-2.1.3/jasmine.css' %}">
+
+<script src="{% static 'github/jasmine-2.1.3/jasmine.js' %}"></script>
+<script src="{% static 'github//jasmine-2.1.3/jasmine-html.js' %}"></script>
+<script src="{% static 'github/jasmine-2.1.3/boot.js' %}"></script>
+
+<!-- include source files here... -->
+<script src="{% static 'github/jasmine-2.1.3/Player.js' %}"></script>
+<script src="{% static 'github/jasmine-2.1.3/Song.js' %}"></script>
+
+<!-- include spec files here... -->
+<script src="{% static 'github/jasmine-2.1.3/SpecHelper.js' %}"></script>
+<script src="{% static 'github/jasmine-2.1.3/PlayerSpec.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+<div id="jasmine">
+
+</div>
+{% endblock %}

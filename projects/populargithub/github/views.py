@@ -27,8 +27,13 @@ def QueueStatus(request):
     context = RequestContext(request, { 'myRateLimit': myRateLimit})
     return HttpResponse(template.render(context))
 
-def Graph(request):
-    template = loader.get_template('github/graph.html')
+def Compare(request):
+    template = loader.get_template('github/compare.html')
+    context = RequestContext(request)
+    return HttpResponse(template.render(context))
+
+def Jasmine(request):
+    template = loader.get_template('github/jasmine.html')
     context = RequestContext(request)
     return HttpResponse(template.render(context))
 
