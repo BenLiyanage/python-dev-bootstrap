@@ -37,18 +37,6 @@ githubApp.controller('searchCtrl', function($scope, $http, $timeout) {
             $scope.selectedRepo.splice(index, 1)
         }
     }
-    $scope.drawChart = function(json) {
-        console.log("drawing") 
-        var data = new google.visualization.DataTable(json);
-        
-        var mergesOptions = {
-          title: 'Code Merges Per Month',
-          chartArea: {left:30, width:'70%'}
-        };
-
-        var chart_MergesPerMonth = new google.visualization.LineChart(document.getElementById('chart_MergesPerMonth'));
-        chart_MergesPerMonth.draw(data, mergesOptions);
-    }
     
     $scope.updateChart = function() {
         var full_names = ''    
@@ -60,14 +48,23 @@ githubApp.controller('searchCtrl', function($scope, $http, $timeout) {
         //remove trailing plus
         full_names = full_names.substr(0, full_names.length-1)
         
-        $.ajax({
-            url:'/github/comparedata', 
-            dataType:'json', 
-            data: { 'full_names': full_names} 
-        }).done($scope.drawChart)
+        $http({
+            method: 'get',
+            url: '/github/comparedata',
+            params: { 'full_names': full_names}
+        }).success(function(data, status, headers, config) {
+                console.log('drawing')
+                var chartData = new google.visualization.DataTable(data);
+                
+                var mergesOptions = {
+                    title: 'Code Merges Per Month',
+                    chartArea: {left:30, width:'70%'}
+                };
+
+                var chart_MergesPerMonth = new google.visualization.LineChart(document.getElementById('chart_MergesPerMonth'));
+                chart_MergesPerMonth.draw(chartData, mergesOptions);
+        }).error(function (data, status, headers, config) { console.log(data, status, headers, config) } )
     }
-    
-    
 });
 
 githubApp.directive('mergesGraph', function() {
