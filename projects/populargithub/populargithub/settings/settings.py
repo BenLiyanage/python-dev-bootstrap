@@ -88,10 +88,17 @@ USE_L10N = True
 USE_TZ = True
 
 
+# Simplified static file serving.
+# https://warehouse.python.org/project/whitenoise/
+#STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
-
+STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
 
 LOGGING = {
     'version': 1,

@@ -10,3 +10,4 @@ projects/populargithub/populargithub/passwords.py
 *.log
 projects/populargithub/logfile
 projects/populargithub/github/migrations
+projects/populargithub/staticfiles/

@@ -37,3 +37,6 @@ At the moment this application requires mysql--there are some mysql specific que
 * Log logging to database for Repo Processing to allow for rendering statistical success rates.
 * Mobile testing.
 * Throw in a D3.js example.
+* Add heroku toolbelt to vagrant file
+* add pip install django-toolbelt to vagrant file (some additional depedencies were needed to install this)
+* add pip install whitenoise for static files

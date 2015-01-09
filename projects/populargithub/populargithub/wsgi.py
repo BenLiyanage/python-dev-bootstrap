@@ -11,4 +11,7 @@ import os
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "populargithub.settings")
 
 from django.core.wsgi import get_wsgi_application
+from whitenoise.django import DjangoWhiteNoise
+print 'hello world'
 application = get_wsgi_application()
+application = DjangoWhiteNoise(application)
