@@ -10,14 +10,14 @@ This is a full stack solution.  Technologies I have used in this project are:
 
 * Frontend
     * Angular.js
-  * Bootstrap
-  * jQuery
-  * Google Graph API
+    * Bootstrap
+    * jQuery
+    * Google Graph API
 * Backend
-  * Python
-  * Django
-  * MySQL
-  * Github API
+    * Python
+    * Django
+    * MySQL
+    * Github API
 
 # Installation
 
