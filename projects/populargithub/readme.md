@@ -9,10 +9,11 @@ This application allows you to compare stats about different publically availabl
 This is a full stack solution.  Technologies I have used in this project are:
 
 * Frontend
-    * Angular.js
-    * Bootstrap
-    * jQuery
-    * Google Graph API
+    * Angular.js, cause it's cool.
+    * Bootstrap, ditto.
+    * jQuery, for dropdowns.
+    * Google Graph API, cause I didn't realize I should be playing with d3.js
+    * Jasmine, for Angular Unit Testing
 * Backend
     * Python
     * Django
