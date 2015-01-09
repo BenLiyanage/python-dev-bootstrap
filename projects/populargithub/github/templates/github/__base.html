@@ -43,11 +43,12 @@
     {% load navigation %}
     {% url 'compare' as compare %}
     {% url 'jasmine' as jasmine %}
+    {% url 'about' as about %}
     <div  class="container-fluid">
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar" id="sidebar">
           <ul class="nav nav-sidebar">
-            <li><a href="">About</a></li>
+            <li class="{% active request about False %}"><a href="{{ about }}">About {% active request about True %}</a></li>
           </ul>
           <ul class="nav nav-sidebar">
             <li class="{% active request compare False %}"><a href="{{ compare }}">Compare Repositories {% active request compare True %}</a></li>

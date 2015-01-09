@@ -5,6 +5,7 @@ from django.http import HttpResponse
 import requests, json, datetime, pickle, sys
 from django.db.models.base import ObjectDoesNotExist
 from django.db.models import Count, Min
+from markdown import markdown
 
 import logging
 from django.views import generic
@@ -36,6 +37,15 @@ def Jasmine(request):
     template = loader.get_template('github/jasmine.html')
     context = RequestContext(request)
     return HttpResponse(template.render(context))
+
+def About(request):
+    template = loader.get_template('github/about.html')
+    with open ('readme.md', 'r') as myFile:
+        content = myFile.read().replace('\n','')
+    content = markdown(content)
+    context = RequestContext(request, { 'content': content })
+    return HttpResponse(template.render(context))
+
 
 def CompareData(request):
     #Initialize our JSON Object

@@ -9,7 +9,7 @@ This application allows you to compare stats about different publically availabl
 This is a full stack solution.  Technologies I have used in this project are:
 
 * Frontend
-  * Angular.js
+    * Angular.js
   * Bootstrap
   * jQuery
   * Google Graph API
@@ -40,3 +40,4 @@ At the moment this application requires mysql--there are some mysql specific que
 * Add heroku toolbelt to vagrant file
 * add pip install django-toolbelt to vagrant file (some additional depedencies were needed to install this)
 * add pip install whitenoise for static files
+* add heroku pluggin: https://github.com/ddollar/heroku-push

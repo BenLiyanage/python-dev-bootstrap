@@ -1,1 +1,1 @@
-web: gunicorn populargithub.wsgi:application -b 0.0.0.0:8000 --log-file - --log-level debug
+web: gunicorn populargithub.wsgi:application --log-file - --log-level debug
