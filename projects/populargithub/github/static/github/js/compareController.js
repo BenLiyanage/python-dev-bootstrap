@@ -50,7 +50,7 @@ githubApp.controller('searchCtrl', function($scope, $http, $timeout) {
         
         $http({
             method: 'get',
-            url: '/github/comparedata',
+            url: '/comparedata',
             params: { 'full_names': full_names}
         }).success(function(data, status, headers, config) {
             var chartData = new google.visualization.DataTable(data);

@@ -74,6 +74,35 @@ DATABASES = {
     }
 }
 
+# heroku db settings pulled from config
+import urlparse
+import os
+
+# Check to make sure DATABASES is set in settings.py file.
+# If not default to {}
+
+if 'DATABASE_URL' in os.environ:
+    # Register database schemes in URLs.
+    urlparse.uses_netloc.append('mysql')
+
+    url = urlparse.urlparse(os.environ['DATABASE_URL'])
+
+    # Ensure default database exists.
+    DATABASES['default'] = DATABASES.get('default', {})
+
+    # Update with environment configuration.
+    DATABASES['default'].update({
+        'NAME': url.path[1:],
+        'USER': url.username,
+        'PASSWORD': url.password,
+        'HOST': url.hostname,
+        'PORT': url.port,
+    })
+
+
+    if url.scheme == 'mysql':
+        DATABASES['default']['ENGINE'] = 'django.db.backends.mysql'
+
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
 
