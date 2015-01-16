@@ -3,6 +3,10 @@ from tweepy import OAuthHandler
 from tweepy import Stream
 import json
 from urllib import quote,unquote
+import pandas
+from datetime import datetime, timedelta
+
+# Please note, this script is inteded to be run inside of the django framework, as it leverages the database component for summations.
 
 access_token = "29463499-9Og6hxW4HqFxcQyIrAdmLpbAnrwIk290ghOE0ez5f"
 access_token_secret = "elXVYJRFmFFit3PiVTmI9eU0IvHqqD7H4yeEmClJ8c"
@@ -11,52 +15,45 @@ consumer_secret = "vOvKV1QwuS1AeKPMIvJqErBxW7i1N12OL4UY2tNMs0c"
 
 class twitterListener(StreamListener):
     
-    retweets = {}
     
+    def __init__(self, windowInMinutes):
+        self.windowInMinutes = windowInMinutes
+        self.retweets = pandas.DataFrame(columns=['text','date'])
+        print self.retweets.columns.values
     def on_data(self, data):
         try:
             data = json.loads(data)
             
-            if 'retweeted_status' in data:
-                ##store the tweet in a dictionary, with the text as the keys
+            if 'retweeted_status'  in data:
+                # remove expiring records
+                expireBefore = (datetime.now() - timedelta(minutes=self.windowInMinutes))
                 
-                # I do this to handle international characters, that can't be in a dictionary
-                key = quote(data['text'])
-                if key in self.retweets:
-                    self.retweets[key] += 1
-                else:
-                    self.retweets[key] = 1
+                self.retweets = self.retweets[self.retweets.date > expireBefore ]
                 
-                #convert the list to a sorted array
-                #this is expensive, I'm being lazy.
-                sortedRetweetKeys = sorted(self.retweets, key=self.retweets.get, reverse=True)
+                # add our new record
+                self.retweets = self.retweets.append({'text':data['text'], 'date':datetime.now()}, ignore_index=True)
                 
-                #print the top 10
-                tweetsToPrint = len(self.retweets)
-                if tweetsToPrint > 10:
-                    tweetsToPrint = 10
+                top10 = self.retweets.groupby("text")["text"].agg(["count"]).sort('count',ascending=0).head(10)
                 
                 print '-----------------------------------------------'
                 print '-----------------------------------------------'
                 print '-----------------------------------------------'
                 print '-----------------------------------------------'
-                for index in range(0,tweetsToPrint):
-                    #unquote is to decode the text for international characters
-                    print str(self.retweets[sortedRetweetKeys[index]]) + '-' + unquote(sortedRetweetKeys[index])
-                    
-                #exit()
+                print top10
+                
+            return True
         except Exception as e:
             print "Error: " + str(e)
-            
-        return True
 
     def on_error(self, status):
         print status
 
+# main function call
 if __name__ == '__main__':
-
+    
     #This handles Twitter authetification and the connection to Twitter Streaming API
-    myListener = twitterListener()
+    myListener = twitterListener(15)
+    
     auth = OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_token_secret)
     stream = Stream(auth, myListener)
