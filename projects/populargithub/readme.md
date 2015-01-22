@@ -24,8 +24,22 @@ This is a full stack solution.  Technologies I have used in this project are:
 
 * Pull down this repository.  
 * Run the vagrant file.  This will assemble an appropriate box for you.
-* Create a mysql database named 'github'
-* Replace github api keys in *populargithub/settings/__init__.py--template*
+* Create a mysql database named 'github' - create database github;
+* mkdir /projects/populargithub/logfile
+* pip install requirements.txt
+* python manage.py makemigrations
+* python manage.py migrate
+* cp /projects/populargithub/settings/__init__.py--template /projects/populargithub/settings/__init__.py
+* set up github api secrets
+    * log into github -> https://github.com/settings/applications
+    * ->Register New Application
+    * ->Fill out Information
+    * Put ClientID and Client Secret into __init__.py
+
+How to run:
+python manage.py runserver 0.0.0.0:8000 
+
+Web site should be running on 192.168.33.10:8000
 
 ## Requirements
 
