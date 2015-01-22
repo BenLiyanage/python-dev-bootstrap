@@ -39,7 +39,5 @@ At the moment this application requires mysql--there are some mysql specific que
 * Mobile testing.
 * Throw in a D3.js example.
 * Add heroku toolbelt to vagrant file
-* add pip install django-toolbelt to vagrant file (some additional depedencies were needed to install this)
-* add pip install whitenoise for static files
 * add heroku pluggin: https://github.com/ddollar/heroku-push
 * set up web test runner for python: http://tungwaiyip.info/software/HTMLTestRunner.html
