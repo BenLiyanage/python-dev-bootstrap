@@ -34,12 +34,21 @@ class TestProccessing(TestCase):
         # Proccess a known repo
         ProcessRepo(testRepoFullName)
         
+        # verify that a pagination was queued on the pullrequest import
+        myRequestCaches = GitHubRequestCache.objects.filter(started_at__isnull = True)
+        self.assertEqual(myRequestCaches.count(), 1)
+        
+        # process the queued pagination
+        ProcessGitHubRequest(1)
+        
         myRepo = Repo.objects.get(pk = testRepo)
         
         # test that pull requests got imported
         # this repo should have more than 100 pull requests.
         # importing pull requests requires pagingation to go over 100 entries
         self.assertGreater(myRepo.pullrequest_set.count(), 100)
+        
+        
 
     def test_ProcessGitHubRequest(self):
         testRepo = 18295962

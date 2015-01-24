@@ -7,6 +7,7 @@ class GitHubRequestCache(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     started_at = models.DateTimeField(default=None, null=True)
     completed_at = models.DateTimeField(default=None, null=True)
+    success = models.NullBooleanField(default=None, null=True)
     
 class RateLimit(models.Model):
     type = models.CharField(max_length=255, primary_key=True)

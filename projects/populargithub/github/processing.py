@@ -8,6 +8,8 @@ import logging
 from django.views import generic
 from django.conf import settings
 from datetime import datetime
+from urllib import urlencode
+from urlparse import urlparse, urlunparse, parse_qs
 
 
 log = logging.getLogger(__name__)
@@ -148,6 +150,8 @@ def MarkGitHubRequestAsProcessed(url):
     #TODO: Process logic and logging is not completely right
     myRequestCache = GitHubRequestCache.objects.get(pk = url)
     myRequestCache.completed_at = datetime.now()
+    if myRequestCache.success == None:
+        myRequestCache.success = True
     myRequestCache.save()
 
 def QueueGitHubRequest(url):
@@ -176,7 +180,11 @@ def ProcessGitHubRequest(numberToProcess=10):
         
             ProcessRepo(user + '/' + repo)
         else:
-            raise Exception("Unknown request type")
+            log.info("Unknown Request in Cache: {0}".format(myRequestCache.query))
+            # mark this request as unproccessible
+            myRequestCache.success = False
+            myRequestCache.save()
+            MarkGitHubRequestAsProcessed(myRequestCache.query)
             
     print 'end queue processing'
             
@@ -221,6 +229,27 @@ def MakeGitHubRequest(url):
     
     UpdateRateLimit(type, r.headers['X-RateLimit-Limit'], r.headers['X-RateLimit-Remaining'], r.headers['X-RateLimit-Reset'])
     
+    # check for pagination.  If there is a paginated request, queue it.
+    if 'Link' in r.headers:
+        links = r.headers['Link'].split(',')
+        
+        for linkString in links:
+            linkStringDecomposed = linkString.split('; ')
+            if linkStringDecomposed[1] == 'rel="next"':
+                
+                nextLink = linkStringDecomposed[0][1:-1] # slice off the begining '<' and trailing '>'
+                # remove client and secret from query
+                u = urlparse(nextLink)
+                query = parse_qs(u.query)
+                query.pop('client_id', None)
+                query.pop('client_secret', None)
+                u = u._replace(query=urlencode(query, True))
+                #queue the link
+                nextLink = u.path + u.params + u.query
+                nextLink = nextLink [1:] # remove leading '/'
+                log.debug("Queueing a pagination request: {0}".format(nextLink))
+                QueueGitHubRequest(nextLink)
+        
     # check return status code
     if r.status_code == 200:
         log.debug("found new data")
