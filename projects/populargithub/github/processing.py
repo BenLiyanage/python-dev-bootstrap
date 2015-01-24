@@ -2,11 +2,12 @@ from django.shortcuts import render
 from github.models import *
 from django.template import RequestContext, loader
 from django.http import HttpResponse
-import requests, json, datetime, pickle, sys
+import requests, json, pickle, sys
 from django.db.models.base import ObjectDoesNotExist
 import logging
 from django.views import generic
 from django.conf import settings
+from datetime import datetime
 
 
 log = logging.getLogger(__name__)
@@ -140,13 +141,13 @@ def UpdateRateLimit(type, limit, remaining, reset):
     myRateLimit.limit = limit
     myRateLimit.remaining = remaining
     s = int(limit)
-    myRateLimit.reset = datetime.datetime.fromtimestamp(s).strftime('%Y-%m-%d %H:%M:%S.%f')
+    myRateLimit.reset = datetime.fromtimestamp(s).strftime('%Y-%m-%d %H:%M:%S.%f')
     myRateLimit.save()
 
 def MarkGitHubRequestAsProcessed(url):
     #TODO: Process logic and logging is not completely right
     myRequestCache = GitHubRequestCache.objects.get(pk = url)
-    myRequestCache.processed = True
+    myRequestCache.completed_at = datetime.now()
     myRequestCache.save()
     
 def MakeGitHubRequest(url):
@@ -162,7 +163,7 @@ def MakeGitHubRequest(url):
     
     # Make the Request
     headers = {}
-    if myRequestCache.processed:
+    if myRequestCache.completed_at != None:
         headers = {'If-None-Match':myRequestCache.ETag}
     
     #add auth stuff to our URL
@@ -179,6 +180,7 @@ def MakeGitHubRequest(url):
     if 'ETag' in r.headers:
         log.debug("Saving ETag: {0}".format(r.headers['ETag']))
         myRequestCache.ETag = r.headers['ETag']
+        myRequestCache.started_at = datetime.now()
         myRequestCache.save()
         
     #record rate limiting for status page
