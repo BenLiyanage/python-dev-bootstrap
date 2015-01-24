@@ -149,16 +149,47 @@ def MarkGitHubRequestAsProcessed(url):
     myRequestCache = GitHubRequestCache.objects.get(pk = url)
     myRequestCache.completed_at = datetime.now()
     myRequestCache.save()
+
+def QueueGitHubRequest(url):
+    try:
+        myRequestCache = GitHubRequestCache.objects.get(pk = url)
+    except ObjectDoesNotExist:
+        myRequestCache = GitHubRequestCache(pk = url, ETag = '')
+    
+    myRequestCache.started_at = None
+    myRequestCache.completed_at = None
+    myRequestCache.save()
+    
+def ProcessGitHubRequest(numberToProcess=10):
+    print '-----------------------------------'
+    log.info("processing queue")
+    myRequestCaches = GitHubRequestCache.objects.filter(started_at__isnull = True).order_by('created_at')[:numberToProcess]
+    
+    for myRequestCache in myRequestCaches:
+        queryParameters = myRequestCache.query.split('/')
+        queryType = queryParameters [0]
+        log.info("found a request")
+        if queryType == 'repos':
+            log.info("processing a repo")
+            user = queryParameters[1]
+            repo = queryParameters[2]
+        
+            ProcessRepo(user + '/' + repo)
+        else:
+            raise Exception("Unknown request type")
+            
+    print 'end queue processing'
+            
     
 def MakeGitHubRequest(url):
     log.info("Making GitHubRequest: {0}".format(url))
     #look up our query to see if we can make a conditional request
     try:
-        log.debug("Checking cache")
+        log.info("Checking cache")
         myRequestCache = GitHubRequestCache.objects.get(pk = url)
-        log.debug("Using ETag: {0}".format(myRequestCache.ETag))
+        log.info("Using ETag: {0}".format(myRequestCache.ETag))
     except ObjectDoesNotExist:
-        log.debug("Unknown API Request")
+        log.info("API Request Not In Cache")
         myRequestCache = GitHubRequestCache(pk = url, ETag = '')
     
     # Make the Request

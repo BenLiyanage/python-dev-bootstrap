@@ -4,6 +4,7 @@ class GitHubRequestCache(models.Model):
     query = models.CharField(max_length=255, primary_key=True)
     ETag = models.CharField(max_length=255)
     processed = models.BooleanField(default=False)
+    created_at = models.DateTimeField(auto_now_add=True)
     started_at = models.DateTimeField(default=None, null=True)
     completed_at = models.DateTimeField(default=None, null=True)
     
