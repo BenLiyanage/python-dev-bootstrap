@@ -26,7 +26,7 @@ class TestProccessing(TestCase):
         
         #repo request shouldn't be processed, since its cached
         ProcessRepo(testRepoFullName)
-    
+        
     def test_PrcoessRepoLargePullRequestCount(self):
         testRepo = 3638964
         testRepoFullName = 'ansible/ansible'
@@ -47,9 +47,7 @@ class TestProccessing(TestCase):
         # this repo should have more than 100 pull requests.
         # importing pull requests requires pagingation to go over 100 entries
         self.assertGreater(myRepo.pullrequest_set.count(), 100)
-        
-        
-
+    
     def test_ProcessGitHubRequest(self):
         testRepo = 18295962
         testRepoFullName = 'BenLiyanage/AncientOne'

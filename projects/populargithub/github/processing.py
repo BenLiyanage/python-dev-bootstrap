@@ -51,7 +51,6 @@ def BulkImport():
 def ProcessRepo(name):
     try:
         log.info("Getting id: {0}".format(name))
-        output = ""
         
         remoteRepoURL = "repos/{0}".format(name)
         remoteRepo = MakeGitHubRequest(remoteRepoURL)
@@ -71,53 +70,58 @@ def ProcessRepo(name):
                 
                 # get pull requests
                 # get request is dependant on ratelimiting parameters that we may have captured
-                remotePullRequestURL = "repos/" + myRepo.full_name + "/pulls?state=closed"
-                remotePullRequests = MakeGitHubRequest(remotePullRequestURL)
+                remotePullRequestURL = "repos/" + myRepo.full_name + "/pulls?state=closed&per_page=100"
                 
-                if remotePullRequests is not None:
-                    log.info("Importing {0} Pull Requests".format(len(remotePullRequests)))
-                    for remotePullRequest in remotePullRequests:
-                        try:
-                            log.info("Processing Pull Number {0}".format(remotePullRequest['number']))
-                            
-                            try:
-                                myPullRequest = myRepo.pullrequest_set.get(pk=remotePullRequest['number'])
-                            except ObjectDoesNotExist:
-                                myPullRequest = PullRequest(number = remotePullRequest['number'], repo = myRepo)
-                            
-                            #figure out if we need to create the user
-                            if remotePullRequest['user'] is not None:
-                                try:
-                                    myUser = User.objects.get(pk = remotePullRequest['user']['id'])
-                                except:
-                                    myUser = User(pk = remotePullRequest['user']['id'], login = remotePullRequest['user']['login'])
-                                    myUser.save()
-                                
-                            myPullRequest.user = myUser
-                            
-                            myPullRequest.state = remotePullRequest['state']
-                            myPullRequest.created_at = remotePullRequest['created_at']
-                            myPullRequest.updated_at = remotePullRequest['updated_at']
-                            myPullRequest.closed_at = remotePullRequest['closed_at']
-                            myPullRequest.merged_at = remotePullRequest['merged_at']
-
-                            myPullRequest.save()
-                        except Exception as e:
-                            log.info("Failed to Process")
-                            log.info(json.dumps(remotePullRequest, indent=4, separators=(',', ': ')))
-                            raise
-                        
-                    output += str(list(myRepo.pullrequest_set.all()))
-                    
-                    MarkGitHubRequestAsProcessed(remotePullRequestURL)
-            return output
+                ProcessPulLRequests(remotePullRequestURL, myRepo)
+                
         else:
-            return "Could not process repo: {0}".format(name)
+            log.info("Skipping, Repo Already Processed: {0}".format(name))
     except Exception as e:
         log.info("Error Proccessing Repo {0}".format(name))
         log.info(e)
         log.debug("Repo Object" + json.dumps(remoteRepo, indent=4, separators=(',', ': ')))
-    
+
+def ProcessPulLRequests(remotePullRequestURL, myRepo):
+    remotePullRequests = MakeGitHubRequest(remotePullRequestURL)
+                
+    if remotePullRequests is not None:
+        numberOfPullRequests = len(remotePullRequests)
+        log.info("Importing {0} Pull Requests".format(numberOfPullRequests))
+        if numberOfPullRequests > 0:
+            log.info("Starting at Pull Request Number: {0}".format(remotePullRequests[0]['number']))
+            
+        for remotePullRequest in remotePullRequests:
+            try:
+                try:
+                    myPullRequest = myRepo.pullrequest_set.get(pk=remotePullRequest['number'])
+                except ObjectDoesNotExist:
+                    myPullRequest = PullRequest(number = remotePullRequest['number'], repo = myRepo)
+                
+                #figure out if we need to create the user
+                if remotePullRequest['user'] is not None:
+                    try:
+                        myUser = User.objects.get(pk = remotePullRequest['user']['id'])
+                    except:
+                        myUser = User(pk = remotePullRequest['user']['id'], login = remotePullRequest['user']['login'])
+                        myUser.save()
+                    
+                myPullRequest.user = myUser
+                
+                myPullRequest.state = remotePullRequest['state']
+                myPullRequest.created_at = remotePullRequest['created_at']
+                myPullRequest.updated_at = remotePullRequest['updated_at']
+                myPullRequest.closed_at = remotePullRequest['closed_at']
+                myPullRequest.merged_at = remotePullRequest['merged_at']
+
+                myPullRequest.save()
+            except Exception as e:
+                log.info("Failed to Process")
+                log.info(json.dumps(remotePullRequest, indent=4, separators=(',', ': ')))
+                raise
+            
+        MarkGitHubRequestAsProcessed(remotePullRequestURL)
+        
+        
 def RefreshRateLimitStats():
     rateInfo = MakeGitHubRequest('rate_limit')
     
@@ -165,8 +169,8 @@ def QueueGitHubRequest(url):
     myRequestCache.save()
     
 def ProcessGitHubRequest(numberToProcess=10):
-    print '-----------------------------------'
-    log.info("processing queue")
+    log.info("----------------------")
+    log.info("Processing Queue")
     myRequestCaches = GitHubRequestCache.objects.filter(started_at__isnull = True).order_by('created_at')[:numberToProcess]
     
     for myRequestCache in myRequestCaches:
@@ -179,6 +183,14 @@ def ProcessGitHubRequest(numberToProcess=10):
             repo = queryParameters[2]
         
             ProcessRepo(user + '/' + repo)
+        # pagination uses a different edge to process pull requests.  format is repositories/{id}/pulls?state=closed&page={pagenumber}
+        elif queryType == 'repositories':
+            #parse the repo from the url
+            repoID = int(queryParameters[1])
+            myRepo = Repo.objects.get(pk = repoID)
+            
+            #process the pull request
+            ProcessPulLRequests(myRequestCache.query, myRepo)
         else:
             log.info("Unknown Request in Cache: {0}".format(myRequestCache.query))
             # mark this request as unproccessible
@@ -186,7 +198,7 @@ def ProcessGitHubRequest(numberToProcess=10):
             myRequestCache.save()
             MarkGitHubRequestAsProcessed(myRequestCache.query)
             
-    print 'end queue processing'
+    log.info("End Queue Processing")
             
     
 def MakeGitHubRequest(url):
@@ -238,6 +250,7 @@ def MakeGitHubRequest(url):
             if linkStringDecomposed[1] == 'rel="next"':
                 
                 nextLink = linkStringDecomposed[0][1:-1] # slice off the begining '<' and trailing '>'
+                log.info("Raw Pagination Request {0}".format(nextLink))
                 # remove client and secret from query
                 u = urlparse(nextLink)
                 query = parse_qs(u.query)
@@ -245,9 +258,9 @@ def MakeGitHubRequest(url):
                 query.pop('client_secret', None)
                 u = u._replace(query=urlencode(query, True))
                 #queue the link
-                nextLink = u.path + u.params + u.query
+                nextLink = u.path + '?' + u.params + u.query
                 nextLink = nextLink [1:] # remove leading '/'
-                log.debug("Queueing a pagination request: {0}".format(nextLink))
+                log.info("Queueing a pagination request: {0}".format(nextLink))
                 QueueGitHubRequest(nextLink)
         
     # check return status code
