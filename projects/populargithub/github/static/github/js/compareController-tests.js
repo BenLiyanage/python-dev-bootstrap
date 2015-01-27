@@ -13,7 +13,7 @@ describe("Angular Tests", function() {
         module('githubApp')
         inject(function($controller, $rootScope) {
             scope = $rootScope.$new();
-            controller =  $controller('searchCtrl', { $scope: scope });
+            controller =  $controller('compareController', { $scope: scope });
         })
     })
     

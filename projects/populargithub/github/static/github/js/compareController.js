@@ -16,7 +16,7 @@ function formatGitHubDate(gitHubDate)
     return dateString
 }
 
-githubApp.controller('searchCtrl', function($scope, $http, $timeout) {
+githubApp.controller('compareController', function($scope, $http, $timeout) {
     $scope.selectedRepo = [{full_name: 'sevenwire/forgery', id: 322 }, {full_name: 'collectiveidea/acts_as_geocodable', id: 364 }]
     
     //Update Rate Limit For Search Stats
