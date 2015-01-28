@@ -5,7 +5,7 @@ class RateLimitAdmin(admin.ModelAdmin):
     list_display = ('type','limit','remaining','reset')
 
 class GitHubRequestCacheAdmin(admin.ModelAdmin):
-    list_display = ('query','ETag','processed')
+    list_display = ('query','ETag')
 
 class RepoAdmin(admin.ModelAdmin):
     list_display = ('id', 'full_name','description','html_url' )

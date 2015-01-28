@@ -11,10 +11,14 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
         <!-- Angular for DataBinding/Templating -->
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular-route.min.js"></script>
+        
         <!-- Google Graphing Library for... graphing, duh. -->
         <script type="text/javascript" src="https://www.google.com/jsapi"></script>
         <!-- My Scripts -->
+        <!--- TODO: Should enable django js compression. See: http://django-compressor.readthedocs.org/en/latest/settings/ --->
         <script src="{% static 'github/js/compareController.js' %}"></script>
+        <script src="{% static 'github/js/queueMonitorController.js' %}"></script>
         <link rel="stylesheet" href="{% static 'github/css/custom.css' %}"/>
         {% block head %}
         {% endblock %}
@@ -55,7 +59,10 @@
                         <li class="{% active request jasmine False %}"><a href="{{ jasmine }}">Angular Unit Tests {% active request jasmine True %}</a></li>
                     </ul>
                     <div ng-controller="queueMonitorController">
-
+                        <p>Queue Status:</p>
+                        Unproccessed: {%verbatim%} {{unprocessed}} {% endverbatim %} <br/>
+                        Successful: {%verbatim%} {{successful}} {% endverbatim %} <br/>
+                        Failed: {%verbatim%} {{failed}} {% endverbatim %} <br/>
                     </div>
                     {% comment "example of how to do additional nav sections %}
                     <ul class="nav nav-sidebar">
