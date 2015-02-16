@@ -152,7 +152,7 @@ def UpdateRateLimit(type, limit, remaining, reset):
 
 def MarkGitHubRequestAsProcessed(url):
     #TODO: Process logic and logging is not completely right
-    myRequestCache = GitHubRequestCache.objects.get(pk = url)
+    myRequestCache = GitHubRequestCache.objects.get(query = url)
     myRequestCache.completed_at = datetime.now()
     if myRequestCache.success == None:
         myRequestCache.success = True
@@ -160,9 +160,9 @@ def MarkGitHubRequestAsProcessed(url):
 
 def QueueGitHubRequest(url):
     try:
-        myRequestCache = GitHubRequestCache.objects.get(pk = url)
+        myRequestCache = GitHubRequestCache.objects.get(query = url)
     except ObjectDoesNotExist:
-        myRequestCache = GitHubRequestCache(pk = url, ETag = '')
+        myRequestCache = GitHubRequestCache(query = url, ETag = '')
     
     myRequestCache.started_at = None
     myRequestCache.completed_at = None
@@ -206,11 +206,11 @@ def MakeGitHubRequest(url):
     #look up our query to see if we can make a conditional request
     try:
         log.info("Checking cache")
-        myRequestCache = GitHubRequestCache.objects.get(pk = url)
+        myRequestCache = GitHubRequestCache.objects.get(query = url)
         log.info("Using ETag: {0}".format(myRequestCache.ETag))
     except ObjectDoesNotExist:
         log.info("API Request Not In Cache")
-        myRequestCache = GitHubRequestCache(pk = url, ETag = '')
+        myRequestCache = GitHubRequestCache(query = url, ETag = '')
     
     # Make the Request
     headers = {}

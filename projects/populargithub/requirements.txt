@@ -1,7 +1,4 @@
 Django==1.7.1
-MySQL-python==1.2.5
-dj-database-url==0.3.0
-dj-static==0.0.6
 gunicorn==19.1.1
 pytz==2011k
 requests==2.5.0

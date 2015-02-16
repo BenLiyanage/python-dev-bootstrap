@@ -1,12 +1,13 @@
 from django.db import models
 
 class GitHubRequestCache(models.Model):
-    query = models.CharField(max_length=255, primary_key=True)
+    query = models.CharField(max_length=255)
     ETag = models.CharField(max_length=255)
     created_at = models.DateTimeField(auto_now_add=True)
     started_at = models.DateTimeField(default=None, null=True)
     completed_at = models.DateTimeField(default=None, null=True)
     success = models.NullBooleanField(default=None, null=True)
+    
     
 class RateLimit(models.Model):
     type = models.CharField(max_length=255, primary_key=True)
