@@ -26,6 +26,8 @@ TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 
 ALLOWED_HOSTS = []
 
+# Max amount of days to retrieve data
+CACHE_DAYS_THRESHOLD=180
 
 # Application definition
 
@@ -126,7 +128,7 @@ USE_TZ = True
 STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
+    []
 )
 
 LOGGING = {

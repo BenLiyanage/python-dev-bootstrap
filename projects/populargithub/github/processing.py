@@ -189,7 +189,7 @@ def ProcessGitHubRequest(numberToProcess=10):
             repoID = int(queryParameters[1])
             myRepo = Repo.objects.get(pk = repoID)
 
-            delta = timedelta(days=180)
+            delta = timedelta(days=settings.CACHE_DAYS_THRESHOLD)
             now = datetime.now()
             threshold = now - delta
             myPullRequest = PullRequest.objects.filter(repo_id=repoID, created_at__lte=threshold)
