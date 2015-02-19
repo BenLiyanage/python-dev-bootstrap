@@ -1,24 +1,22 @@
 from django.db import models
 
-# Create your models here.
-class RepoQueue(models.Model):
-    started_at = models.DateTimeField()
-    completed_at = models.DateTimeField(default=None, null=True)
-    repos_found = models.IntegerField(default=0)
-    repos_processed = models.IntegerField(default=0)
-    repos_skipped = models.IntegerField(default=0)
-    
 class GitHubRequestCache(models.Model):
-    query = models.CharField(max_length=255, primary_key=True)
+    query = models.CharField(max_length=255)
     ETag = models.CharField(max_length=255)
-    processed = models.BooleanField(default=False)
+    created_at = models.DateTimeField(auto_now_add=True)
+    started_at = models.DateTimeField(default=None, null=True)
+    completed_at = models.DateTimeField(default=None, null=True)
+    success = models.NullBooleanField(default=None, null=True)
+    
     
 class RateLimit(models.Model):
     type = models.CharField(max_length=255, primary_key=True)
     limit = models.IntegerField()
     remaining = models.IntegerField()
     reset = models.DateTimeField()
-    
+
+
+# The below classes should probably be separated out into a separate app as they are related to git, not github    
 class Repo(models.Model):
     # core stats
     id = models.IntegerField(primary_key=True)

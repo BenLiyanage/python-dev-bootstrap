@@ -2,30 +2,31 @@
 
 {% block content %}
 <h1 class="page-header">Compare Repositories</h1>
-<div>We've queued up a couple repositories for you to compare.  Feel free to adjust the list below.</div>
-<div class="row">
-    <div id="chart_MergesPerMonth"  style="height:200px" merges-graph></div>
+<div ng-controller="compareController">
+    <div>We've queued up a couple repositories for you to compare.  Feel free to adjust the list below.</div>
+    <div class="row">
+        <div id="chart_MergesPerMonth"  style="height:200px" merges-graph></div>
+    </div>
+
+    <h2 class="sub-header">GitHub Repositories to Compare</h2>
+    <input type="text" auto-complete placeholder="search for repos to compare" size="30" />
+    <span>There are <strong>{%verbatim%} {{rateLimitRemaining}} {% endverbatim %}</strong> searches left on this IP, due to the GitHub API limit. <span ng-show="rateLimit!=rateLimitRemaining">This will reset to <strong>{%verbatim%} {{rateLimit}} {% endverbatim %}</strong> at <strong>{%verbatim%} {{rateLimitReset}} {%endverbatim%}</strong></span></span>
+
+    <div ng-show="selectedRepo.length!=0" class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Repo Name</th>
+                    <th>&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="repo in selectedRepo">
+                    <td>{%verbatim%} {{ repo.full_name }} {% endverbatim %}</td>
+                    <td><a href="javascript: return false;" ng-click="remove(repo)">Remove</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
-
-<h2 class="sub-header">GitHub Repositories to Compare</h2>
-<input type="text" auto-complete placeholder="search for repos to compare" size="30" />
-<span>There are <strong>{%verbatim%} {{rateLimitRemaining}} {% endverbatim %}</strong> searches left on this IP, due to the GitHub API limit. <span ng-show="rateLimit!=rateLimitRemaining">This will reset to <strong>{%verbatim%} {{rateLimit}} {% endverbatim %}</strong> at <strong>{%verbatim%} {{rateLimitReset}} {%endverbatim%}</strong></span></span>
-
-<div ng-show="selectedRepo.length!=0" class="table-responsive">
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>Repo Name</th>
-                <th>&nbsp;</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr ng-repeat="repo in selectedRepo">
-                <td>{%verbatim%} {{ repo.full_name }} {% endverbatim %}</td>
-                <td><a href="javascript: return false;" ng-click="remove(repo)">Remove</a></td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
 {% endblock %}

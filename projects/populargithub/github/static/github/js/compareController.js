@@ -16,9 +16,10 @@ function formatGitHubDate(gitHubDate)
     return dateString
 }
 
-githubApp.controller('searchCtrl', function($scope, $http, $timeout) {
+githubApp.controller('compareController', function($scope, $http, $timeout) {
     $scope.selectedRepo = [{full_name: 'sevenwire/forgery', id: 322 }, {full_name: 'collectiveidea/acts_as_geocodable', id: 364 }]
     
+    //Update Rate Limit For Search Stats
     $http({
         method: 'get', 
         url: 'https://api.github.com/rate_limit'
@@ -79,7 +80,6 @@ githubApp.directive('autoComplete', function($http) {
                 minLength: 0,
                 source: function(request, response) { 
                     //need to do the dynamic search here using "term" as the current input
-                    //alert('hi')
                     var req = { 
                         method: 'get', 
                         url: 'https://api.github.com/search/repositories',
@@ -97,7 +97,6 @@ githubApp.directive('autoComplete', function($http) {
                 select: function(event, ui) {
                     scope['selectedRepo'].push({'full_name': ui.item.full_name, id: ui.item.id})
                     scope.$apply();
-                    
                 }
             }).data('ui-autocomplete')._renderItem = function(ul, item) {
                 return $("<li></li>")

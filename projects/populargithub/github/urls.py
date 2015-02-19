@@ -9,5 +9,6 @@ urlpatterns = patterns('',
     url(r'^populate$', views.populate, name='populate'),
     url(r'^repo$', views.RepoList.as_view(), name='populate'),
     url(r'^comparedata$', views.CompareData),
+    url(r'^queuemonitordata$', views.QueueMonitorData),
     url(r'^jasmine$', views.Jasmine, name='jasmine'),
 )

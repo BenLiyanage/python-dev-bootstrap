@@ -13,3 +13,4 @@ projects/populargithub/github/migrations
 projects/populargithub/staticfiles/
 projects/populargithub/.anvil
 projects/populargithub/settings/__init__.py
+projects/populargithub/populargithub/settings/__init__.py
