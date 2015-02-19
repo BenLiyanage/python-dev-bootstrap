@@ -1,8 +1,9 @@
 from django.test import TestCase
-from models import Repo
+from models import Repo, PullRequest, User
 from processing import ProcessRepo, GitHubRequestCache, QueueGitHubRequest, ProcessGitHubRequest
 from django.db.models.base import ObjectDoesNotExist
 import unittest 
+from random import choice
 # Create your tests here.
 
 class TestProccessing(TestCase):
@@ -47,6 +48,24 @@ class TestProccessing(TestCase):
         # this repo should have more than 100 pull requests.
         # importing pull requests requires pagingation to go over 100 entries
         self.assertGreater(myRepo.pullrequest_set.count(), 100)
+        
+        #verify that another request was queued
+        myRequestCaches = GitHubRequestCache.objects.filter(started_at__isnull = True)
+        self.assertEqual(myRequestCaches.count(), 1)
+        
+        #### Test hitting the data cache threshold for large pull request chains.
+        # get a random user_id
+        myUser = choice(User.objects.all())
+        
+        myPullRequest = PullRequest(number = 10000,repo=myRepo, created_at = '2015-01-01 01:01', user = myUser, updated_at='2015-01-01 01:01')
+        myPullRequest.save()
+        
+        #proccess the queued pagination
+        ProcessGitHubRequest(1)
+        
+        # Verify that there are no more queued paginations
+        myRequestCaches = GitHubRequestCache.objects.filter(started_at__isnull = True)
+        self.assertEqual(myRequestCaches.count(), 0)
     
     def test_ProcessGitHubRequest(self):
         testRepo = 18295962
