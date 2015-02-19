@@ -16,7 +16,7 @@ log = logging.getLogger(__name__)
 apiBaseURL = 'https://api.github.com/'
 
 def BulkImport():
-    output = "Initializing Population\n"
+    output = "Initializing Population\n"    
     
     RefreshRateLimitStats()
     remaining = RateLimitRemaining('core')
