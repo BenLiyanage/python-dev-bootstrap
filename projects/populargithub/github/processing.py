@@ -194,8 +194,6 @@ def ProcessGitHubRequest(numberToProcess=10):
             threshold = now - delta
             myPullRequest = PullRequest.objects.filter(repo_id=repoID, created_at__lte=threshold)
 
-            print myPullRequest
-
             if len(myPullRequest) > 0:
                 myRequestCache.delete()
             else:
