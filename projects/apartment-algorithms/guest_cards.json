@@ -26,7 +26,7 @@
         "application_denied": null,
         "application_canceled": null,
         "lease_signed": "2013-05-06",
-        "resident_rent": 495,
+        "resident_rent": 500,
         "unit_name": "425-5-C3"
     },
     {
@@ -538,6 +538,21 @@
         "lease_signed": null,
         "resident_rent": null,
         "unit_name": null
+    },
+    {
+        "id": 1819389,
+        "first_seen": "2013-05-30",
+        "expected_move_in": "2013-08-16",
+        "shown_unit": "2013-05-30",
+        "agent_id": 3518,
+        "marketing_source": "Drive By",
+        "application_submitted": "2013-08-08",
+        "application_approved": "2013-08-12",
+        "application_denied": "2013-06-18",
+        "application_canceled": null,
+        "lease_signed": "2013-08-16",
+        "resident_rent": 575,
+        "unit_name": "415-5-C2"
     },
     {
         "id": 1819389,
