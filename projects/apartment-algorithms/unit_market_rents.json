@@ -1,0 +1,1268 @@
+[
+    {
+        "name": "407-5-A2",
+        "square_feet": 763,
+        "datestamp": "2013-04-29",
+        "market_rent": 575
+    },
+    {
+        "name": "407-5-A3",
+        "square_feet": 763,
+        "datestamp": "2013-04-29",
+        "market_rent": 575
+    },
+    {
+        "name": "407-5-B1",
+        "square_feet": 527,
+        "datestamp": "2013-04-29",
+        "market_rent": 475
+    },
+    {
+        "name": "407-5-B2",
+        "square_feet": 527,
+        "datestamp": "2013-04-29",
+        "market_rent": 475
+    },
+    {
+        "name": "407-5-B3",
+        "square_feet": 527,
+        "datestamp": "2013-04-29",
+        "market_rent": 475
+    },
+    {
+        "name": "407-5-B3",
+        "square_feet": 527,
+        "datestamp": "2013-06-19",
+        "market_rent": 495
+    },
+    {
+        "name": "407-5-B3",
+        "square_feet": 527,
+        "datestamp": "2014-03-13",
+        "market_rent": 500
+    },
+    {
+        "name": "407-5-C1",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "407-5-C2",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "407-5-C3",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 595
+    },
+    {
+        "name": "407-6-A2",
+        "square_feet": 763,
+        "datestamp": "2013-04-29",
+        "market_rent": 575
+    },
+    {
+        "name": "407-6-A2",
+        "square_feet": 763,
+        "datestamp": "2013-06-19",
+        "market_rent": 550
+    },
+    {
+        "name": "407-6-A3",
+        "square_feet": 763,
+        "datestamp": "2013-04-29",
+        "market_rent": 575
+    },
+    {
+        "name": "407-6-B1",
+        "square_feet": 527,
+        "datestamp": "2013-04-29",
+        "market_rent": 475
+    },
+    {
+        "name": "407-6-B2",
+        "square_feet": 527,
+        "datestamp": "2013-04-29",
+        "market_rent": 475
+    },
+    {
+        "name": "407-6-B3",
+        "square_feet": 527,
+        "datestamp": "2013-04-29",
+        "market_rent": 475
+    },
+    {
+        "name": "407-6-C1",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "407-6-C1",
+        "square_feet": 664,
+        "datestamp": "2013-06-19",
+        "market_rent": 575
+    },
+    {
+        "name": "407-6-C2",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "407-6-C2",
+        "square_feet": 664,
+        "datestamp": "2013-06-19",
+        "market_rent": 595
+    },
+    {
+        "name": "407-6-C3",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "408-5-A2",
+        "square_feet": 763,
+        "datestamp": "2013-04-29",
+        "market_rent": 575
+    },
+    {
+        "name": "408-5-A2",
+        "square_feet": 763,
+        "datestamp": "2014-03-13",
+        "market_rent": 625
+    },
+    {
+        "name": "408-5-A3",
+        "square_feet": 763,
+        "datestamp": "2013-04-29",
+        "market_rent": 575
+    },
+    {
+        "name": "408-5-A3",
+        "square_feet": 763,
+        "datestamp": "2014-03-13",
+        "market_rent": 625
+    },
+    {
+        "name": "408-5-B1",
+        "square_feet": 527,
+        "datestamp": "2013-04-29",
+        "market_rent": 475
+    },
+    {
+        "name": "408-5-B1",
+        "square_feet": 527,
+        "datestamp": "2013-06-19",
+        "market_rent": 495
+    },
+    {
+        "name": "408-5-B2",
+        "square_feet": 527,
+        "datestamp": "2013-04-29",
+        "market_rent": 475
+    },
+    {
+        "name": "408-5-B2",
+        "square_feet": 527,
+        "datestamp": "2013-06-19",
+        "market_rent": 480
+    },
+    {
+        "name": "408-5-B3",
+        "square_feet": 527,
+        "datestamp": "2013-04-29",
+        "market_rent": 475
+    },
+    {
+        "name": "408-5-C1",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "408-5-C2",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "408-5-C3",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 595
+    },
+    {
+        "name": "408-5-C3",
+        "square_feet": 664,
+        "datestamp": "2013-05-17",
+        "market_rent": 495
+    },
+    {
+        "name": "409-5-A1",
+        "square_feet": 527,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "409-5-A2",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "409-5-A2",
+        "square_feet": 664,
+        "datestamp": "2013-06-19",
+        "market_rent": 595
+    },
+    {
+        "name": "409-5-A2",
+        "square_feet": 664,
+        "datestamp": "2014-03-13",
+        "market_rent": 575
+    },
+    {
+        "name": "409-5-A3",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "409-5-B2",
+        "square_feet": 527,
+        "datestamp": "2013-04-29",
+        "market_rent": 475
+    },
+    {
+        "name": "409-5-B3",
+        "square_feet": 527,
+        "datestamp": "2013-04-29",
+        "market_rent": 475
+    },
+    {
+        "name": "409-5-C1",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 595
+    },
+    {
+        "name": "409-5-C2",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "409-5-C3",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "409-6-A1",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "409-6-A2",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "409-6-A2",
+        "square_feet": 664,
+        "datestamp": "2013-06-19",
+        "market_rent": 500
+    },
+    {
+        "name": "409-6-A3",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "409-6-B2",
+        "square_feet": 527,
+        "datestamp": "2013-04-29",
+        "market_rent": 475
+    },
+    {
+        "name": "409-6-B3",
+        "square_feet": 527,
+        "datestamp": "2013-04-29",
+        "market_rent": 475
+    },
+    {
+        "name": "409-6-C1",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "409-6-C2",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "409-6-C3",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 595
+    },
+    {
+        "name": "410-5-A1",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "410-5-A2",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "410-5-A3",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "410-5-B2",
+        "square_feet": 527,
+        "datestamp": "2013-04-29",
+        "market_rent": 475
+    },
+    {
+        "name": "410-5-B3",
+        "square_feet": 527,
+        "datestamp": "2013-04-29",
+        "market_rent": 475
+    },
+    {
+        "name": "410-5-B3",
+        "square_feet": 527,
+        "datestamp": "2013-05-17",
+        "market_rent": 449
+    },
+    {
+        "name": "410-5-C1",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "410-5-C2",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "410-5-C3",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "411-5-A2",
+        "square_feet": 763,
+        "datestamp": "2013-04-29",
+        "market_rent": 575
+    },
+    {
+        "name": "411-5-A3",
+        "square_feet": 763,
+        "datestamp": "2013-04-29",
+        "market_rent": 575
+    },
+    {
+        "name": "411-5-B1",
+        "square_feet": 527,
+        "datestamp": "2013-04-29",
+        "market_rent": 475
+    },
+    {
+        "name": "411-5-B2",
+        "square_feet": 527,
+        "datestamp": "2013-04-29",
+        "market_rent": 475
+    },
+    {
+        "name": "411-5-B3",
+        "square_feet": 527,
+        "datestamp": "2013-04-29",
+        "market_rent": 475
+    },
+    {
+        "name": "411-5-B3",
+        "square_feet": 527,
+        "datestamp": "2013-06-19",
+        "market_rent": 495
+    },
+    {
+        "name": "411-5-C1",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "411-5-C2",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "411-5-C3",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "411-6-A2",
+        "square_feet": 763,
+        "datestamp": "2013-04-29",
+        "market_rent": 575
+    },
+    {
+        "name": "411-6-A3",
+        "square_feet": 763,
+        "datestamp": "2013-04-29",
+        "market_rent": 699
+    },
+    {
+        "name": "411-6-B1",
+        "square_feet": 527,
+        "datestamp": "2013-04-29",
+        "market_rent": 475
+    },
+    {
+        "name": "411-6-B2",
+        "square_feet": 527,
+        "datestamp": "2013-04-29",
+        "market_rent": 475
+    },
+    {
+        "name": "411-6-B2",
+        "square_feet": 527,
+        "datestamp": "2013-06-19",
+        "market_rent": 535
+    },
+    {
+        "name": "411-6-B2",
+        "square_feet": 527,
+        "datestamp": "2014-01-02",
+        "market_rent": 500
+    },
+    {
+        "name": "411-6-B3",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "411-6-B3",
+        "square_feet": 664,
+        "datestamp": "2013-06-19",
+        "market_rent": 495
+    },
+    {
+        "name": "411-6-C1",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "411-6-C2",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "411-6-C3",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "412-5-A2",
+        "square_feet": 763,
+        "datestamp": "2013-04-29",
+        "market_rent": 575
+    },
+    {
+        "name": "412-5-A2",
+        "square_feet": 763,
+        "datestamp": "2014-01-24",
+        "market_rent": 625
+    },
+    {
+        "name": "412-5-A3",
+        "square_feet": 763,
+        "datestamp": "2013-04-29",
+        "market_rent": 575
+    },
+    {
+        "name": "412-5-B1",
+        "square_feet": 527,
+        "datestamp": "2013-04-29",
+        "market_rent": 475
+    },
+    {
+        "name": "412-5-B1",
+        "square_feet": 527,
+        "datestamp": "2013-06-19",
+        "market_rent": 495
+    },
+    {
+        "name": "412-5-B2",
+        "square_feet": 527,
+        "datestamp": "2013-04-29",
+        "market_rent": 549
+    },
+    {
+        "name": "412-5-B3",
+        "square_feet": 527,
+        "datestamp": "2013-04-29",
+        "market_rent": 475
+    },
+    {
+        "name": "412-5-C1",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "412-5-C2",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 595
+    },
+    {
+        "name": "412-5-C3",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "413-5-A2",
+        "square_feet": 763,
+        "datestamp": "2013-04-29",
+        "market_rent": 575
+    },
+    {
+        "name": "413-5-A2",
+        "square_feet": 763,
+        "datestamp": "2013-06-19",
+        "market_rent": 550
+    },
+    {
+        "name": "413-5-A3",
+        "square_feet": 763,
+        "datestamp": "2013-04-29",
+        "market_rent": 575
+    },
+    {
+        "name": "413-5-B1",
+        "square_feet": 527,
+        "datestamp": "2013-04-29",
+        "market_rent": 475
+    },
+    {
+        "name": "413-5-B1",
+        "square_feet": 527,
+        "datestamp": "2013-06-19",
+        "market_rent": 450
+    },
+    {
+        "name": "413-5-B2",
+        "square_feet": 527,
+        "datestamp": "2013-04-29",
+        "market_rent": 475
+    },
+    {
+        "name": "413-5-B3",
+        "square_feet": 527,
+        "datestamp": "2013-04-29",
+        "market_rent": 549
+    },
+    {
+        "name": "413-5-C1",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "413-5-C2",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "413-5-C3",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "413-6-A2",
+        "square_feet": 763,
+        "datestamp": "2013-04-29",
+        "market_rent": 575
+    },
+    {
+        "name": "413-6-A3",
+        "square_feet": 763,
+        "datestamp": "2013-04-29",
+        "market_rent": 575
+    },
+    {
+        "name": "413-6-B1",
+        "square_feet": 527,
+        "datestamp": "2013-04-29",
+        "market_rent": 475
+    },
+    {
+        "name": "413-6-B2",
+        "square_feet": 527,
+        "datestamp": "2013-04-29",
+        "market_rent": 475
+    },
+    {
+        "name": "413-6-B3",
+        "square_feet": 527,
+        "datestamp": "2013-04-29",
+        "market_rent": 475
+    },
+    {
+        "name": "413-6-C1",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "413-6-C2",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "413-6-C3",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 595
+    },
+    {
+        "name": "414-5-A2",
+        "square_feet": 763,
+        "datestamp": "2013-04-29",
+        "market_rent": 575
+    },
+    {
+        "name": "414-5-A3",
+        "square_feet": 763,
+        "datestamp": "2013-04-29",
+        "market_rent": 575
+    },
+    {
+        "name": "414-5-B1",
+        "square_feet": 527,
+        "datestamp": "2013-04-29",
+        "market_rent": 475
+    },
+    {
+        "name": "414-5-B1",
+        "square_feet": 527,
+        "datestamp": "2013-06-19",
+        "market_rent": 460
+    },
+    {
+        "name": "414-5-B2",
+        "square_feet": 527,
+        "datestamp": "2013-04-29",
+        "market_rent": 475
+    },
+    {
+        "name": "414-5-B3",
+        "square_feet": 527,
+        "datestamp": "2013-04-29",
+        "market_rent": 549
+    },
+    {
+        "name": "414-5-C1",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "414-5-C2",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "414-5-C2",
+        "square_feet": 664,
+        "datestamp": "2013-06-19",
+        "market_rent": 595
+    },
+    {
+        "name": "414-5-C3",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "415-5-A1",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "415-5-A2",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "415-5-A3",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 595
+    },
+    {
+        "name": "415-5-B2",
+        "square_feet": 527,
+        "datestamp": "2013-04-29",
+        "market_rent": 475
+    },
+    {
+        "name": "415-5-B3",
+        "square_feet": 527,
+        "datestamp": "2013-04-29",
+        "market_rent": 475
+    },
+    {
+        "name": "415-5-C1",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "415-5-C2",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "415-5-C3",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 595
+    },
+    {
+        "name": "415-6-A1",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "415-6-A2",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "415-6-A3",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 595
+    },
+    {
+        "name": "415-6-B2",
+        "square_feet": 527,
+        "datestamp": "2013-04-29",
+        "market_rent": 549
+    },
+    {
+        "name": "415-6-B3",
+        "square_feet": 527,
+        "datestamp": "2013-04-29",
+        "market_rent": 475
+    },
+    {
+        "name": "415-6-B3",
+        "square_feet": 527,
+        "datestamp": "2013-06-19",
+        "market_rent": 495
+    },
+    {
+        "name": "415-6-C1",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "415-6-C2",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "415-6-C3",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 595
+    },
+    {
+        "name": "416-5-A1",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "416-5-A2",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "416-5-A3",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "416-5-B2",
+        "square_feet": 527,
+        "datestamp": "2013-04-29",
+        "market_rent": 549
+    },
+    {
+        "name": "416-5-B3",
+        "square_feet": 527,
+        "datestamp": "2013-04-29",
+        "market_rent": 475
+    },
+    {
+        "name": "416-5-C1",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "416-5-C2",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 595
+    },
+    {
+        "name": "416-5-C3",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "417-5-A2",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "417-5-A3",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 595
+    },
+    {
+        "name": "417-5-C2",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "417-5-C3",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "417-6-A2",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "417-6-A2",
+        "square_feet": 664,
+        "datestamp": "2013-06-19",
+        "market_rent": 645
+    },
+    {
+        "name": "417-6-A3",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "417-6-C2",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "417-6-C3",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "418-5-A2",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 595
+    },
+    {
+        "name": "418-5-A3",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "418-5-C2",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 595
+    },
+    {
+        "name": "418-5-C3",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "419-5-A1",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "419-5-A2",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "419-5-A3",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 595
+    },
+    {
+        "name": "419-5-C2",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 595
+    },
+    {
+        "name": "419-5-C3",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "419-6-A1",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "419-6-A2",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "419-6-A3",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 595
+    },
+    {
+        "name": "419-6-C2",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 595
+    },
+    {
+        "name": "419-6-C3",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 595
+    },
+    {
+        "name": "420-5-A1",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "420-5-A2",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "420-5-A3",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "420-5-A3",
+        "square_feet": 664,
+        "datestamp": "2013-06-19",
+        "market_rent": 595
+    },
+    {
+        "name": "420-5-C2",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 595
+    },
+    {
+        "name": "420-5-C3",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "421-5-A1",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "421-5-A2",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "421-5-A3",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "421-5-C2",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 595
+    },
+    {
+        "name": "421-5-C3",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 595
+    },
+    {
+        "name": "421-6-A1",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "421-6-A2",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 595
+    },
+    {
+        "name": "421-6-A3",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "421-6-C2",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 595
+    },
+    {
+        "name": "421-6-C3",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "421-6-C3",
+        "square_feet": 664,
+        "datestamp": "2013-06-19",
+        "market_rent": 595
+    },
+    {
+        "name": "422-5-A1",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "422-5-A2",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "422-5-A3",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "422-5-C2",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "422-5-C3",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "423-5-A1",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "423-5-A2",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "423-5-A3",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "423-5-A3",
+        "square_feet": 664,
+        "datestamp": "2013-06-19",
+        "market_rent": 595
+    },
+    {
+        "name": "423-5-C2",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 595
+    },
+    {
+        "name": "423-5-C3",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "423-6-A2",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "423-6-A3",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "423-6-C1",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "423-6-C2",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "423-6-C3",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "424-5-A1",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "424-5-A2",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "424-5-A3",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "424-5-C2",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "424-5-C3",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "425-5-A2",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "425-5-A3",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 595
+    },
+    {
+        "name": "425-5-C2",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 550
+    },
+    {
+        "name": "425-5-C3",
+        "square_feet": 664,
+        "datestamp": "2013-04-29",
+        "market_rent": 595
+    },
+    {
+        "name": "425-5-C3",
+        "square_feet": 664,
+        "datestamp": "2013-05-07",
+        "market_rent": 495
+    }
+]

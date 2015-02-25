@@ -24,6 +24,5 @@ Vagrant.configure("2") do |config|
     puppet.manifests_path = "manifests"
     puppet.manifest_file  = "init.pp"
     puppet.options = "--verbose --debug"
-    puppet.options = "--verbose --noop"
   end
 end
