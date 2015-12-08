@@ -50,6 +50,8 @@ class LeaderBoard():
 		month = ''
 		monthCount = 0
 		
+		# There is probably a better way of doing group processing, but I'm not sure what it is.
+		# I was having trouble getting the .groupby().head(3) working correctly in pandas
 		for i in range(0, len(leaderboard)):
 			
 			if month != leaderboard.loc[i]['month']:
@@ -63,10 +65,70 @@ class LeaderBoard():
 				continue
 			else:
 				print "Let's pretend this is a name: " + str(leaderboard.loc[i]['agent_id'])
+
+	def quarter_from_datestamp(self, datestamp):
+		return int(datestamp[5:7]) / 4 + 1
+	
+	def listing_cost(self, marketing_source, lease_signed):
+		# requirements
+		# * Apartment Guide = $495 per month, flat rate
+		# * Apartments.com = $295 per signed lease
+		# * Rent.com = $595 or 50% per lease signed, whichever is higher.
+		# * For Rent = $195 monthly, plus $25 per lead.
+		# * Craigslist = Free!
+		# * Resident Referral = $500 per signed lease
+
+		if marketing_source == 'Apartments.com':			
+			if lease_signed == None:
+				return 0
+			else:
+				return 295
+		elif marketing_source == 'Rent.com':
+			# TODO: 50% of what?
+			return 595
+		elif marketing_source == 'For Rent':
+			return 25
+		elif marketing_source == 'Resident Referral':
+			return 500
+		else:
+			# includes:
+			# marketing_source == 'Craigslist':
+			# marketing_source == 'Apartment Guide':
+			return 0
+			
+	# def total_cost(self, first_param)
+	marketing_per_month_cost = {
+		'Apartment Guide': 495,
+		'For Rent': 195
+		}
+	def get_marketing_monthly_cost(self, marketing_source):
+		if marketing_source in self.marketing_per_month_cost:
+			return self.marketing_per_month_cost[self.marketing_per_month_cost]
+		else:
+			return 0
+	
+	def print_marketing_costs(self):
+		advertisingSources = self.guest_cards
+		advertisingSources['year'] = map(lambda first_seen: first_seen[0:4], advertisingSources['first_seen'])
+		advertisingSources['quarter'] = map(self.quarter_from_datestamp, advertisingSources['first_seen'])
+		advertisingSources['listing_cost'] = map(self.listing_cost, advertisingSources['marketing_source'], advertisingSources['lease_signed'])
+		advertisingSources = advertisingSources.groupby(['year', 'quarter', 'marketing_source']).agg(
+			{
+				'first_seen': numpy.count_nonzero,
+				'lease_signed': numpy.count_nonzero,
+				'listing_cost': numpy.sum + 
+			})
+		# advertisingSources['monthly_fee'] = map(self.get_marketing_monthly_cost, advertisingSources['marketing_source'])
+		print advertisingSources['marketing_source']
+		
+		print advertisingSources
+		
+		
 		
 if __name__ == '__main__':
 	myLeaderBoard = LeaderBoard()
-	myLeaderBoard.print_leader_board()
+	# myLeaderBoard.print_leader_board()
+	myLeaderBoard.print_marketing_costs()
 # print guest_cards['lease_signed']
 
 

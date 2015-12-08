@@ -1,0 +1,7 @@
+.bar, label, .month { float:left; margin:10px; }
+.bar, .month , .legend div{ border: 1px solid black; background-color: #ccc;   height:20px; width:0px; margin:10px 0px  }
+#container { padding: 20px; }
+label { width:50px; clear:left; }
+.month { background-color:red!important; }
+.legend { clear:both; float: left; line-height:20px }
+.legend div {position: relative; top: -10px; margin-left:20px; margin-right:5px; }
