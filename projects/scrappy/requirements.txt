@@ -1,0 +1,5 @@
+# For scraping
+Scrapy==1.4.0
+
+# For debug
+pdbpp==0.9.1
