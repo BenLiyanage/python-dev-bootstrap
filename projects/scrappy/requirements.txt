@@ -1,5 +1,6 @@
 # For scraping
 Scrapy==1.4.0
+beautifulsoup4==4.6.0
 
 # For debug
 pdbpp==0.9.1

@@ -18,7 +18,10 @@ An example of a drug from one of the subcategories is:
 
 3) The source HTML data for each page should be stored in the directory structure
 
-4) There should be a JSON file for each of the drugs in the directory structure that contains the data from the data tables on each of the wiki pages.  eg, for Omzeprazole above, the data for all of the sections in the table on the right hand side ("Clinical data", "Legal Status", "Pharmacokinetic data", etc) should be represented in the JSON file.  This JSON file should also contain the URL of the source data.
+4) There should be a JSON file for each of the drugs in the directory structure that contains the data from the data
+tables on each of the wiki pages.  eg, for Omzeprazole above, the data for all of the sections in the table on the right
+hand side ("Clinical data", "Legal Status", "Pharmacokinetic data", etc) should be represented in the JSON file.  This
+JSON file should also contain the URL of the source data.
 
 5) Based on the data retrieved, provide some simple stats:
 
